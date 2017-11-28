@@ -1,0 +1,51 @@
+﻿<script type="text/javascript" src="../SiteAssets/CommonJavascript/jquery-3.1.1.js"></script>
+<script type="text/javascript" src="../SiteAssets/CommonJavascript/jquery.signalR-2.2.2.js"></script>
+<script type="text/javascript" src="/_layouts/15/MicrosoftAjax.js"></script>
+<script type="text/javascript" src="/_layouts/15/sp.runtime.js"></script>
+<script type="text/javascript" src="/_layouts/15/sp.js"></script>
+<script type="text/javascript" src="/_layouts/15/sp.requestexecutor.js"></script>
+<script type="text/javascript" src="/_layouts/15/ps.js"></script>
+<script type="text/javascript" src="../SiteAssets/CommonJavascript/jszip.js"></script>
+<script type="text/javascript" src="../SiteAssets/CommonJavascript/dx.web.js"></script>
+<script type="text/javascript" src="../SiteAssets/CommonJavascript/tabs.js"></script>
+
+<link href="../SiteAssets/CommonContent/App.css" rel="stylesheet" />
+<link href="../SiteAssets/CommonContent/dx.common.css" rel="stylesheet" />
+<link href="../SiteAssets/CommonContent/dx.light.css" rel="stylesheet" />
+<link href="../SiteAssets/CommonContent/tabs.css" rel="stylesheet" />
+
+<script type="text/javascript" src="../SiteAssets/DataSyncJs/App.js"></script>
+<script type="text/javascript" src="../SiteAssets/DataSyncJs/DevExtremeExtension.js"></script>
+<script type="text/javascript" src="../SiteAssets/DataSyncJs/LinkedItemsTable.js"></script>
+<script type="text/javascript" src="../SiteAssets/DataSyncJs/CRUDTables.js"></script>
+
+<div id="LoadPanel" class="loadpanel"></div>
+
+<div id="tabs" style="height: 500px">
+    <ul>
+        <li><a href="#fragment-1"><span>SyncSystem Table</span></a></li>
+        <li><a href="#fragment-2"><span>SyncSystemSetting Table</span></a></li>
+        <li><a href="#fragment-3"><span>SyncSystemSettingValue Table</span></a></li>
+        <li><a href="#fragment-4"><span>SyncSystemFieldMapping Table</span></a></li>
+        <li><a href="#fragment-5"><span>SyncSystemType Table</span></a></li>
+        <li><a href="#fragment-6"><span>View Linked items</span></a></li>
+    </ul>
+    <div id="fragment-1">
+        <div id="gridContainer__SyncSystem" style="width: 100%"></div>
+    </div>
+    <div id="fragment-2">
+        <div id="gridContainer__SyncSystemSetting" style="width:100%"></div>
+    </div>
+    <div id="fragment-3">
+        <div id="gridContainer__SyncSystemSettingValue" style="width:100%"></div>
+    </div>
+    <div id="fragment-4">
+        <div id="gridContainer__SyncSystemFieldMapping" style="width:100%"></div>
+    </div>
+    <div id="fragment-5">
+        <div id="gridContainer__SyncSystemType" style="width:100%"></div>
+    </div>
+    <div id="fragment-6">
+        <div id="gridContainer__VProjectServerSystemLink" style="width:100%"></div>
+    </div>
+</div>

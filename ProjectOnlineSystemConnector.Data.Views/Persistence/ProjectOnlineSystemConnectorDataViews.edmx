@@ -1,0 +1,1456 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+	<edmx:Runtime>
+		<edmx:StorageModels>
+			<Schema Namespace="ProjectOnlineSystemConnectorDataViews.SQLServer.Store" Alias="Self" 
+					Provider="System.Data.SqlClient" ProviderManifestToken="2008"
+					xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+				<EntityContainer Name="ProjectOnlineSystemConnectorDataViewsSQLServerContainer">
+					<EntitySet Name="Master" EntityType="Self.Master" Schema="dbo" />
+					<EntitySet Name="MasterFieldMappingValue" EntityType="Self.MasterFieldMappingValue" Schema="dbo" />
+					<EntitySet Name="MasterHistory" EntityType="Self.MasterHistory" Schema="dbo" />
+					<EntitySet Name="MasterHistoryFieldMappingValue" EntityType="Self.MasterHistoryFieldMappingValue" Schema="dbo" />
+					<EntitySet Name="MasterWorklog" EntityType="Self.MasterWorklog" Schema="dbo" />
+					<EntitySet Name="ProjectServerSystemLink" EntityType="Self.ProjectServerSystemLink" Schema="dbo" />
+					<EntitySet Name="Staging" EntityType="Self.Staging" Schema="dbo" />
+					<EntitySet Name="StagingFieldMappingValue" EntityType="Self.StagingFieldMappingValue" Schema="dbo" />
+					<EntitySet Name="SyncSystem" EntityType="Self.SyncSystem" Schema="dbo" />
+					<EntitySet Name="SyncSystemFieldMapping" EntityType="Self.SyncSystemFieldMapping" Schema="dbo" />
+					<EntitySet Name="SyncSystemSetting" EntityType="Self.SyncSystemSetting" Schema="dbo" />
+					<EntitySet Name="SyncSystemSettingValue" EntityType="Self.SyncSystemSettingValue" Schema="dbo" />
+					<EntitySet Name="SyncSystemType" EntityType="Self.SyncSystemType" Schema="dbo" />
+					<EntitySet Name="vProjectServerSystemLink" EntityType="Self.vProjectServerSystemLink" Schema="dbo" />
+					<EntitySet Name="vStagingFieldMappingValue" EntityType="Self.vStagingFieldMappingValue" Schema="dbo" />
+					<EntitySet Name="WebHookEntry" EntityType="Self.WebHookEntry" Schema="dbo" />
+					<AssociationSet Name="FK_Master_SyncSystem" Association="Self.FK_Master_SyncSystem">
+						<End Role="Master" EntitySet="Master"/>
+						<End Role="SyncSystem" EntitySet="SyncSystem"/>
+					</AssociationSet>
+					<AssociationSet Name="FK_FieldMappingValueMaster_Master" Association="Self.FK_FieldMappingValueMaster_Master">
+						<End Role="MasterFieldMappingValue" EntitySet="MasterFieldMappingValue"/>
+						<End Role="Master" EntitySet="Master"/>
+					</AssociationSet>
+					<AssociationSet Name="FK_FieldMappingValueMaster_SyncSystemFieldMapping" Association="Self.FK_FieldMappingValueMaster_SyncSystemFieldMapping">
+						<End Role="MasterFieldMappingValue" EntitySet="MasterFieldMappingValue"/>
+						<End Role="SyncSystemFieldMapping" EntitySet="SyncSystemFieldMapping"/>
+					</AssociationSet>
+					<AssociationSet Name="FK_MasterHistory_SyncSystem" Association="Self.FK_MasterHistory_SyncSystem">
+						<End Role="MasterHistory" EntitySet="MasterHistory"/>
+						<End Role="SyncSystem" EntitySet="SyncSystem"/>
+					</AssociationSet>
+					<AssociationSet Name="FK_FieldMappingValueMasterHistory_MasterHistory" Association="Self.FK_FieldMappingValueMasterHistory_MasterHistory">
+						<End Role="MasterHistoryFieldMappingValue" EntitySet="MasterHistoryFieldMappingValue"/>
+						<End Role="MasterHistory" EntitySet="MasterHistory"/>
+					</AssociationSet>
+					<AssociationSet Name="FK_FieldMappingValueMasterHistory_SyncSystemFieldMapping" Association="Self.FK_FieldMappingValueMasterHistory_SyncSystemFieldMapping">
+						<End Role="MasterHistoryFieldMappingValue" EntitySet="MasterHistoryFieldMappingValue"/>
+						<End Role="SyncSystemFieldMapping" EntitySet="SyncSystemFieldMapping"/>
+					</AssociationSet>
+					<AssociationSet Name="FK_MasterWorklog_SyncSystem" Association="Self.FK_MasterWorklog_SyncSystem">
+						<End Role="MasterWorklog" EntitySet="MasterWorklog"/>
+						<End Role="SyncSystem" EntitySet="SyncSystem"/>
+					</AssociationSet>
+					<AssociationSet Name="FK_ProjectServerSystemLink_SyncSystem" Association="Self.FK_ProjectServerSystemLink_SyncSystem">
+						<End Role="ProjectServerSystemLink" EntitySet="ProjectServerSystemLink"/>
+						<End Role="SyncSystem" EntitySet="SyncSystem"/>
+					</AssociationSet>
+					<AssociationSet Name="FK_Stating_SyncSystem" Association="Self.FK_Stating_SyncSystem">
+						<End Role="Staging" EntitySet="Staging"/>
+						<End Role="SyncSystem" EntitySet="SyncSystem"/>
+					</AssociationSet>
+					<AssociationSet Name="FK_FieldMappingValueStaging_Staging" Association="Self.FK_FieldMappingValueStaging_Staging">
+						<End Role="StagingFieldMappingValue" EntitySet="StagingFieldMappingValue"/>
+						<End Role="Staging" EntitySet="Staging"/>
+					</AssociationSet>
+					<AssociationSet Name="FK_FieldMappingValueStaging_SyncSystemFieldMapping" Association="Self.FK_FieldMappingValueStaging_SyncSystemFieldMapping">
+						<End Role="StagingFieldMappingValue" EntitySet="StagingFieldMappingValue"/>
+						<End Role="SyncSystemFieldMapping" EntitySet="SyncSystemFieldMapping"/>
+					</AssociationSet>
+					<AssociationSet Name="FK_SyncSystem_SyncSystemType" Association="Self.FK_SyncSystem_SyncSystemType">
+						<End Role="SyncSystem" EntitySet="SyncSystem"/>
+						<End Role="SyncSystemType" EntitySet="SyncSystemType"/>
+					</AssociationSet>
+					<AssociationSet Name="FK_SyncSystemFieldMapping_SyncSystem" Association="Self.FK_SyncSystemFieldMapping_SyncSystem">
+						<End Role="SyncSystemFieldMapping" EntitySet="SyncSystemFieldMapping"/>
+						<End Role="SyncSystem" EntitySet="SyncSystem"/>
+					</AssociationSet>
+					<AssociationSet Name="FK_SyncSystemSettingValue_SyncSystem" Association="Self.FK_SyncSystemSettingValue_SyncSystem">
+						<End Role="SyncSystemSettingValue" EntitySet="SyncSystemSettingValue"/>
+						<End Role="SyncSystem" EntitySet="SyncSystem"/>
+					</AssociationSet>
+					<AssociationSet Name="FK_SyncSystemSettingValue_SyncSystemSetting" Association="Self.FK_SyncSystemSettingValue_SyncSystemSetting">
+						<End Role="SyncSystemSettingValue" EntitySet="SyncSystemSettingValue"/>
+						<End Role="SyncSystemSetting" EntitySet="SyncSystemSetting"/>
+					</AssociationSet>
+					<AssociationSet Name="FK_WebHookEntry_SyncSystem" Association="Self.FK_WebHookEntry_SyncSystem">
+						<End Role="WebHookEntry" EntitySet="WebHookEntry"/>
+						<End Role="SyncSystem" EntitySet="SyncSystem"/>
+					</AssociationSet>
+	<!-- __LLBLGENPRO_USER_CODE_REGION_START SSDLEntityContainerCustomCode -->
+	<!-- __LLBLGENPRO_USER_CODE_REGION_END -->
+				</EntityContainer>
+				<EntityType Name="Master">
+					<Key>
+						<PropertyRef Name="MasterId"/>
+					</Key>
+					<Property Name="MasterId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" DefaultValue="1"  />
+					<Property Name="SystemId" Type="int" Nullable="false"  />
+					<Property Name="RecordDateCreated" Type="datetime" Nullable="false"  />
+					<Property Name="RecordDateUpdated" Type="datetime" Nullable="false"  />
+					<Property Name="ProjectId" Type="nvarchar" MaxLength="50"  />
+					<Property Name="ProjectKey" Type="nvarchar" MaxLength="200"  />
+					<Property Name="ProjectName" Type="nvarchar"  />
+					<Property Name="IssueId" Type="nvarchar" MaxLength="50"  />
+					<Property Name="IssueKey" Type="nvarchar" MaxLength="200"  />
+					<Property Name="IssueName" Type="nvarchar"  />
+					<Property Name="IssueTypeId" Type="nvarchar" MaxLength="50"  />
+					<Property Name="IssueTypeName" Type="nvarchar" MaxLength="50"  />
+					<Property Name="IsSubTask" Type="bit" Nullable="false"  />
+					<Property Name="ParentEpicId" Type="nvarchar" MaxLength="50"  />
+					<Property Name="ParentEpicKey" Type="nvarchar" MaxLength="50"  />
+					<Property Name="ParentSprintId" Type="nvarchar" MaxLength="50"  />
+					<Property Name="ParentSprintName" Type="nvarchar"  />
+					<Property Name="ParentVersionId" Type="nvarchar" MaxLength="50"  />
+					<Property Name="ParentVersionName" Type="nvarchar"  />
+					<Property Name="ParentVersionReleased" Type="bit"  />
+					<Property Name="ParentIssueId" Type="nvarchar" MaxLength="50"  />
+					<Property Name="ParentIssueKey" Type="nvarchar" MaxLength="50"  />
+					<Property Name="DateStart" Type="datetime"  />
+					<Property Name="DateFinish" Type="datetime"  />
+					<Property Name="Assignee" Type="nvarchar"  />
+					<Property Name="IssueStatus" Type="nvarchar" MaxLength="200"  />
+					<Property Name="DateRelease" Type="datetime"  />
+					<Property Name="DateStartActual" Type="datetime"  />
+					<Property Name="DateFinishActual" Type="datetime"  />
+					<Property Name="IssueActualWork" Type="int"  />
+					<Property Name="OriginalEstimate" Type="int"  />
+				</EntityType>
+				<EntityType Name="MasterFieldMappingValue">
+					<Key>
+						<PropertyRef Name="MasterFieldMappingValueId"/>
+					</Key>
+					<Property Name="MasterFieldMappingValueId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" DefaultValue="1"  />
+					<Property Name="MasterId" Type="int" Nullable="false"  />
+					<Property Name="SyncSystemFieldMappingId" Type="int" Nullable="false"  />
+					<Property Name="Value" Type="nvarchar"  />
+				</EntityType>
+				<EntityType Name="MasterHistory">
+					<Key>
+						<PropertyRef Name="MasterHistoryId"/>
+					</Key>
+					<Property Name="MasterHistoryId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" DefaultValue="1"  />
+					<Property Name="SystemId" Type="int" Nullable="false"  />
+					<Property Name="RecordDateCreated" Type="datetime" Nullable="false"  />
+					<Property Name="RecordDateUpdated" Type="datetime" Nullable="false"  />
+					<Property Name="ProjectId" Type="nvarchar" MaxLength="50"  />
+					<Property Name="ProjectKey" Type="nvarchar" MaxLength="200"  />
+					<Property Name="ProjectName" Type="nvarchar"  />
+					<Property Name="IssueId" Type="nvarchar" MaxLength="50"  />
+					<Property Name="IssueKey" Type="nvarchar" MaxLength="200"  />
+					<Property Name="IssueName" Type="nvarchar"  />
+					<Property Name="IssueTypeId" Type="nvarchar" MaxLength="50"  />
+					<Property Name="IssueTypeName" Type="nvarchar" MaxLength="50"  />
+					<Property Name="IsSubTask" Type="bit" Nullable="false"  />
+					<Property Name="ParentEpicId" Type="nvarchar" MaxLength="50"  />
+					<Property Name="ParentEpicKey" Type="nvarchar" MaxLength="50"  />
+					<Property Name="ParentSprintId" Type="nvarchar" MaxLength="50"  />
+					<Property Name="ParentSprintName" Type="nvarchar"  />
+					<Property Name="ParentVersionId" Type="nvarchar" MaxLength="50"  />
+					<Property Name="ParentVersionName" Type="nvarchar"  />
+					<Property Name="ParentVersionReleased" Type="bit"  />
+					<Property Name="ParentIssueId" Type="nvarchar" MaxLength="50"  />
+					<Property Name="ParentIssueKey" Type="nvarchar" MaxLength="50"  />
+					<Property Name="DateStart" Type="datetime"  />
+					<Property Name="DateFinish" Type="datetime"  />
+					<Property Name="Assignee" Type="nvarchar"  />
+					<Property Name="IssueStatus" Type="nvarchar" MaxLength="200"  />
+					<Property Name="DateRelease" Type="datetime"  />
+					<Property Name="DateStartActual" Type="datetime"  />
+					<Property Name="DateFinishActual" Type="datetime"  />
+					<Property Name="IssueActualWork" Type="int"  />
+					<Property Name="OriginalEstimate" Type="int"  />
+				</EntityType>
+				<EntityType Name="MasterHistoryFieldMappingValue">
+					<Key>
+						<PropertyRef Name="MasterHistoryFieldMappingValueId"/>
+					</Key>
+					<Property Name="MasterHistoryFieldMappingValueId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" DefaultValue="1"  />
+					<Property Name="MasterHistoryId" Type="int" Nullable="false"  />
+					<Property Name="SyncSystemFieldMappingId" Type="int" Nullable="false"  />
+					<Property Name="Value" Type="nvarchar"  />
+				</EntityType>
+				<EntityType Name="MasterWorklog">
+					<Key>
+						<PropertyRef Name="MasterWorklogId"/>
+					</Key>
+					<Property Name="MasterWorklogId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" DefaultValue="1"  />
+					<Property Name="SystemId" Type="int" Nullable="false"  />
+					<Property Name="RecordDateCreated" Type="datetime" Nullable="false"  />
+					<Property Name="RecordDateUpdated" Type="datetime" Nullable="false"  />
+					<Property Name="WebHookEvent" Type="nvarchar" Nullable="false"  />
+					<Property Name="RecordState" Type="nvarchar" Nullable="false" MaxLength="50"  />
+					<Property Name="WorkLogId" Type="nvarchar"  />
+					<Property Name="IssueId" Type="nvarchar" MaxLength="50"  />
+					<Property Name="TimeSpentSeconds" Type="bigint"  />
+					<Property Name="DateStarted" Type="datetime"  />
+					<Property Name="DateCreated" Type="datetime"  />
+					<Property Name="DateUpdated" Type="datetime"  />
+					<Property Name="Comment" Type="nvarchar"  />
+					<Property Name="AuthorEmailAddress" Type="nvarchar"  />
+					<Property Name="AuthorName" Type="nvarchar" MaxLength="50"  />
+					<Property Name="AuthorKey" Type="nvarchar" MaxLength="50"  />
+				</EntityType>
+				<EntityType Name="ProjectServerSystemLink">
+					<Key>
+						<PropertyRef Name="ProjectServerSystemLinkId"/>
+					</Key>
+					<Property Name="ProjectServerSystemLinkId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" DefaultValue="1"  />
+					<Property Name="ProjectUid" Type="uniqueidentifier" Nullable="false"  />
+					<Property Name="SystemId" Type="int" Nullable="false"  />
+					<Property Name="ProjectKey" Type="nvarchar" MaxLength="200"  />
+					<Property Name="ProjectName" Type="nvarchar" MaxLength="200"  />
+					<Property Name="ProjectId" Type="nvarchar" MaxLength="200"  />
+					<Property Name="IsHomeProject" Type="bit" Nullable="false"  />
+					<Property Name="EpicKey" Type="nvarchar" MaxLength="200"  />
+					<Property Name="EpicName" Type="nvarchar" MaxLength="200"  />
+					<Property Name="EpicId" Type="nvarchar" MaxLength="200"  />
+					<Property Name="LastExecuted" Type="datetime"  />
+					<Property Name="ExecuteStatus" Type="nvarchar"  />
+					<Property Name="DateCreated" Type="datetime" Nullable="false"  />
+				</EntityType>
+				<EntityType Name="Staging">
+					<Key>
+						<PropertyRef Name="StagingId"/>
+					</Key>
+					<Property Name="StagingId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" DefaultValue="1"  />
+					<Property Name="SystemId" Type="int" Nullable="false"  />
+					<Property Name="RecordDateCreated" Type="datetime" Nullable="false"  />
+					<Property Name="RecordDateUpdated" Type="datetime" Nullable="false"  />
+					<Property Name="WebHookEvent" Type="nvarchar" Nullable="false"  />
+					<Property Name="RecordState" Type="nvarchar" Nullable="false" MaxLength="50"  />
+					<Property Name="ChangedFields" Type="nvarchar"  />
+					<Property Name="ProjectId" Type="nvarchar" MaxLength="50"  />
+					<Property Name="ProjectKey" Type="nvarchar" MaxLength="200"  />
+					<Property Name="ProjectName" Type="nvarchar"  />
+					<Property Name="IssueId" Type="nvarchar" MaxLength="50"  />
+					<Property Name="IssueKey" Type="nvarchar" MaxLength="200"  />
+					<Property Name="IssueName" Type="nvarchar"  />
+					<Property Name="IssueTypeId" Type="nvarchar" MaxLength="50"  />
+					<Property Name="IssueTypeName" Type="nvarchar" MaxLength="50"  />
+					<Property Name="IsSubTask" Type="bit" Nullable="false"  />
+					<Property Name="ParentEpicId" Type="nvarchar" MaxLength="50"  />
+					<Property Name="ParentEpicKey" Type="nvarchar" MaxLength="50"  />
+					<Property Name="ParentSprintId" Type="nvarchar" MaxLength="50"  />
+					<Property Name="ParentSprintName" Type="nvarchar"  />
+					<Property Name="ParentVersionId" Type="nvarchar" MaxLength="50"  />
+					<Property Name="ParentVersionName" Type="nvarchar"  />
+					<Property Name="ParentVersionReleased" Type="bit"  />
+					<Property Name="ParentIssueId" Type="nvarchar" MaxLength="50"  />
+					<Property Name="ParentIssueKey" Type="nvarchar" MaxLength="50"  />
+					<Property Name="DateStart" Type="datetime"  />
+					<Property Name="DateFinish" Type="datetime"  />
+					<Property Name="Assignee" Type="nvarchar"  />
+					<Property Name="IssueStatus" Type="nvarchar" MaxLength="200"  />
+					<Property Name="DateRelease" Type="datetime"  />
+					<Property Name="DateStartActual" Type="datetime"  />
+					<Property Name="DateFinishActual" Type="datetime"  />
+					<Property Name="IssueActualWork" Type="int"  />
+					<Property Name="OriginalEstimate" Type="int"  />
+				</EntityType>
+				<EntityType Name="StagingFieldMappingValue">
+					<Key>
+						<PropertyRef Name="StagingFieldMappingValueId"/>
+					</Key>
+					<Property Name="StagingFieldMappingValueId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" DefaultValue="1"  />
+					<Property Name="StagingId" Type="int" Nullable="false"  />
+					<Property Name="SyncSystemFieldMappingId" Type="int" Nullable="false"  />
+					<Property Name="Value" Type="nvarchar"  />
+				</EntityType>
+				<EntityType Name="SyncSystem">
+					<Key>
+						<PropertyRef Name="SystemId"/>
+					</Key>
+					<Property Name="SystemId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" DefaultValue="1"  />
+					<Property Name="SystemTypeId" Type="int" Nullable="false"  />
+					<Property Name="SystemName" Type="nvarchar" Nullable="false"  />
+					<Property Name="SystemUrl" Type="nvarchar" Nullable="false"  />
+					<Property Name="SystemApiUrl" Type="nvarchar" Nullable="false"  />
+					<Property Name="SystemLogin" Type="nvarchar" Nullable="false"  />
+					<Property Name="SystemPassword" Type="nvarchar" Nullable="false"  />
+					<Property Name="DefaultParentTaskName" Type="nvarchar" Nullable="false"  />
+				</EntityType>
+				<EntityType Name="SyncSystemFieldMapping">
+					<Key>
+						<PropertyRef Name="SyncSystemFieldMappingId"/>
+					</Key>
+					<Property Name="SyncSystemFieldMappingId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" DefaultValue="1"  />
+					<Property Name="SystemId" Type="int" Nullable="false"  />
+					<Property Name="SystemFieldName" Type="nvarchar"  />
+					<Property Name="EpmFieldName" Type="nvarchar" Nullable="false"  />
+					<Property Name="FieldType" Type="nvarchar" Nullable="false"  />
+					<Property Name="StagingFieldName" Type="nvarchar"  />
+					<Property Name="IsMultiSelect" Type="bit" Nullable="false"  />
+					<Property Name="IsIdWithValue" Type="bit" Nullable="false"  />
+				</EntityType>
+				<EntityType Name="SyncSystemSetting">
+					<Key>
+						<PropertyRef Name="SettingId"/>
+					</Key>
+					<Property Name="SettingId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" DefaultValue="1"  />
+					<Property Name="Setting" Type="nvarchar" Nullable="false"  />
+				</EntityType>
+				<EntityType Name="SyncSystemSettingValue">
+					<Key>
+						<PropertyRef Name="SyncSystemSettingId"/>
+					</Key>
+					<Property Name="SyncSystemSettingId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" DefaultValue="1"  />
+					<Property Name="SystemId" Type="int" Nullable="false"  />
+					<Property Name="SettingId" Type="int" Nullable="false"  />
+					<Property Name="SettingValue" Type="nvarchar" Nullable="false"  />
+				</EntityType>
+				<EntityType Name="SyncSystemType">
+					<Key>
+						<PropertyRef Name="SystemTypeId"/>
+					</Key>
+					<Property Name="SystemTypeId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" DefaultValue="1"  />
+					<Property Name="SystemTypeName" Type="nvarchar" Nullable="false"  />
+				</EntityType>
+				<EntityType Name="vProjectServerSystemLink">
+					<Key>
+						<PropertyRef Name="RowNumber"/>
+					</Key>
+					<Property Name="RowNumber" Type="int" Nullable="false"  />
+					<Property Name="ProjectServerSystemLinkId" Type="int" Nullable="false"  />
+					<Property Name="ProjectUid" Type="uniqueidentifier" Nullable="false"  />
+					<Property Name="SystemId" Type="int" Nullable="false"  />
+					<Property Name="ProjectKey" Type="nvarchar" MaxLength="200"  />
+					<Property Name="ProjectName" Type="nvarchar" MaxLength="200"  />
+					<Property Name="ProjectId" Type="nvarchar" MaxLength="200"  />
+					<Property Name="IsHomeProject" Type="bit" Nullable="false"  />
+					<Property Name="EpicKey" Type="nvarchar" MaxLength="200"  />
+					<Property Name="EpicName" Type="nvarchar" MaxLength="200"  />
+					<Property Name="EpicId" Type="nvarchar" MaxLength="200"  />
+					<Property Name="LastExecuted" Type="datetime"  />
+					<Property Name="ExecuteStatus" Type="nvarchar"  />
+					<Property Name="DateCreated" Type="datetime" Nullable="false"  />
+					<Property Name="SystemName" Type="nvarchar"  />
+				</EntityType>
+				<EntityType Name="vStagingFieldMappingValue">
+					<Key>
+						<PropertyRef Name="RowNumber"/>
+					</Key>
+					<Property Name="RowNumber" Type="int" Nullable="false"  />
+					<Property Name="StagingFieldMappingValueId" Type="int"  />
+					<Property Name="StagingId" Type="int"  />
+					<Property Name="SyncSystemFieldMappingId" Type="int"  />
+					<Property Name="Value" Type="nvarchar"  />
+					<Property Name="EpmFieldName" Type="nvarchar" Nullable="false"  />
+					<Property Name="FieldType" Type="nvarchar" Nullable="false"  />
+					<Property Name="SystemFieldName" Type="nvarchar"  />
+					<Property Name="StagingFieldName" Type="nvarchar"  />
+					<Property Name="SystemId" Type="int" Nullable="false"  />
+				</EntityType>
+				<EntityType Name="WebHookEntry">
+					<Key>
+						<PropertyRef Name="WebHookEntryId"/>
+					</Key>
+					<Property Name="WebHookEntryId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" DefaultValue="1"  />
+					<Property Name="SystemId" Type="int" Nullable="false"  />
+					<Property Name="JsonRequest" Type="nvarchar" Nullable="false"  />
+					<Property Name="DateCreated" Type="datetime" Nullable="false"  />
+				</EntityType>
+				<Association Name="FK_Master_SyncSystem">
+					<End Role="Master" Type="Self.Master" Multiplicity="*" />
+					<End Role="SyncSystem" Type="Self.SyncSystem" Multiplicity="1" />
+					<ReferentialConstraint>
+						<Principal Role="SyncSystem">
+							<PropertyRef Name="SystemId"/>
+						</Principal>
+						<Dependent Role="Master">
+							<PropertyRef Name="SystemId"/>
+						</Dependent>
+					</ReferentialConstraint>
+				</Association>
+				<Association Name="FK_FieldMappingValueMaster_Master">
+					<End Role="MasterFieldMappingValue" Type="Self.MasterFieldMappingValue" Multiplicity="*" />
+					<End Role="Master" Type="Self.Master" Multiplicity="1" />
+					<ReferentialConstraint>
+						<Principal Role="Master">
+							<PropertyRef Name="MasterId"/>
+						</Principal>
+						<Dependent Role="MasterFieldMappingValue">
+							<PropertyRef Name="MasterId"/>
+						</Dependent>
+					</ReferentialConstraint>
+				</Association>
+				<Association Name="FK_FieldMappingValueMaster_SyncSystemFieldMapping">
+					<End Role="MasterFieldMappingValue" Type="Self.MasterFieldMappingValue" Multiplicity="*" />
+					<End Role="SyncSystemFieldMapping" Type="Self.SyncSystemFieldMapping" Multiplicity="1" />
+					<ReferentialConstraint>
+						<Principal Role="SyncSystemFieldMapping">
+							<PropertyRef Name="SyncSystemFieldMappingId"/>
+						</Principal>
+						<Dependent Role="MasterFieldMappingValue">
+							<PropertyRef Name="SyncSystemFieldMappingId"/>
+						</Dependent>
+					</ReferentialConstraint>
+				</Association>
+				<Association Name="FK_MasterHistory_SyncSystem">
+					<End Role="MasterHistory" Type="Self.MasterHistory" Multiplicity="*" />
+					<End Role="SyncSystem" Type="Self.SyncSystem" Multiplicity="1" />
+					<ReferentialConstraint>
+						<Principal Role="SyncSystem">
+							<PropertyRef Name="SystemId"/>
+						</Principal>
+						<Dependent Role="MasterHistory">
+							<PropertyRef Name="SystemId"/>
+						</Dependent>
+					</ReferentialConstraint>
+				</Association>
+				<Association Name="FK_FieldMappingValueMasterHistory_MasterHistory">
+					<End Role="MasterHistoryFieldMappingValue" Type="Self.MasterHistoryFieldMappingValue" Multiplicity="*" />
+					<End Role="MasterHistory" Type="Self.MasterHistory" Multiplicity="1" />
+					<ReferentialConstraint>
+						<Principal Role="MasterHistory">
+							<PropertyRef Name="MasterHistoryId"/>
+						</Principal>
+						<Dependent Role="MasterHistoryFieldMappingValue">
+							<PropertyRef Name="MasterHistoryId"/>
+						</Dependent>
+					</ReferentialConstraint>
+				</Association>
+				<Association Name="FK_FieldMappingValueMasterHistory_SyncSystemFieldMapping">
+					<End Role="MasterHistoryFieldMappingValue" Type="Self.MasterHistoryFieldMappingValue" Multiplicity="*" />
+					<End Role="SyncSystemFieldMapping" Type="Self.SyncSystemFieldMapping" Multiplicity="1" />
+					<ReferentialConstraint>
+						<Principal Role="SyncSystemFieldMapping">
+							<PropertyRef Name="SyncSystemFieldMappingId"/>
+						</Principal>
+						<Dependent Role="MasterHistoryFieldMappingValue">
+							<PropertyRef Name="SyncSystemFieldMappingId"/>
+						</Dependent>
+					</ReferentialConstraint>
+				</Association>
+				<Association Name="FK_MasterWorklog_SyncSystem">
+					<End Role="MasterWorklog" Type="Self.MasterWorklog" Multiplicity="*" />
+					<End Role="SyncSystem" Type="Self.SyncSystem" Multiplicity="1" />
+					<ReferentialConstraint>
+						<Principal Role="SyncSystem">
+							<PropertyRef Name="SystemId"/>
+						</Principal>
+						<Dependent Role="MasterWorklog">
+							<PropertyRef Name="SystemId"/>
+						</Dependent>
+					</ReferentialConstraint>
+				</Association>
+				<Association Name="FK_ProjectServerSystemLink_SyncSystem">
+					<End Role="ProjectServerSystemLink" Type="Self.ProjectServerSystemLink" Multiplicity="*" />
+					<End Role="SyncSystem" Type="Self.SyncSystem" Multiplicity="1" />
+					<ReferentialConstraint>
+						<Principal Role="SyncSystem">
+							<PropertyRef Name="SystemId"/>
+						</Principal>
+						<Dependent Role="ProjectServerSystemLink">
+							<PropertyRef Name="SystemId"/>
+						</Dependent>
+					</ReferentialConstraint>
+				</Association>
+				<Association Name="FK_Stating_SyncSystem">
+					<End Role="Staging" Type="Self.Staging" Multiplicity="*" />
+					<End Role="SyncSystem" Type="Self.SyncSystem" Multiplicity="1" />
+					<ReferentialConstraint>
+						<Principal Role="SyncSystem">
+							<PropertyRef Name="SystemId"/>
+						</Principal>
+						<Dependent Role="Staging">
+							<PropertyRef Name="SystemId"/>
+						</Dependent>
+					</ReferentialConstraint>
+				</Association>
+				<Association Name="FK_FieldMappingValueStaging_Staging">
+					<End Role="StagingFieldMappingValue" Type="Self.StagingFieldMappingValue" Multiplicity="*" />
+					<End Role="Staging" Type="Self.Staging" Multiplicity="1" />
+					<ReferentialConstraint>
+						<Principal Role="Staging">
+							<PropertyRef Name="StagingId"/>
+						</Principal>
+						<Dependent Role="StagingFieldMappingValue">
+							<PropertyRef Name="StagingId"/>
+						</Dependent>
+					</ReferentialConstraint>
+				</Association>
+				<Association Name="FK_FieldMappingValueStaging_SyncSystemFieldMapping">
+					<End Role="StagingFieldMappingValue" Type="Self.StagingFieldMappingValue" Multiplicity="*" />
+					<End Role="SyncSystemFieldMapping" Type="Self.SyncSystemFieldMapping" Multiplicity="1" />
+					<ReferentialConstraint>
+						<Principal Role="SyncSystemFieldMapping">
+							<PropertyRef Name="SyncSystemFieldMappingId"/>
+						</Principal>
+						<Dependent Role="StagingFieldMappingValue">
+							<PropertyRef Name="SyncSystemFieldMappingId"/>
+						</Dependent>
+					</ReferentialConstraint>
+				</Association>
+				<Association Name="FK_SyncSystem_SyncSystemType">
+					<End Role="SyncSystem" Type="Self.SyncSystem" Multiplicity="*" />
+					<End Role="SyncSystemType" Type="Self.SyncSystemType" Multiplicity="1" />
+					<ReferentialConstraint>
+						<Principal Role="SyncSystemType">
+							<PropertyRef Name="SystemTypeId"/>
+						</Principal>
+						<Dependent Role="SyncSystem">
+							<PropertyRef Name="SystemTypeId"/>
+						</Dependent>
+					</ReferentialConstraint>
+				</Association>
+				<Association Name="FK_SyncSystemFieldMapping_SyncSystem">
+					<End Role="SyncSystemFieldMapping" Type="Self.SyncSystemFieldMapping" Multiplicity="*" />
+					<End Role="SyncSystem" Type="Self.SyncSystem" Multiplicity="1" />
+					<ReferentialConstraint>
+						<Principal Role="SyncSystem">
+							<PropertyRef Name="SystemId"/>
+						</Principal>
+						<Dependent Role="SyncSystemFieldMapping">
+							<PropertyRef Name="SystemId"/>
+						</Dependent>
+					</ReferentialConstraint>
+				</Association>
+				<Association Name="FK_SyncSystemSettingValue_SyncSystem">
+					<End Role="SyncSystemSettingValue" Type="Self.SyncSystemSettingValue" Multiplicity="*" />
+					<End Role="SyncSystem" Type="Self.SyncSystem" Multiplicity="1" />
+					<ReferentialConstraint>
+						<Principal Role="SyncSystem">
+							<PropertyRef Name="SystemId"/>
+						</Principal>
+						<Dependent Role="SyncSystemSettingValue">
+							<PropertyRef Name="SystemId"/>
+						</Dependent>
+					</ReferentialConstraint>
+				</Association>
+				<Association Name="FK_SyncSystemSettingValue_SyncSystemSetting">
+					<End Role="SyncSystemSettingValue" Type="Self.SyncSystemSettingValue" Multiplicity="*" />
+					<End Role="SyncSystemSetting" Type="Self.SyncSystemSetting" Multiplicity="1" />
+					<ReferentialConstraint>
+						<Principal Role="SyncSystemSetting">
+							<PropertyRef Name="SettingId"/>
+						</Principal>
+						<Dependent Role="SyncSystemSettingValue">
+							<PropertyRef Name="SettingId"/>
+						</Dependent>
+					</ReferentialConstraint>
+				</Association>
+				<Association Name="FK_WebHookEntry_SyncSystem">
+					<End Role="WebHookEntry" Type="Self.WebHookEntry" Multiplicity="*" />
+					<End Role="SyncSystem" Type="Self.SyncSystem" Multiplicity="1" />
+					<ReferentialConstraint>
+						<Principal Role="SyncSystem">
+							<PropertyRef Name="SystemId"/>
+						</Principal>
+						<Dependent Role="WebHookEntry">
+							<PropertyRef Name="SystemId"/>
+						</Dependent>
+					</ReferentialConstraint>
+				</Association>
+	<!-- __LLBLGENPRO_USER_CODE_REGION_START SSDLCustomCode -->
+	<!-- __LLBLGENPRO_USER_CODE_REGION_END -->
+			</Schema>
+		</edmx:StorageModels>
+		<edmx:ConceptualModels>
+			<Schema Namespace="ProjectOnlineSystemConnectorDataViewsModel" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2009/11/edm"	 xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration"  xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false" >
+				<EntityContainer Name="ProjectOnlineSystemConnectorDataViewsEntities">
+					<EntitySet Name="Master" EntityType="Self.Master"/>	
+					<EntitySet Name="MasterFieldMappingValue" EntityType="Self.MasterFieldMappingValue"/>	
+					<EntitySet Name="MasterHistory" EntityType="Self.MasterHistory"/>	
+					<EntitySet Name="MasterHistoryFieldMappingValue" EntityType="Self.MasterHistoryFieldMappingValue"/>	
+					<EntitySet Name="MasterWorklog" EntityType="Self.MasterWorklog"/>	
+					<EntitySet Name="ProjectServerSystemLink" EntityType="Self.ProjectServerSystemLink"/>	
+					<EntitySet Name="Staging" EntityType="Self.Staging"/>	
+					<EntitySet Name="StagingFieldMappingValue" EntityType="Self.StagingFieldMappingValue"/>	
+					<EntitySet Name="SyncSystem" EntityType="Self.SyncSystem"/>	
+					<EntitySet Name="SyncSystemFieldMapping" EntityType="Self.SyncSystemFieldMapping"/>	
+					<EntitySet Name="SyncSystemSetting" EntityType="Self.SyncSystemSetting"/>	
+					<EntitySet Name="SyncSystemSettingValue" EntityType="Self.SyncSystemSettingValue"/>	
+					<EntitySet Name="SyncSystemType" EntityType="Self.SyncSystemType"/>	
+					<EntitySet Name="VProjectServerSystemLink" EntityType="Self.VProjectServerSystemLink"/>	
+					<EntitySet Name="VStagingFieldMappingValue" EntityType="Self.VStagingFieldMappingValue"/>	
+					<EntitySet Name="WebHookEntry" EntityType="Self.WebHookEntry"/>	
+					<AssociationSet Name="WebHookEntry_SyncSystem_SyncSystem_WebHookEntries" Association="Self.WebHookEntry_SyncSystem_SyncSystem_WebHookEntries">
+						<End Role="WebHookEntry" EntitySet="WebHookEntry"/>
+						<End Role="SyncSystem" EntitySet="SyncSystem"/>
+					</AssociationSet>
+					<AssociationSet Name="SyncSystem_SyncSystemType_SyncSystemType_SyncSystems" Association="Self.SyncSystem_SyncSystemType_SyncSystemType_SyncSystems">
+						<End Role="SyncSystem" EntitySet="SyncSystem"/>
+						<End Role="SyncSystemType" EntitySet="SyncSystemType"/>
+					</AssociationSet>
+					<AssociationSet Name="SyncSystemSettingValue_SyncSystem_SyncSystem_SyncSystemSettingValues" Association="Self.SyncSystemSettingValue_SyncSystem_SyncSystem_SyncSystemSettingValues">
+						<End Role="SyncSystemSettingValue" EntitySet="SyncSystemSettingValue"/>
+						<End Role="SyncSystem" EntitySet="SyncSystem"/>
+					</AssociationSet>
+					<AssociationSet Name="SyncSystemSettingValue_SyncSystemSetting_SyncSystemSetting_SyncSystemSettingValues" Association="Self.SyncSystemSettingValue_SyncSystemSetting_SyncSystemSetting_SyncSystemSettingValues">
+						<End Role="SyncSystemSettingValue" EntitySet="SyncSystemSettingValue"/>
+						<End Role="SyncSystemSetting" EntitySet="SyncSystemSetting"/>
+					</AssociationSet>
+					<AssociationSet Name="SyncSystemFieldMapping_SyncSystem_SyncSystem_SyncSystemFieldMappings" Association="Self.SyncSystemFieldMapping_SyncSystem_SyncSystem_SyncSystemFieldMappings">
+						<End Role="SyncSystemFieldMapping" EntitySet="SyncSystemFieldMapping"/>
+						<End Role="SyncSystem" EntitySet="SyncSystem"/>
+					</AssociationSet>
+					<AssociationSet Name="MasterFieldMappingValue_SyncSystemFieldMapping_SyncSystemFieldMapping_MasterFieldMappingValues" Association="Self.MasterFieldMappingValue_SyncSystemFieldMapping_SyncSystemFieldMapping_MasterFieldMappingValues">
+						<End Role="MasterFieldMappingValue" EntitySet="MasterFieldMappingValue"/>
+						<End Role="SyncSystemFieldMapping" EntitySet="SyncSystemFieldMapping"/>
+					</AssociationSet>
+					<AssociationSet Name="MasterHistoryFieldMappingValue_SyncSystemFieldMapping_SyncSystemFieldMapping_MasterHistoryFieldMappingValues" Association="Self.MasterHistoryFieldMappingValue_SyncSystemFieldMapping_SyncSystemFieldMapping_MasterHistoryFieldMappingValues">
+						<End Role="MasterHistoryFieldMappingValue" EntitySet="MasterHistoryFieldMappingValue"/>
+						<End Role="SyncSystemFieldMapping" EntitySet="SyncSystemFieldMapping"/>
+					</AssociationSet>
+					<AssociationSet Name="StagingFieldMappingValue_SyncSystemFieldMapping_SyncSystemFieldMapping_StagingFieldMappingValues" Association="Self.StagingFieldMappingValue_SyncSystemFieldMapping_SyncSystemFieldMapping_StagingFieldMappingValues">
+						<End Role="StagingFieldMappingValue" EntitySet="StagingFieldMappingValue"/>
+						<End Role="SyncSystemFieldMapping" EntitySet="SyncSystemFieldMapping"/>
+					</AssociationSet>
+					<AssociationSet Name="Master_SyncSystem_SyncSystem_Masters" Association="Self.Master_SyncSystem_SyncSystem_Masters">
+						<End Role="Master" EntitySet="Master"/>
+						<End Role="SyncSystem" EntitySet="SyncSystem"/>
+					</AssociationSet>
+					<AssociationSet Name="MasterHistory_SyncSystem_SyncSystem_MasterHistories" Association="Self.MasterHistory_SyncSystem_SyncSystem_MasterHistories">
+						<End Role="MasterHistory" EntitySet="MasterHistory"/>
+						<End Role="SyncSystem" EntitySet="SyncSystem"/>
+					</AssociationSet>
+					<AssociationSet Name="MasterWorklog_SyncSystem_SyncSystem_MasterWorklogs" Association="Self.MasterWorklog_SyncSystem_SyncSystem_MasterWorklogs">
+						<End Role="MasterWorklog" EntitySet="MasterWorklog"/>
+						<End Role="SyncSystem" EntitySet="SyncSystem"/>
+					</AssociationSet>
+					<AssociationSet Name="ProjectServerSystemLink_SyncSystem_SyncSystem_ProjectServerSystemLinks" Association="Self.ProjectServerSystemLink_SyncSystem_SyncSystem_ProjectServerSystemLinks">
+						<End Role="ProjectServerSystemLink" EntitySet="ProjectServerSystemLink"/>
+						<End Role="SyncSystem" EntitySet="SyncSystem"/>
+					</AssociationSet>
+					<AssociationSet Name="Staging_SyncSystem_SyncSystem_Stagings" Association="Self.Staging_SyncSystem_SyncSystem_Stagings">
+						<End Role="Staging" EntitySet="Staging"/>
+						<End Role="SyncSystem" EntitySet="SyncSystem"/>
+					</AssociationSet>
+					<AssociationSet Name="StagingFieldMappingValue_Staging_Staging_StagingFieldMappingValues" Association="Self.StagingFieldMappingValue_Staging_Staging_StagingFieldMappingValues">
+						<End Role="StagingFieldMappingValue" EntitySet="StagingFieldMappingValue"/>
+						<End Role="Staging" EntitySet="Staging"/>
+					</AssociationSet>
+					<AssociationSet Name="MasterHistoryFieldMappingValue_MasterHistory_MasterHistory_MasterHistoryFieldMappingValues" Association="Self.MasterHistoryFieldMappingValue_MasterHistory_MasterHistory_MasterHistoryFieldMappingValues">
+						<End Role="MasterHistoryFieldMappingValue" EntitySet="MasterHistoryFieldMappingValue"/>
+						<End Role="MasterHistory" EntitySet="MasterHistory"/>
+					</AssociationSet>
+					<AssociationSet Name="MasterFieldMappingValue_Master_Master_MasterFieldMappingValues" Association="Self.MasterFieldMappingValue_Master_Master_MasterFieldMappingValues">
+						<End Role="MasterFieldMappingValue" EntitySet="MasterFieldMappingValue"/>
+						<End Role="Master" EntitySet="Master"/>
+					</AssociationSet>
+	<!-- __LLBLGENPRO_USER_CODE_REGION_START CSDLEntityContainerCustomCode -->
+	<!-- __LLBLGENPRO_USER_CODE_REGION_END -->
+				</EntityContainer>
+				<EntityType Name="Master">
+					<Key>
+						<PropertyRef Name="MasterId"/>
+					</Key>
+					<Property Name="Assignee"  Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+					<Property Name="DateFinish"  Type="DateTime" />
+					<Property Name="DateFinishActual"  Type="DateTime" />
+					<Property Name="DateRelease"  Type="DateTime" />
+					<Property Name="DateStart"  Type="DateTime" />
+					<Property Name="DateStartActual"  Type="DateTime" />
+					<Property Name="IsSubTask" Nullable="false"  Type="Boolean" />
+					<Property Name="IssueActualWork"  Type="Int32" />
+					<Property Name="IssueId"  Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+					<Property Name="IssueKey"  Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+					<Property Name="IssueName"  Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+					<Property Name="IssueStatus"  Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+					<Property Name="IssueTypeId"  Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+					<Property Name="IssueTypeName"  Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+					<Property Name="MasterId" Nullable="false"  Type="Int32" />
+					<Property Name="OriginalEstimate"  Type="Int32" />
+					<Property Name="ParentEpicId"  Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+					<Property Name="ParentEpicKey"  Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+					<Property Name="ParentIssueId"  Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+					<Property Name="ParentIssueKey"  Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+					<Property Name="ParentSprintId"  Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+					<Property Name="ParentSprintName"  Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+					<Property Name="ParentVersionId"  Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+					<Property Name="ParentVersionName"  Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+					<Property Name="ParentVersionReleased"  Type="Boolean" />
+					<Property Name="ProjectId"  Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+					<Property Name="ProjectKey"  Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+					<Property Name="ProjectName"  Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+					<Property Name="RecordDateCreated" Nullable="false"  Type="DateTime" />
+					<Property Name="RecordDateUpdated" Nullable="false"  Type="DateTime" />
+					<Property Name="SystemId" Nullable="false"  Type="Int32" />
+					<NavigationProperty Name="MasterFieldMappingValues" Relationship="Self.MasterFieldMappingValue_Master_Master_MasterFieldMappingValues" FromRole="Master" ToRole="MasterFieldMappingValue" />
+					<NavigationProperty Name="SyncSystem" Relationship="Self.Master_SyncSystem_SyncSystem_Masters" FromRole="Master" ToRole="SyncSystem" />
+				</EntityType>
+				<EntityType Name="MasterFieldMappingValue">
+					<Key>
+						<PropertyRef Name="MasterFieldMappingValueId"/>
+					</Key>
+					<Property Name="MasterFieldMappingValueId" Nullable="false"  Type="Int32" />
+					<Property Name="MasterId" Nullable="false"  Type="Int32" />
+					<Property Name="SyncSystemFieldMappingId" Nullable="false"  Type="Int32" />
+					<Property Name="Value"  Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+					<NavigationProperty Name="Master" Relationship="Self.MasterFieldMappingValue_Master_Master_MasterFieldMappingValues" FromRole="MasterFieldMappingValue" ToRole="Master" />
+					<NavigationProperty Name="SyncSystemFieldMapping" Relationship="Self.MasterFieldMappingValue_SyncSystemFieldMapping_SyncSystemFieldMapping_MasterFieldMappingValues" FromRole="MasterFieldMappingValue" ToRole="SyncSystemFieldMapping" />
+				</EntityType>
+				<EntityType Name="MasterHistory">
+					<Key>
+						<PropertyRef Name="MasterHistoryId"/>
+					</Key>
+					<Property Name="Assignee"  Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+					<Property Name="DateFinish"  Type="DateTime" />
+					<Property Name="DateFinishActual"  Type="DateTime" />
+					<Property Name="DateRelease"  Type="DateTime" />
+					<Property Name="DateStart"  Type="DateTime" />
+					<Property Name="DateStartActual"  Type="DateTime" />
+					<Property Name="IsSubTask" Nullable="false"  Type="Boolean" />
+					<Property Name="IssueActualWork"  Type="Int32" />
+					<Property Name="IssueId"  Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+					<Property Name="IssueKey"  Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+					<Property Name="IssueName"  Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+					<Property Name="IssueStatus"  Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+					<Property Name="IssueTypeId"  Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+					<Property Name="IssueTypeName"  Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+					<Property Name="MasterHistoryId" Nullable="false"  Type="Int32" />
+					<Property Name="OriginalEstimate"  Type="Int32" />
+					<Property Name="ParentEpicId"  Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+					<Property Name="ParentEpicKey"  Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+					<Property Name="ParentIssueId"  Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+					<Property Name="ParentIssueKey"  Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+					<Property Name="ParentSprintId"  Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+					<Property Name="ParentSprintName"  Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+					<Property Name="ParentVersionId"  Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+					<Property Name="ParentVersionName"  Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+					<Property Name="ParentVersionReleased"  Type="Boolean" />
+					<Property Name="ProjectId"  Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+					<Property Name="ProjectKey"  Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+					<Property Name="ProjectName"  Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+					<Property Name="RecordDateCreated" Nullable="false"  Type="DateTime" />
+					<Property Name="RecordDateUpdated" Nullable="false"  Type="DateTime" />
+					<Property Name="SystemId" Nullable="false"  Type="Int32" />
+					<NavigationProperty Name="MasterHistoryFieldMappingValues" Relationship="Self.MasterHistoryFieldMappingValue_MasterHistory_MasterHistory_MasterHistoryFieldMappingValues" FromRole="MasterHistory" ToRole="MasterHistoryFieldMappingValue" />
+					<NavigationProperty Name="SyncSystem" Relationship="Self.MasterHistory_SyncSystem_SyncSystem_MasterHistories" FromRole="MasterHistory" ToRole="SyncSystem" />
+				</EntityType>
+				<EntityType Name="MasterHistoryFieldMappingValue">
+					<Key>
+						<PropertyRef Name="MasterHistoryFieldMappingValueId"/>
+					</Key>
+					<Property Name="MasterHistoryFieldMappingValueId" Nullable="false"  Type="Int32" />
+					<Property Name="MasterHistoryId" Nullable="false"  Type="Int32" />
+					<Property Name="SyncSystemFieldMappingId" Nullable="false"  Type="Int32" />
+					<Property Name="Value"  Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+					<NavigationProperty Name="MasterHistory" Relationship="Self.MasterHistoryFieldMappingValue_MasterHistory_MasterHistory_MasterHistoryFieldMappingValues" FromRole="MasterHistoryFieldMappingValue" ToRole="MasterHistory" />
+					<NavigationProperty Name="SyncSystemFieldMapping" Relationship="Self.MasterHistoryFieldMappingValue_SyncSystemFieldMapping_SyncSystemFieldMapping_MasterHistoryFieldMappingValues" FromRole="MasterHistoryFieldMappingValue" ToRole="SyncSystemFieldMapping" />
+				</EntityType>
+				<EntityType Name="MasterWorklog">
+					<Key>
+						<PropertyRef Name="MasterWorklogId"/>
+					</Key>
+					<Property Name="AuthorEmailAddress"  Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+					<Property Name="AuthorKey"  Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+					<Property Name="AuthorName"  Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+					<Property Name="Comment"  Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+					<Property Name="DateCreated"  Type="DateTime" />
+					<Property Name="DateStarted"  Type="DateTime" />
+					<Property Name="DateUpdated"  Type="DateTime" />
+					<Property Name="IssueId"  Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+					<Property Name="MasterWorklogId" Nullable="false"  Type="Int32" />
+					<Property Name="RecordDateCreated" Nullable="false"  Type="DateTime" />
+					<Property Name="RecordDateUpdated" Nullable="false"  Type="DateTime" />
+					<Property Name="RecordState" Nullable="false"  Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+					<Property Name="SystemId" Nullable="false"  Type="Int32" />
+					<Property Name="TimeSpentSeconds"  Type="Int64" />
+					<Property Name="WebHookEvent" Nullable="false"  Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+					<Property Name="WorkLogId"  Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+					<NavigationProperty Name="SyncSystem" Relationship="Self.MasterWorklog_SyncSystem_SyncSystem_MasterWorklogs" FromRole="MasterWorklog" ToRole="SyncSystem" />
+				</EntityType>
+				<EntityType Name="ProjectServerSystemLink">
+					<Key>
+						<PropertyRef Name="ProjectServerSystemLinkId"/>
+					</Key>
+					<Property Name="DateCreated" Nullable="false"  Type="DateTime" />
+					<Property Name="EpicId"  Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+					<Property Name="EpicKey"  Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+					<Property Name="EpicName"  Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+					<Property Name="ExecuteStatus"  Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+					<Property Name="IsHomeProject" Nullable="false"  Type="Boolean" />
+					<Property Name="LastExecuted"  Type="DateTime" />
+					<Property Name="ProjectId"  Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+					<Property Name="ProjectKey"  Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+					<Property Name="ProjectName"  Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+					<Property Name="ProjectServerSystemLinkId" Nullable="false"  Type="Int32" />
+					<Property Name="ProjectUid" Nullable="false"  Type="Guid" />
+					<Property Name="SystemId" Nullable="false"  Type="Int32" />
+					<NavigationProperty Name="SyncSystem" Relationship="Self.ProjectServerSystemLink_SyncSystem_SyncSystem_ProjectServerSystemLinks" FromRole="ProjectServerSystemLink" ToRole="SyncSystem" />
+				</EntityType>
+				<EntityType Name="Staging">
+					<Key>
+						<PropertyRef Name="StagingId"/>
+					</Key>
+					<Property Name="Assignee"  Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+					<Property Name="ChangedFields"  Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+					<Property Name="DateFinish"  Type="DateTime" />
+					<Property Name="DateFinishActual"  Type="DateTime" />
+					<Property Name="DateRelease"  Type="DateTime" />
+					<Property Name="DateStart"  Type="DateTime" />
+					<Property Name="DateStartActual"  Type="DateTime" />
+					<Property Name="IsSubTask" Nullable="false"  Type="Boolean" />
+					<Property Name="IssueActualWork"  Type="Int32" />
+					<Property Name="IssueId"  Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+					<Property Name="IssueKey"  Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+					<Property Name="IssueName"  Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+					<Property Name="IssueStatus"  Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+					<Property Name="IssueTypeId"  Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+					<Property Name="IssueTypeName"  Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+					<Property Name="OriginalEstimate"  Type="Int32" />
+					<Property Name="ParentEpicId"  Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+					<Property Name="ParentEpicKey"  Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+					<Property Name="ParentIssueId"  Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+					<Property Name="ParentIssueKey"  Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+					<Property Name="ParentSprintId"  Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+					<Property Name="ParentSprintName"  Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+					<Property Name="ParentVersionId"  Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+					<Property Name="ParentVersionName"  Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+					<Property Name="ParentVersionReleased"  Type="Boolean" />
+					<Property Name="ProjectId"  Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+					<Property Name="ProjectKey"  Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+					<Property Name="ProjectName"  Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+					<Property Name="RecordDateCreated" Nullable="false"  Type="DateTime" />
+					<Property Name="RecordDateUpdated" Nullable="false"  Type="DateTime" />
+					<Property Name="RecordState" Nullable="false"  Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+					<Property Name="StagingId" Nullable="false"  Type="Int32" />
+					<Property Name="SystemId" Nullable="false"  Type="Int32" />
+					<Property Name="WebHookEvent" Nullable="false"  Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+					<NavigationProperty Name="StagingFieldMappingValues" Relationship="Self.StagingFieldMappingValue_Staging_Staging_StagingFieldMappingValues" FromRole="Staging" ToRole="StagingFieldMappingValue" />
+					<NavigationProperty Name="SyncSystem" Relationship="Self.Staging_SyncSystem_SyncSystem_Stagings" FromRole="Staging" ToRole="SyncSystem" />
+				</EntityType>
+				<EntityType Name="StagingFieldMappingValue">
+					<Key>
+						<PropertyRef Name="StagingFieldMappingValueId"/>
+					</Key>
+					<Property Name="StagingFieldMappingValueId" Nullable="false"  Type="Int32" />
+					<Property Name="StagingId" Nullable="false"  Type="Int32" />
+					<Property Name="SyncSystemFieldMappingId" Nullable="false"  Type="Int32" />
+					<Property Name="Value"  Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+					<NavigationProperty Name="Staging" Relationship="Self.StagingFieldMappingValue_Staging_Staging_StagingFieldMappingValues" FromRole="StagingFieldMappingValue" ToRole="Staging" />
+					<NavigationProperty Name="SyncSystemFieldMapping" Relationship="Self.StagingFieldMappingValue_SyncSystemFieldMapping_SyncSystemFieldMapping_StagingFieldMappingValues" FromRole="StagingFieldMappingValue" ToRole="SyncSystemFieldMapping" />
+				</EntityType>
+				<EntityType Name="SyncSystem">
+					<Key>
+						<PropertyRef Name="SystemId"/>
+					</Key>
+					<Property Name="DefaultParentTaskName" Nullable="false"  Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+					<Property Name="SystemApiUrl" Nullable="false"  Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+					<Property Name="SystemId" Nullable="false"  Type="Int32" />
+					<Property Name="SystemLogin" Nullable="false"  Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+					<Property Name="SystemName" Nullable="false"  Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+					<Property Name="SystemPassword" Nullable="false"  Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+					<Property Name="SystemTypeId" Nullable="false"  Type="Int32" />
+					<Property Name="SystemUrl" Nullable="false"  Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+					<NavigationProperty Name="Masters" Relationship="Self.Master_SyncSystem_SyncSystem_Masters" FromRole="SyncSystem" ToRole="Master" />
+					<NavigationProperty Name="MasterHistories" Relationship="Self.MasterHistory_SyncSystem_SyncSystem_MasterHistories" FromRole="SyncSystem" ToRole="MasterHistory" />
+					<NavigationProperty Name="MasterWorklogs" Relationship="Self.MasterWorklog_SyncSystem_SyncSystem_MasterWorklogs" FromRole="SyncSystem" ToRole="MasterWorklog" />
+					<NavigationProperty Name="ProjectServerSystemLinks" Relationship="Self.ProjectServerSystemLink_SyncSystem_SyncSystem_ProjectServerSystemLinks" FromRole="SyncSystem" ToRole="ProjectServerSystemLink" />
+					<NavigationProperty Name="Stagings" Relationship="Self.Staging_SyncSystem_SyncSystem_Stagings" FromRole="SyncSystem" ToRole="Staging" />
+					<NavigationProperty Name="SyncSystemFieldMappings" Relationship="Self.SyncSystemFieldMapping_SyncSystem_SyncSystem_SyncSystemFieldMappings" FromRole="SyncSystem" ToRole="SyncSystemFieldMapping" />
+					<NavigationProperty Name="SyncSystemSettingValues" Relationship="Self.SyncSystemSettingValue_SyncSystem_SyncSystem_SyncSystemSettingValues" FromRole="SyncSystem" ToRole="SyncSystemSettingValue" />
+					<NavigationProperty Name="SyncSystemType" Relationship="Self.SyncSystem_SyncSystemType_SyncSystemType_SyncSystems" FromRole="SyncSystem" ToRole="SyncSystemType" />
+					<NavigationProperty Name="WebHookEntries" Relationship="Self.WebHookEntry_SyncSystem_SyncSystem_WebHookEntries" FromRole="SyncSystem" ToRole="WebHookEntry" />
+				</EntityType>
+				<EntityType Name="SyncSystemFieldMapping">
+					<Key>
+						<PropertyRef Name="SyncSystemFieldMappingId"/>
+					</Key>
+					<Property Name="EpmFieldName" Nullable="false"  Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+					<Property Name="FieldType" Nullable="false"  Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+					<Property Name="IsIdWithValue" Nullable="false"  Type="Boolean" />
+					<Property Name="IsMultiSelect" Nullable="false"  Type="Boolean" />
+					<Property Name="StagingFieldName"  Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+					<Property Name="SyncSystemFieldMappingId" Nullable="false"  Type="Int32" />
+					<Property Name="SystemFieldName"  Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+					<Property Name="SystemId" Nullable="false"  Type="Int32" />
+					<NavigationProperty Name="MasterFieldMappingValues" Relationship="Self.MasterFieldMappingValue_SyncSystemFieldMapping_SyncSystemFieldMapping_MasterFieldMappingValues" FromRole="SyncSystemFieldMapping" ToRole="MasterFieldMappingValue" />
+					<NavigationProperty Name="MasterHistoryFieldMappingValues" Relationship="Self.MasterHistoryFieldMappingValue_SyncSystemFieldMapping_SyncSystemFieldMapping_MasterHistoryFieldMappingValues" FromRole="SyncSystemFieldMapping" ToRole="MasterHistoryFieldMappingValue" />
+					<NavigationProperty Name="StagingFieldMappingValues" Relationship="Self.StagingFieldMappingValue_SyncSystemFieldMapping_SyncSystemFieldMapping_StagingFieldMappingValues" FromRole="SyncSystemFieldMapping" ToRole="StagingFieldMappingValue" />
+					<NavigationProperty Name="SyncSystem" Relationship="Self.SyncSystemFieldMapping_SyncSystem_SyncSystem_SyncSystemFieldMappings" FromRole="SyncSystemFieldMapping" ToRole="SyncSystem" />
+				</EntityType>
+				<EntityType Name="SyncSystemSetting">
+					<Key>
+						<PropertyRef Name="SettingId"/>
+					</Key>
+					<Property Name="Setting" Nullable="false"  Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+					<Property Name="SettingId" Nullable="false"  Type="Int32" />
+					<NavigationProperty Name="SyncSystemSettingValues" Relationship="Self.SyncSystemSettingValue_SyncSystemSetting_SyncSystemSetting_SyncSystemSettingValues" FromRole="SyncSystemSetting" ToRole="SyncSystemSettingValue" />
+				</EntityType>
+				<EntityType Name="SyncSystemSettingValue">
+					<Key>
+						<PropertyRef Name="SyncSystemSettingId"/>
+					</Key>
+					<Property Name="SettingId" Nullable="false"  Type="Int32" />
+					<Property Name="SettingValue" Nullable="false"  Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+					<Property Name="SyncSystemSettingId" Nullable="false"  Type="Int32" />
+					<Property Name="SystemId" Nullable="false"  Type="Int32" />
+					<NavigationProperty Name="SyncSystem" Relationship="Self.SyncSystemSettingValue_SyncSystem_SyncSystem_SyncSystemSettingValues" FromRole="SyncSystemSettingValue" ToRole="SyncSystem" />
+					<NavigationProperty Name="SyncSystemSetting" Relationship="Self.SyncSystemSettingValue_SyncSystemSetting_SyncSystemSetting_SyncSystemSettingValues" FromRole="SyncSystemSettingValue" ToRole="SyncSystemSetting" />
+				</EntityType>
+				<EntityType Name="SyncSystemType">
+					<Key>
+						<PropertyRef Name="SystemTypeId"/>
+					</Key>
+					<Property Name="SystemTypeId" Nullable="false"  Type="Int32" />
+					<Property Name="SystemTypeName" Nullable="false"  Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+					<NavigationProperty Name="SyncSystems" Relationship="Self.SyncSystem_SyncSystemType_SyncSystemType_SyncSystems" FromRole="SyncSystemType" ToRole="SyncSystem" />
+				</EntityType>
+				<EntityType Name="VProjectServerSystemLink">
+					<Key>
+						<PropertyRef Name="RowNumber"/>
+					</Key>
+					<Property Name="DateCreated" Nullable="false"  Type="DateTime" />
+					<Property Name="EpicId"  Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+					<Property Name="EpicKey"  Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+					<Property Name="EpicName"  Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+					<Property Name="ExecuteStatus"  Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+					<Property Name="IsHomeProject" Nullable="false"  Type="Boolean" />
+					<Property Name="LastExecuted"  Type="DateTime" />
+					<Property Name="ProjectId"  Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+					<Property Name="ProjectKey"  Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+					<Property Name="ProjectName"  Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+					<Property Name="ProjectServerSystemLinkId" Nullable="false"  Type="Int32" />
+					<Property Name="ProjectUid" Nullable="false"  Type="Guid" />
+					<Property Name="RowNumber" Nullable="false"  Type="Int32" />
+					<Property Name="SystemId" Nullable="false"  Type="Int32" />
+					<Property Name="SystemName"  Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+				</EntityType>
+				<EntityType Name="VStagingFieldMappingValue">
+					<Key>
+						<PropertyRef Name="RowNumber"/>
+					</Key>
+					<Property Name="EpmFieldName" Nullable="false"  Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+					<Property Name="FieldType" Nullable="false"  Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+					<Property Name="RowNumber" Nullable="false"  Type="Int32" />
+					<Property Name="StagingFieldMappingValueId"  Type="Int32" />
+					<Property Name="StagingFieldName"  Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+					<Property Name="StagingId"  Type="Int32" />
+					<Property Name="SyncSystemFieldMappingId"  Type="Int32" />
+					<Property Name="SystemFieldName"  Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+					<Property Name="SystemId" Nullable="false"  Type="Int32" />
+					<Property Name="Value"  Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+				</EntityType>
+				<EntityType Name="WebHookEntry">
+					<Key>
+						<PropertyRef Name="WebHookEntryId"/>
+					</Key>
+					<Property Name="DateCreated" Nullable="false"  Type="DateTime" />
+					<Property Name="JsonRequest" Nullable="false"  Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+					<Property Name="SystemId" Nullable="false"  Type="Int32" />
+					<Property Name="WebHookEntryId" Nullable="false"  Type="Int32" />
+					<NavigationProperty Name="SyncSystem" Relationship="Self.WebHookEntry_SyncSystem_SyncSystem_WebHookEntries" FromRole="WebHookEntry" ToRole="SyncSystem" />
+				</EntityType>
+				<Association Name="WebHookEntry_SyncSystem_SyncSystem_WebHookEntries">
+					<End Role="WebHookEntry" Type="Self.WebHookEntry" Multiplicity="*" />
+					<End Role="SyncSystem" Type="Self.SyncSystem" Multiplicity="1" />
+					<ReferentialConstraint>
+						<Principal Role="SyncSystem">
+							<PropertyRef Name="SystemId" />
+						</Principal>
+						<Dependent Role="WebHookEntry">
+							<PropertyRef Name="SystemId" />
+						</Dependent>
+					</ReferentialConstraint>	
+				</Association>
+				<Association Name="SyncSystem_SyncSystemType_SyncSystemType_SyncSystems">
+					<End Role="SyncSystem" Type="Self.SyncSystem" Multiplicity="*" />
+					<End Role="SyncSystemType" Type="Self.SyncSystemType" Multiplicity="1" />
+					<ReferentialConstraint>
+						<Principal Role="SyncSystemType">
+							<PropertyRef Name="SystemTypeId" />
+						</Principal>
+						<Dependent Role="SyncSystem">
+							<PropertyRef Name="SystemTypeId" />
+						</Dependent>
+					</ReferentialConstraint>	
+				</Association>
+				<Association Name="SyncSystemSettingValue_SyncSystem_SyncSystem_SyncSystemSettingValues">
+					<End Role="SyncSystemSettingValue" Type="Self.SyncSystemSettingValue" Multiplicity="*" />
+					<End Role="SyncSystem" Type="Self.SyncSystem" Multiplicity="1" />
+					<ReferentialConstraint>
+						<Principal Role="SyncSystem">
+							<PropertyRef Name="SystemId" />
+						</Principal>
+						<Dependent Role="SyncSystemSettingValue">
+							<PropertyRef Name="SystemId" />
+						</Dependent>
+					</ReferentialConstraint>	
+				</Association>
+				<Association Name="SyncSystemSettingValue_SyncSystemSetting_SyncSystemSetting_SyncSystemSettingValues">
+					<End Role="SyncSystemSettingValue" Type="Self.SyncSystemSettingValue" Multiplicity="*" />
+					<End Role="SyncSystemSetting" Type="Self.SyncSystemSetting" Multiplicity="1" />
+					<ReferentialConstraint>
+						<Principal Role="SyncSystemSetting">
+							<PropertyRef Name="SettingId" />
+						</Principal>
+						<Dependent Role="SyncSystemSettingValue">
+							<PropertyRef Name="SettingId" />
+						</Dependent>
+					</ReferentialConstraint>	
+				</Association>
+				<Association Name="SyncSystemFieldMapping_SyncSystem_SyncSystem_SyncSystemFieldMappings">
+					<End Role="SyncSystemFieldMapping" Type="Self.SyncSystemFieldMapping" Multiplicity="*" />
+					<End Role="SyncSystem" Type="Self.SyncSystem" Multiplicity="1" />
+					<ReferentialConstraint>
+						<Principal Role="SyncSystem">
+							<PropertyRef Name="SystemId" />
+						</Principal>
+						<Dependent Role="SyncSystemFieldMapping">
+							<PropertyRef Name="SystemId" />
+						</Dependent>
+					</ReferentialConstraint>	
+				</Association>
+				<Association Name="MasterFieldMappingValue_SyncSystemFieldMapping_SyncSystemFieldMapping_MasterFieldMappingValues">
+					<End Role="MasterFieldMappingValue" Type="Self.MasterFieldMappingValue" Multiplicity="*" />
+					<End Role="SyncSystemFieldMapping" Type="Self.SyncSystemFieldMapping" Multiplicity="1" />
+					<ReferentialConstraint>
+						<Principal Role="SyncSystemFieldMapping">
+							<PropertyRef Name="SyncSystemFieldMappingId" />
+						</Principal>
+						<Dependent Role="MasterFieldMappingValue">
+							<PropertyRef Name="SyncSystemFieldMappingId" />
+						</Dependent>
+					</ReferentialConstraint>	
+				</Association>
+				<Association Name="MasterHistoryFieldMappingValue_SyncSystemFieldMapping_SyncSystemFieldMapping_MasterHistoryFieldMappingValues">
+					<End Role="MasterHistoryFieldMappingValue" Type="Self.MasterHistoryFieldMappingValue" Multiplicity="*" />
+					<End Role="SyncSystemFieldMapping" Type="Self.SyncSystemFieldMapping" Multiplicity="1" />
+					<ReferentialConstraint>
+						<Principal Role="SyncSystemFieldMapping">
+							<PropertyRef Name="SyncSystemFieldMappingId" />
+						</Principal>
+						<Dependent Role="MasterHistoryFieldMappingValue">
+							<PropertyRef Name="SyncSystemFieldMappingId" />
+						</Dependent>
+					</ReferentialConstraint>	
+				</Association>
+				<Association Name="StagingFieldMappingValue_SyncSystemFieldMapping_SyncSystemFieldMapping_StagingFieldMappingValues">
+					<End Role="StagingFieldMappingValue" Type="Self.StagingFieldMappingValue" Multiplicity="*" />
+					<End Role="SyncSystemFieldMapping" Type="Self.SyncSystemFieldMapping" Multiplicity="1" />
+					<ReferentialConstraint>
+						<Principal Role="SyncSystemFieldMapping">
+							<PropertyRef Name="SyncSystemFieldMappingId" />
+						</Principal>
+						<Dependent Role="StagingFieldMappingValue">
+							<PropertyRef Name="SyncSystemFieldMappingId" />
+						</Dependent>
+					</ReferentialConstraint>	
+				</Association>
+				<Association Name="Master_SyncSystem_SyncSystem_Masters">
+					<End Role="Master" Type="Self.Master" Multiplicity="*" />
+					<End Role="SyncSystem" Type="Self.SyncSystem" Multiplicity="1" />
+					<ReferentialConstraint>
+						<Principal Role="SyncSystem">
+							<PropertyRef Name="SystemId" />
+						</Principal>
+						<Dependent Role="Master">
+							<PropertyRef Name="SystemId" />
+						</Dependent>
+					</ReferentialConstraint>	
+				</Association>
+				<Association Name="MasterHistory_SyncSystem_SyncSystem_MasterHistories">
+					<End Role="MasterHistory" Type="Self.MasterHistory" Multiplicity="*" />
+					<End Role="SyncSystem" Type="Self.SyncSystem" Multiplicity="1" />
+					<ReferentialConstraint>
+						<Principal Role="SyncSystem">
+							<PropertyRef Name="SystemId" />
+						</Principal>
+						<Dependent Role="MasterHistory">
+							<PropertyRef Name="SystemId" />
+						</Dependent>
+					</ReferentialConstraint>	
+				</Association>
+				<Association Name="MasterWorklog_SyncSystem_SyncSystem_MasterWorklogs">
+					<End Role="MasterWorklog" Type="Self.MasterWorklog" Multiplicity="*" />
+					<End Role="SyncSystem" Type="Self.SyncSystem" Multiplicity="1" />
+					<ReferentialConstraint>
+						<Principal Role="SyncSystem">
+							<PropertyRef Name="SystemId" />
+						</Principal>
+						<Dependent Role="MasterWorklog">
+							<PropertyRef Name="SystemId" />
+						</Dependent>
+					</ReferentialConstraint>	
+				</Association>
+				<Association Name="ProjectServerSystemLink_SyncSystem_SyncSystem_ProjectServerSystemLinks">
+					<End Role="ProjectServerSystemLink" Type="Self.ProjectServerSystemLink" Multiplicity="*" />
+					<End Role="SyncSystem" Type="Self.SyncSystem" Multiplicity="1" />
+					<ReferentialConstraint>
+						<Principal Role="SyncSystem">
+							<PropertyRef Name="SystemId" />
+						</Principal>
+						<Dependent Role="ProjectServerSystemLink">
+							<PropertyRef Name="SystemId" />
+						</Dependent>
+					</ReferentialConstraint>	
+				</Association>
+				<Association Name="Staging_SyncSystem_SyncSystem_Stagings">
+					<End Role="Staging" Type="Self.Staging" Multiplicity="*" />
+					<End Role="SyncSystem" Type="Self.SyncSystem" Multiplicity="1" />
+					<ReferentialConstraint>
+						<Principal Role="SyncSystem">
+							<PropertyRef Name="SystemId" />
+						</Principal>
+						<Dependent Role="Staging">
+							<PropertyRef Name="SystemId" />
+						</Dependent>
+					</ReferentialConstraint>	
+				</Association>
+				<Association Name="StagingFieldMappingValue_Staging_Staging_StagingFieldMappingValues">
+					<End Role="StagingFieldMappingValue" Type="Self.StagingFieldMappingValue" Multiplicity="*" />
+					<End Role="Staging" Type="Self.Staging" Multiplicity="1" />
+					<ReferentialConstraint>
+						<Principal Role="Staging">
+							<PropertyRef Name="StagingId" />
+						</Principal>
+						<Dependent Role="StagingFieldMappingValue">
+							<PropertyRef Name="StagingId" />
+						</Dependent>
+					</ReferentialConstraint>	
+				</Association>
+				<Association Name="MasterHistoryFieldMappingValue_MasterHistory_MasterHistory_MasterHistoryFieldMappingValues">
+					<End Role="MasterHistoryFieldMappingValue" Type="Self.MasterHistoryFieldMappingValue" Multiplicity="*" />
+					<End Role="MasterHistory" Type="Self.MasterHistory" Multiplicity="1" />
+					<ReferentialConstraint>
+						<Principal Role="MasterHistory">
+							<PropertyRef Name="MasterHistoryId" />
+						</Principal>
+						<Dependent Role="MasterHistoryFieldMappingValue">
+							<PropertyRef Name="MasterHistoryId" />
+						</Dependent>
+					</ReferentialConstraint>	
+				</Association>
+				<Association Name="MasterFieldMappingValue_Master_Master_MasterFieldMappingValues">
+					<End Role="MasterFieldMappingValue" Type="Self.MasterFieldMappingValue" Multiplicity="*" />
+					<End Role="Master" Type="Self.Master" Multiplicity="1" />
+					<ReferentialConstraint>
+						<Principal Role="Master">
+							<PropertyRef Name="MasterId" />
+						</Principal>
+						<Dependent Role="MasterFieldMappingValue">
+							<PropertyRef Name="MasterId" />
+						</Dependent>
+					</ReferentialConstraint>	
+				</Association>
+	<!-- __LLBLGENPRO_USER_CODE_REGION_START CSDLCustomCode -->
+	<!-- __LLBLGENPRO_USER_CODE_REGION_END -->
+			</Schema>
+		</edmx:ConceptualModels>
+		<edmx:Mappings>
+			<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+				<EntityContainerMapping StorageEntityContainer="ProjectOnlineSystemConnectorDataViewsSQLServerContainer"
+										CdmEntityContainer="ProjectOnlineSystemConnectorDataViewsEntities">
+					<EntitySetMapping Name="Master">
+						<EntityTypeMapping TypeName="IsTypeOf(ProjectOnlineSystemConnectorDataViewsModel.Master)">
+							<MappingFragment StoreEntitySet="Master">
+								<ScalarProperty Name="MasterId" ColumnName="MasterId" />
+								<ScalarProperty Name="SystemId" ColumnName="SystemId" />
+								<ScalarProperty Name="RecordDateCreated" ColumnName="RecordDateCreated" />
+								<ScalarProperty Name="RecordDateUpdated" ColumnName="RecordDateUpdated" />
+								<ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+								<ScalarProperty Name="ProjectKey" ColumnName="ProjectKey" />
+								<ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+								<ScalarProperty Name="IssueId" ColumnName="IssueId" />
+								<ScalarProperty Name="IssueKey" ColumnName="IssueKey" />
+								<ScalarProperty Name="IssueName" ColumnName="IssueName" />
+								<ScalarProperty Name="IssueTypeId" ColumnName="IssueTypeId" />
+								<ScalarProperty Name="IssueTypeName" ColumnName="IssueTypeName" />
+								<ScalarProperty Name="IsSubTask" ColumnName="IsSubTask" />
+								<ScalarProperty Name="ParentEpicId" ColumnName="ParentEpicId" />
+								<ScalarProperty Name="ParentEpicKey" ColumnName="ParentEpicKey" />
+								<ScalarProperty Name="ParentSprintId" ColumnName="ParentSprintId" />
+								<ScalarProperty Name="ParentSprintName" ColumnName="ParentSprintName" />
+								<ScalarProperty Name="ParentVersionId" ColumnName="ParentVersionId" />
+								<ScalarProperty Name="ParentVersionName" ColumnName="ParentVersionName" />
+								<ScalarProperty Name="ParentVersionReleased" ColumnName="ParentVersionReleased" />
+								<ScalarProperty Name="ParentIssueId" ColumnName="ParentIssueId" />
+								<ScalarProperty Name="ParentIssueKey" ColumnName="ParentIssueKey" />
+								<ScalarProperty Name="DateStart" ColumnName="DateStart" />
+								<ScalarProperty Name="DateFinish" ColumnName="DateFinish" />
+								<ScalarProperty Name="Assignee" ColumnName="Assignee" />
+								<ScalarProperty Name="IssueStatus" ColumnName="IssueStatus" />
+								<ScalarProperty Name="DateRelease" ColumnName="DateRelease" />
+								<ScalarProperty Name="DateStartActual" ColumnName="DateStartActual" />
+								<ScalarProperty Name="DateFinishActual" ColumnName="DateFinishActual" />
+								<ScalarProperty Name="IssueActualWork" ColumnName="IssueActualWork" />
+								<ScalarProperty Name="OriginalEstimate" ColumnName="OriginalEstimate" />
+							</MappingFragment>
+						</EntityTypeMapping>
+					</EntitySetMapping>
+					<EntitySetMapping Name="MasterFieldMappingValue">
+						<EntityTypeMapping TypeName="IsTypeOf(ProjectOnlineSystemConnectorDataViewsModel.MasterFieldMappingValue)">
+							<MappingFragment StoreEntitySet="MasterFieldMappingValue">
+								<ScalarProperty Name="MasterFieldMappingValueId" ColumnName="MasterFieldMappingValueId" />
+								<ScalarProperty Name="MasterId" ColumnName="MasterId" />
+								<ScalarProperty Name="SyncSystemFieldMappingId" ColumnName="SyncSystemFieldMappingId" />
+								<ScalarProperty Name="Value" ColumnName="Value" />
+							</MappingFragment>
+						</EntityTypeMapping>
+					</EntitySetMapping>
+					<EntitySetMapping Name="MasterHistory">
+						<EntityTypeMapping TypeName="IsTypeOf(ProjectOnlineSystemConnectorDataViewsModel.MasterHistory)">
+							<MappingFragment StoreEntitySet="MasterHistory">
+								<ScalarProperty Name="MasterHistoryId" ColumnName="MasterHistoryId" />
+								<ScalarProperty Name="SystemId" ColumnName="SystemId" />
+								<ScalarProperty Name="RecordDateCreated" ColumnName="RecordDateCreated" />
+								<ScalarProperty Name="RecordDateUpdated" ColumnName="RecordDateUpdated" />
+								<ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+								<ScalarProperty Name="ProjectKey" ColumnName="ProjectKey" />
+								<ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+								<ScalarProperty Name="IssueId" ColumnName="IssueId" />
+								<ScalarProperty Name="IssueKey" ColumnName="IssueKey" />
+								<ScalarProperty Name="IssueName" ColumnName="IssueName" />
+								<ScalarProperty Name="IssueTypeId" ColumnName="IssueTypeId" />
+								<ScalarProperty Name="IssueTypeName" ColumnName="IssueTypeName" />
+								<ScalarProperty Name="IsSubTask" ColumnName="IsSubTask" />
+								<ScalarProperty Name="ParentEpicId" ColumnName="ParentEpicId" />
+								<ScalarProperty Name="ParentEpicKey" ColumnName="ParentEpicKey" />
+								<ScalarProperty Name="ParentSprintId" ColumnName="ParentSprintId" />
+								<ScalarProperty Name="ParentSprintName" ColumnName="ParentSprintName" />
+								<ScalarProperty Name="ParentVersionId" ColumnName="ParentVersionId" />
+								<ScalarProperty Name="ParentVersionName" ColumnName="ParentVersionName" />
+								<ScalarProperty Name="ParentVersionReleased" ColumnName="ParentVersionReleased" />
+								<ScalarProperty Name="ParentIssueId" ColumnName="ParentIssueId" />
+								<ScalarProperty Name="ParentIssueKey" ColumnName="ParentIssueKey" />
+								<ScalarProperty Name="DateStart" ColumnName="DateStart" />
+								<ScalarProperty Name="DateFinish" ColumnName="DateFinish" />
+								<ScalarProperty Name="Assignee" ColumnName="Assignee" />
+								<ScalarProperty Name="IssueStatus" ColumnName="IssueStatus" />
+								<ScalarProperty Name="DateRelease" ColumnName="DateRelease" />
+								<ScalarProperty Name="DateStartActual" ColumnName="DateStartActual" />
+								<ScalarProperty Name="DateFinishActual" ColumnName="DateFinishActual" />
+								<ScalarProperty Name="IssueActualWork" ColumnName="IssueActualWork" />
+								<ScalarProperty Name="OriginalEstimate" ColumnName="OriginalEstimate" />
+							</MappingFragment>
+						</EntityTypeMapping>
+					</EntitySetMapping>
+					<EntitySetMapping Name="MasterHistoryFieldMappingValue">
+						<EntityTypeMapping TypeName="IsTypeOf(ProjectOnlineSystemConnectorDataViewsModel.MasterHistoryFieldMappingValue)">
+							<MappingFragment StoreEntitySet="MasterHistoryFieldMappingValue">
+								<ScalarProperty Name="MasterHistoryFieldMappingValueId" ColumnName="MasterHistoryFieldMappingValueId" />
+								<ScalarProperty Name="MasterHistoryId" ColumnName="MasterHistoryId" />
+								<ScalarProperty Name="SyncSystemFieldMappingId" ColumnName="SyncSystemFieldMappingId" />
+								<ScalarProperty Name="Value" ColumnName="Value" />
+							</MappingFragment>
+						</EntityTypeMapping>
+					</EntitySetMapping>
+					<EntitySetMapping Name="MasterWorklog">
+						<EntityTypeMapping TypeName="IsTypeOf(ProjectOnlineSystemConnectorDataViewsModel.MasterWorklog)">
+							<MappingFragment StoreEntitySet="MasterWorklog">
+								<ScalarProperty Name="MasterWorklogId" ColumnName="MasterWorklogId" />
+								<ScalarProperty Name="SystemId" ColumnName="SystemId" />
+								<ScalarProperty Name="RecordDateCreated" ColumnName="RecordDateCreated" />
+								<ScalarProperty Name="RecordDateUpdated" ColumnName="RecordDateUpdated" />
+								<ScalarProperty Name="WebHookEvent" ColumnName="WebHookEvent" />
+								<ScalarProperty Name="RecordState" ColumnName="RecordState" />
+								<ScalarProperty Name="WorkLogId" ColumnName="WorkLogId" />
+								<ScalarProperty Name="IssueId" ColumnName="IssueId" />
+								<ScalarProperty Name="TimeSpentSeconds" ColumnName="TimeSpentSeconds" />
+								<ScalarProperty Name="DateStarted" ColumnName="DateStarted" />
+								<ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+								<ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+								<ScalarProperty Name="Comment" ColumnName="Comment" />
+								<ScalarProperty Name="AuthorEmailAddress" ColumnName="AuthorEmailAddress" />
+								<ScalarProperty Name="AuthorName" ColumnName="AuthorName" />
+								<ScalarProperty Name="AuthorKey" ColumnName="AuthorKey" />
+							</MappingFragment>
+						</EntityTypeMapping>
+					</EntitySetMapping>
+					<EntitySetMapping Name="ProjectServerSystemLink">
+						<EntityTypeMapping TypeName="IsTypeOf(ProjectOnlineSystemConnectorDataViewsModel.ProjectServerSystemLink)">
+							<MappingFragment StoreEntitySet="ProjectServerSystemLink">
+								<ScalarProperty Name="ProjectServerSystemLinkId" ColumnName="ProjectServerSystemLinkId" />
+								<ScalarProperty Name="ProjectUid" ColumnName="ProjectUid" />
+								<ScalarProperty Name="SystemId" ColumnName="SystemId" />
+								<ScalarProperty Name="ProjectKey" ColumnName="ProjectKey" />
+								<ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+								<ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+								<ScalarProperty Name="IsHomeProject" ColumnName="IsHomeProject" />
+								<ScalarProperty Name="EpicKey" ColumnName="EpicKey" />
+								<ScalarProperty Name="EpicName" ColumnName="EpicName" />
+								<ScalarProperty Name="EpicId" ColumnName="EpicId" />
+								<ScalarProperty Name="LastExecuted" ColumnName="LastExecuted" />
+								<ScalarProperty Name="ExecuteStatus" ColumnName="ExecuteStatus" />
+								<ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+							</MappingFragment>
+						</EntityTypeMapping>
+					</EntitySetMapping>
+					<EntitySetMapping Name="Staging">
+						<EntityTypeMapping TypeName="IsTypeOf(ProjectOnlineSystemConnectorDataViewsModel.Staging)">
+							<MappingFragment StoreEntitySet="Staging">
+								<ScalarProperty Name="StagingId" ColumnName="StagingId" />
+								<ScalarProperty Name="SystemId" ColumnName="SystemId" />
+								<ScalarProperty Name="RecordDateCreated" ColumnName="RecordDateCreated" />
+								<ScalarProperty Name="RecordDateUpdated" ColumnName="RecordDateUpdated" />
+								<ScalarProperty Name="WebHookEvent" ColumnName="WebHookEvent" />
+								<ScalarProperty Name="RecordState" ColumnName="RecordState" />
+								<ScalarProperty Name="ChangedFields" ColumnName="ChangedFields" />
+								<ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+								<ScalarProperty Name="ProjectKey" ColumnName="ProjectKey" />
+								<ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+								<ScalarProperty Name="IssueId" ColumnName="IssueId" />
+								<ScalarProperty Name="IssueKey" ColumnName="IssueKey" />
+								<ScalarProperty Name="IssueName" ColumnName="IssueName" />
+								<ScalarProperty Name="IssueTypeId" ColumnName="IssueTypeId" />
+								<ScalarProperty Name="IssueTypeName" ColumnName="IssueTypeName" />
+								<ScalarProperty Name="IsSubTask" ColumnName="IsSubTask" />
+								<ScalarProperty Name="ParentEpicId" ColumnName="ParentEpicId" />
+								<ScalarProperty Name="ParentEpicKey" ColumnName="ParentEpicKey" />
+								<ScalarProperty Name="ParentSprintId" ColumnName="ParentSprintId" />
+								<ScalarProperty Name="ParentSprintName" ColumnName="ParentSprintName" />
+								<ScalarProperty Name="ParentVersionId" ColumnName="ParentVersionId" />
+								<ScalarProperty Name="ParentVersionName" ColumnName="ParentVersionName" />
+								<ScalarProperty Name="ParentVersionReleased" ColumnName="ParentVersionReleased" />
+								<ScalarProperty Name="ParentIssueId" ColumnName="ParentIssueId" />
+								<ScalarProperty Name="ParentIssueKey" ColumnName="ParentIssueKey" />
+								<ScalarProperty Name="DateStart" ColumnName="DateStart" />
+								<ScalarProperty Name="DateFinish" ColumnName="DateFinish" />
+								<ScalarProperty Name="Assignee" ColumnName="Assignee" />
+								<ScalarProperty Name="IssueStatus" ColumnName="IssueStatus" />
+								<ScalarProperty Name="DateRelease" ColumnName="DateRelease" />
+								<ScalarProperty Name="DateStartActual" ColumnName="DateStartActual" />
+								<ScalarProperty Name="DateFinishActual" ColumnName="DateFinishActual" />
+								<ScalarProperty Name="IssueActualWork" ColumnName="IssueActualWork" />
+								<ScalarProperty Name="OriginalEstimate" ColumnName="OriginalEstimate" />
+							</MappingFragment>
+						</EntityTypeMapping>
+					</EntitySetMapping>
+					<EntitySetMapping Name="StagingFieldMappingValue">
+						<EntityTypeMapping TypeName="IsTypeOf(ProjectOnlineSystemConnectorDataViewsModel.StagingFieldMappingValue)">
+							<MappingFragment StoreEntitySet="StagingFieldMappingValue">
+								<ScalarProperty Name="StagingFieldMappingValueId" ColumnName="StagingFieldMappingValueId" />
+								<ScalarProperty Name="StagingId" ColumnName="StagingId" />
+								<ScalarProperty Name="SyncSystemFieldMappingId" ColumnName="SyncSystemFieldMappingId" />
+								<ScalarProperty Name="Value" ColumnName="Value" />
+							</MappingFragment>
+						</EntityTypeMapping>
+					</EntitySetMapping>
+					<EntitySetMapping Name="SyncSystem">
+						<EntityTypeMapping TypeName="IsTypeOf(ProjectOnlineSystemConnectorDataViewsModel.SyncSystem)">
+							<MappingFragment StoreEntitySet="SyncSystem">
+								<ScalarProperty Name="SystemId" ColumnName="SystemId" />
+								<ScalarProperty Name="SystemTypeId" ColumnName="SystemTypeId" />
+								<ScalarProperty Name="SystemName" ColumnName="SystemName" />
+								<ScalarProperty Name="SystemUrl" ColumnName="SystemUrl" />
+								<ScalarProperty Name="SystemApiUrl" ColumnName="SystemApiUrl" />
+								<ScalarProperty Name="SystemLogin" ColumnName="SystemLogin" />
+								<ScalarProperty Name="SystemPassword" ColumnName="SystemPassword" />
+								<ScalarProperty Name="DefaultParentTaskName" ColumnName="DefaultParentTaskName" />
+							</MappingFragment>
+						</EntityTypeMapping>
+					</EntitySetMapping>
+					<EntitySetMapping Name="SyncSystemFieldMapping">
+						<EntityTypeMapping TypeName="IsTypeOf(ProjectOnlineSystemConnectorDataViewsModel.SyncSystemFieldMapping)">
+							<MappingFragment StoreEntitySet="SyncSystemFieldMapping">
+								<ScalarProperty Name="SyncSystemFieldMappingId" ColumnName="SyncSystemFieldMappingId" />
+								<ScalarProperty Name="SystemId" ColumnName="SystemId" />
+								<ScalarProperty Name="SystemFieldName" ColumnName="SystemFieldName" />
+								<ScalarProperty Name="EpmFieldName" ColumnName="EpmFieldName" />
+								<ScalarProperty Name="FieldType" ColumnName="FieldType" />
+								<ScalarProperty Name="StagingFieldName" ColumnName="StagingFieldName" />
+								<ScalarProperty Name="IsMultiSelect" ColumnName="IsMultiSelect" />
+								<ScalarProperty Name="IsIdWithValue" ColumnName="IsIdWithValue" />
+							</MappingFragment>
+						</EntityTypeMapping>
+					</EntitySetMapping>
+					<EntitySetMapping Name="SyncSystemSetting">
+						<EntityTypeMapping TypeName="IsTypeOf(ProjectOnlineSystemConnectorDataViewsModel.SyncSystemSetting)">
+							<MappingFragment StoreEntitySet="SyncSystemSetting">
+								<ScalarProperty Name="SettingId" ColumnName="SettingId" />
+								<ScalarProperty Name="Setting" ColumnName="Setting" />
+							</MappingFragment>
+						</EntityTypeMapping>
+					</EntitySetMapping>
+					<EntitySetMapping Name="SyncSystemSettingValue">
+						<EntityTypeMapping TypeName="IsTypeOf(ProjectOnlineSystemConnectorDataViewsModel.SyncSystemSettingValue)">
+							<MappingFragment StoreEntitySet="SyncSystemSettingValue">
+								<ScalarProperty Name="SyncSystemSettingId" ColumnName="SyncSystemSettingId" />
+								<ScalarProperty Name="SystemId" ColumnName="SystemId" />
+								<ScalarProperty Name="SettingId" ColumnName="SettingId" />
+								<ScalarProperty Name="SettingValue" ColumnName="SettingValue" />
+							</MappingFragment>
+						</EntityTypeMapping>
+					</EntitySetMapping>
+					<EntitySetMapping Name="SyncSystemType">
+						<EntityTypeMapping TypeName="IsTypeOf(ProjectOnlineSystemConnectorDataViewsModel.SyncSystemType)">
+							<MappingFragment StoreEntitySet="SyncSystemType">
+								<ScalarProperty Name="SystemTypeId" ColumnName="SystemTypeId" />
+								<ScalarProperty Name="SystemTypeName" ColumnName="SystemTypeName" />
+							</MappingFragment>
+						</EntityTypeMapping>
+					</EntitySetMapping>
+					<EntitySetMapping Name="VProjectServerSystemLink">
+						<EntityTypeMapping TypeName="IsTypeOf(ProjectOnlineSystemConnectorDataViewsModel.VProjectServerSystemLink)">
+							<MappingFragment StoreEntitySet="vProjectServerSystemLink">
+								<ScalarProperty Name="RowNumber" ColumnName="RowNumber" />
+								<ScalarProperty Name="ProjectServerSystemLinkId" ColumnName="ProjectServerSystemLinkId" />
+								<ScalarProperty Name="ProjectUid" ColumnName="ProjectUid" />
+								<ScalarProperty Name="SystemId" ColumnName="SystemId" />
+								<ScalarProperty Name="ProjectKey" ColumnName="ProjectKey" />
+								<ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+								<ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+								<ScalarProperty Name="IsHomeProject" ColumnName="IsHomeProject" />
+								<ScalarProperty Name="EpicKey" ColumnName="EpicKey" />
+								<ScalarProperty Name="EpicName" ColumnName="EpicName" />
+								<ScalarProperty Name="EpicId" ColumnName="EpicId" />
+								<ScalarProperty Name="LastExecuted" ColumnName="LastExecuted" />
+								<ScalarProperty Name="ExecuteStatus" ColumnName="ExecuteStatus" />
+								<ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+								<ScalarProperty Name="SystemName" ColumnName="SystemName" />
+							</MappingFragment>
+						</EntityTypeMapping>
+					</EntitySetMapping>
+					<EntitySetMapping Name="VStagingFieldMappingValue">
+						<EntityTypeMapping TypeName="IsTypeOf(ProjectOnlineSystemConnectorDataViewsModel.VStagingFieldMappingValue)">
+							<MappingFragment StoreEntitySet="vStagingFieldMappingValue">
+								<ScalarProperty Name="RowNumber" ColumnName="RowNumber" />
+								<ScalarProperty Name="StagingFieldMappingValueId" ColumnName="StagingFieldMappingValueId" />
+								<ScalarProperty Name="StagingId" ColumnName="StagingId" />
+								<ScalarProperty Name="SyncSystemFieldMappingId" ColumnName="SyncSystemFieldMappingId" />
+								<ScalarProperty Name="Value" ColumnName="Value" />
+								<ScalarProperty Name="EpmFieldName" ColumnName="EpmFieldName" />
+								<ScalarProperty Name="FieldType" ColumnName="FieldType" />
+								<ScalarProperty Name="SystemFieldName" ColumnName="SystemFieldName" />
+								<ScalarProperty Name="StagingFieldName" ColumnName="StagingFieldName" />
+								<ScalarProperty Name="SystemId" ColumnName="SystemId" />
+							</MappingFragment>
+						</EntityTypeMapping>
+					</EntitySetMapping>
+					<EntitySetMapping Name="WebHookEntry">
+						<EntityTypeMapping TypeName="IsTypeOf(ProjectOnlineSystemConnectorDataViewsModel.WebHookEntry)">
+							<MappingFragment StoreEntitySet="WebHookEntry">
+								<ScalarProperty Name="WebHookEntryId" ColumnName="WebHookEntryId" />
+								<ScalarProperty Name="SystemId" ColumnName="SystemId" />
+								<ScalarProperty Name="JsonRequest" ColumnName="JsonRequest" />
+								<ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+							</MappingFragment>
+						</EntityTypeMapping>
+					</EntitySetMapping>
+	<!-- __LLBLGENPRO_USER_CODE_REGION_START MSLEntityContainerMappingCustomCode -->
+	<!-- __LLBLGENPRO_USER_CODE_REGION_END -->
+				</EntityContainerMapping>
+	<!-- __LLBLGENPRO_USER_CODE_REGION_START MSLCustomCode -->
+	<!-- __LLBLGENPRO_USER_CODE_REGION_END -->
+			</Mapping>
+		</edmx:Mappings>
+	</edmx:Runtime>
+	<!-- Designer element for auto-embedding the .edmx file into the compiled assembly as separated resource files and to validate it on build. -->
+	<edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+		<edmx:Connection>
+			<DesignerInfoPropertySet>
+				<DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+			</DesignerInfoPropertySet>
+		</edmx:Connection>
+		<edmx:Options>
+			<DesignerInfoPropertySet>
+				<DesignerProperty Name="ValidateOnBuild" Value="true" />
+			</DesignerInfoPropertySet>
+		</edmx:Options>	
+	<!-- __LLBLGENPRO_USER_CODE_REGION_START DesignerCustomCode -->
+	<!-- __LLBLGENPRO_USER_CODE_REGION_END -->		
+	</edmx:Designer>
+</edmx:Edmx>
+

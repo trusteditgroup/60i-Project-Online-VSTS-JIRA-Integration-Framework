@@ -1,0 +1,1186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--LLBLGen Pro v4.2 project file. Do not manually edit this file. Incorrect references could lead to an unloadable project file.-->
+<Project Version="4.2" TargetFrameworkName="Entity Framework v6">
+  <Properties>
+    <Abbreviations />
+    <Property Name="AdditionalTaskPerformerFolder" Value="" />
+    <Property Name="AdditionalTasksFolder" Value="" />
+    <Property Name="AdditionalTemplatesFolder" Value="" />
+    <Property Name="AdditionalTypeConverterFolder" Value="" />
+    <Property Name="AddNewElementsAfterRefresh" Value="0" />
+    <Property Name="AddNewFieldsAfterRefresh" Value="0" />
+    <Property Name="AddNewViewsAsEntitiesAfterRefresh" Value="0" />
+    <Property Name="AutoAddManyToManyRelationships" Value="false" />
+    <Property Name="AutoAssignSequencesToIntegerPks" Value="true" />
+    <Property Name="AutoAssignTypeConverterToFieldMapping" Value="false" />
+    <Property Name="CleanUpVsNetProjects" Value="true" />
+    <Property Name="ConnectionStringKeyNamePattern" Value="ProjectOnlineSystemConnectorEntities" />
+    <Property Name="DefaultDeleteRuleAction" Value="1" />
+    <Property Name="DefaultUpdateRuleAction" Value="0" />
+    <Property Name="EncodingToUse" Value="0" />
+    <Property Name="EntityActionCombinationDefaultForTable" Value="0" />
+    <Property Name="EntityActionCombinationDefaultForView" Value="4" />
+    <Property Name="EntityFieldNameStripPattern" Value="{}{}" />
+    <Property Name="EntityNameStripPattern" Value="{tbl_}{}" />
+    <Property Name="ExcludableOrphanedElementDetectedAction" Value="3" />
+    <Property Name="FailCodeGenerationOnWriteError" Value="false" />
+    <Property Name="FieldMappedOntoRelatedFieldPattern" Value="{$RelatedFieldName}" />
+    <Property Name="FkFieldsAreNamedAfterTargetField" Value="true" />
+    <Property Name="ForeignKeyConstraintPattern" Value="FK_{$Guid}" />
+    <Property Name="ForeignKeyFieldPattern" Value="{$NavigatorName}{$RelatedFieldName}" />
+    <Property Name="GroupUsage" Value="0" />
+    <Property Name="IdentifyingFieldsFollowDBPrimaryKeyConstraints" Value="0" />
+    <Property Name="InsertUnderscoreAtWordBreakCaseInsensitiveDBs" Value="false" />
+    <Property Name="InsertUnderscoreAtWordBreakCaseSensitiveDBs" Value="false" />
+    <Property Name="LengthPrecisionScaleFollowDBLengthPrecisionScale" Value="0" />
+    <Property Name="MakeElementNamePascalCasing" Value="true" />
+    <Property Name="NavigatorMappedOntoManyToManyPattern" Value="{$EndEntityName}CollectionVia{$IntermediateEntityName$S}" />
+    <Property Name="NavigatorMappedOntoOneManyToOnePattern" Value="{$EndEntityName$S}" />
+    <Property Name="NavigatorMappedOntoOneToManyPattern" Value="{$EndEntityName$P}" />
+    <Property Name="NonExcludableOrphanedElementDetectedAction" Value="3" />
+    <Property Name="PreferDecimalOverCurrencyTypes" Value="true" />
+    <Property Name="PreferNaturalCharacterTypes" Value="true" />
+    <Property Name="PreferSystemSequencesOverSchemaSequencesIfApplicable" Value="true" />
+    <Property Name="PreferVariableLengthTypes" Value="true" />
+    <Property Name="PrimaryKeyConstraintPattern" Value="PK_{$Guid}" />
+    <Property Name="ProjectCreator" Value="ProjectOnlineSystemConnector" />
+    <Property Name="ProjectName" Value="ProjectOnlineSystemConnector.Data.Views" />
+    <Property Name="ReflectNullabilityOfElementFieldInTargetField" Value="0" />
+    <Property Name="RelationalModelDataElementNameCasingCaseInsensitiveDBs" Value="3" />
+    <Property Name="RelationalModelDataElementNameCasingCaseSensitiveDBs" Value="3" />
+    <Property Name="RelationshipsFollowDBForeignKeyConstraints" Value="0" />
+    <Property Name="RemoveUnderscoresFromElementName" Value="true" />
+    <Property Name="RemoveUnmappedElementsAfterRefresh" Value="0" />
+    <Property Name="ResetFieldOrderBasedOnTargetOrderAtRefresh" Value="false" />
+    <Property Name="RetrieveDBCustomProperties" Value="false" />
+    <Property Name="RootNamespace" Value="ProjectOnlineSystemConnector.Data.Views" />
+    <Property Name="SequenceNameMatchingPattern" Value="SEQ_{$TableName}" />
+    <Property Name="SequencePattern" Value="SEQ_{$EntityName}" />
+    <Property Name="SetGroupNameAfterSchemaName" Value="true" />
+    <Property Name="SetSchemaNameAfterGroupName" Value="true" />
+    <Property Name="SingularizeElementNames" Value="true" />
+    <Property Name="StoredProcNameStripPattern" Value="{pr_, sp_}{}" />
+    <Property Name="StoreTimeLastGeneratedIntoProject" Value="false" />
+    <Property Name="SyncMappedElementNamesAfterRefresh" Value="0" />
+    <Property Name="SyncRelationalModelDataElementNameAfterRename" Value="0" />
+    <Property Name="SyncRenamedMappedElementNamesAfterRefresh" Value="0" />
+    <Property Name="TableValuedFunctionNameStripPattern" Value="{fn_, pr_, sp_}{}" />
+    <Property Name="TargetPerEntityEdgesRequireBackingFkConstraint" Value="true" />
+    <Property Name="TypedViewFieldNameStripPattern" Value="{}{}" />
+    <Property Name="TypedViewMappedOnResultsetPattern" Value="{$ProcFunctionName}{$ResultsetName}Result" />
+    <Property Name="TypedViewNameStripPattern" Value="{vw_}{}" />
+    <Property Name="UniqueConstraintPattern" Value="UC_{$Guid}" />
+    <Property Name="UniqueConstraintsFollowDBUniqueConstraints" Value="0" />
+    <Property Name="UpdateCustomPropertiesAfterRefresh" Value="0" />
+    <Property Name="UseCustomFieldOrderingOnNewElements" Value="false" />
+  </Properties>
+  <TypeShortcuts />
+  <IgnoredWarnings />
+  <SavedSearchQueries />
+  <CodeGenerationCyclePreferences>
+    <OutputType Value="3">
+      <LastUsedPreferences>
+        <DestinationRootFolder Value=".\ProjectOnlineSystemConnector.Data.Views" />
+        <FrameworkName Value="Entity Framework v6" />
+        <LanguageName Value="C#" />
+        <PlatformName Value=".NET 4.5" />
+        <PresetName Value="SD.EntityFramework.v6 (DbContext API)" />
+        <RootNamespace Value="ProjectOnlineSystemConnector.Data.Views" />
+        <TemplateGroup Value="General" />
+        <TemplateBindings>
+          <Binding Name="SD.EntityFramework.Shared" />
+          <Binding Name="SD.EntityFramework.v6" />
+          <Binding Name="SD.EntityFramework.NET45" />
+          <Binding Name="SD.TemplateBindings.General" />
+        </TemplateBindings>
+      </LastUsedPreferences>
+    </OutputType>
+    <OutputType Value="2">
+      <LastUsedPreferences>
+        <DestinationRootFolder Value="" />
+        <FrameworkName Value="DDL SQL" />
+        <LanguageName Value="SQL" />
+        <PlatformName Value="RDBMS" />
+        <PresetName Value="" />
+        <RootNamespace Value="" />
+        <TemplateGroup Value="Update DDL SQL" />
+        <TemplateBindings />
+      </LastUsedPreferences>
+    </OutputType>
+  </CodeGenerationCyclePreferences>
+  <OutputSettingValues>
+    <SettingValues>
+      <SettingValue Name="1:EmitForeignKeyFields" Value="true" Type="3" />
+      <SettingValue Name="1:ProviderManifestTokenValue" Value="2008" Type="18" />
+      <SettingValue Name="1:PublicPropertyGettersAndSetters" Value="true" Type="3" />
+      <SettingValue Name="1:SetContextClassNameEqualToEdmxModelContainerName" Value="true" Type="3" />
+    </SettingValues>
+  </OutputSettingValues>
+  <CodeGenerationMetaDataDefaults>
+    <TargetElement Type="2">
+      <Defaults>
+        <Attributes>
+          <Attribute Value="Serializable" />
+          <Attribute Value="DataContract(IsReference$=$true)" />
+        </Attributes>
+      </Defaults>
+    </TargetElement>
+    <TargetElement Type="4">
+      <Defaults>
+        <Attributes>
+          <Attribute Value="Serializable" />
+          <Attribute Value="DataContract(IsReference$=$true)" />
+        </Attributes>
+      </Defaults>
+    </TargetElement>
+    <TargetElement Type="8">
+      <Defaults>
+        <Attributes>
+          <Attribute Value="Serializable" />
+          <Attribute Value="DataContract(IsReference$=$true)" />
+        </Attributes>
+      </Defaults>
+    </TargetElement>
+    <TargetElement Type="16">
+      <Defaults>
+        <Attributes>
+          <Attribute Value="Serializable" />
+          <Attribute Value="DataContract(IsReference$=$true)" />
+        </Attributes>
+      </Defaults>
+    </TargetElement>
+    <TargetElement Type="64">
+      <Defaults>
+        <Attributes>
+          <Attribute Value="DataMember" />
+        </Attributes>
+      </Defaults>
+    </TargetElement>
+    <TargetElement Type="256">
+      <Defaults>
+        <Attributes>
+          <Attribute Value="DataMember" />
+        </Attributes>
+      </Defaults>
+    </TargetElement>
+    <TargetElement Type="512">
+      <Defaults>
+        <Attributes>
+          <Attribute Value="DataMember" />
+        </Attributes>
+      </Defaults>
+    </TargetElement>
+    <TargetElement Type="1024">
+      <Defaults>
+        <Attributes>
+          <Attribute Value="DataMember" />
+        </Attributes>
+      </Defaults>
+    </TargetElement>
+    <TargetElement Type="2048">
+      <Defaults>
+        <Attributes>
+          <Attribute Value="DataMember" />
+        </Attributes>
+      </Defaults>
+    </TargetElement>
+  </CodeGenerationMetaDataDefaults>
+  <EntityModel>
+    <ValueTypeDefinitions />
+    <EntityDefinitions>
+      <EntityDefinition Name="Master" ObjectID="48424895-93f0-4007-837a-418f5ad45bc9">
+        <Fields>
+          <Field Name="Assignee" Type="string" IsOptional="true" MaxLength="2147483647" />
+          <Field Name="DateFinish" Type="datetime" IsOptional="true" />
+          <Field Name="DateFinishActual" Type="datetime" IsOptional="true" />
+          <Field Name="DateRelease" Type="datetime" IsOptional="true" />
+          <Field Name="DateStart" Type="datetime" IsOptional="true" />
+          <Field Name="DateStartActual" Type="datetime" IsOptional="true" />
+          <Field Name="IsSubTask" Type="bool" />
+          <Field Name="IssueActualWork" Type="int" IsOptional="true" Precision="10" />
+          <Field Name="IssueId" Type="string" IsOptional="true" MaxLength="50" />
+          <Field Name="IssueKey" Type="string" IsOptional="true" MaxLength="200" />
+          <Field Name="IssueName" Type="string" IsOptional="true" MaxLength="2147483647" />
+          <Field Name="IssueStatus" Type="string" IsOptional="true" MaxLength="200" />
+          <Field Name="IssueTypeId" Type="string" IsOptional="true" MaxLength="50" />
+          <Field Name="IssueTypeName" Type="string" IsOptional="true" MaxLength="50" />
+          <Field Name="MasterId" Type="int" IsReadOnly="true" Precision="10" IsPrimaryKey="true" />
+          <Field Name="OriginalEstimate" Type="int" IsOptional="true" Precision="10" />
+          <Field Name="ParentEpicId" Type="string" IsOptional="true" MaxLength="50" />
+          <Field Name="ParentEpicKey" Type="string" IsOptional="true" MaxLength="50" />
+          <Field Name="ParentIssueId" Type="string" IsOptional="true" MaxLength="50" />
+          <Field Name="ParentIssueKey" Type="string" IsOptional="true" MaxLength="50" />
+          <Field Name="ParentSprintId" Type="string" IsOptional="true" MaxLength="50" />
+          <Field Name="ParentSprintName" Type="string" IsOptional="true" MaxLength="2147483647" />
+          <Field Name="ParentVersionId" Type="string" IsOptional="true" MaxLength="50" />
+          <Field Name="ParentVersionName" Type="string" IsOptional="true" MaxLength="2147483647" />
+          <Field Name="ParentVersionReleased" Type="bool" IsOptional="true" />
+          <Field Name="ProjectId" Type="string" IsOptional="true" MaxLength="50" />
+          <Field Name="ProjectKey" Type="string" IsOptional="true" MaxLength="200" />
+          <Field Name="ProjectName" Type="string" IsOptional="true" MaxLength="2147483647" />
+          <Field Name="RecordDateCreated" Type="datetime" />
+          <Field Name="RecordDateUpdated" Type="datetime" />
+          <Field Name="SystemId" Type="int" Precision="10" />
+        </Fields>
+      </EntityDefinition>
+      <EntityDefinition Name="MasterFieldMappingValue" ObjectID="ebc040dc-36d7-4f09-ac11-ab0a7ae53f2a">
+        <Fields>
+          <Field Name="MasterFieldMappingValueId" Type="int" IsReadOnly="true" Precision="10" IsPrimaryKey="true" />
+          <Field Name="MasterId" Type="int" Precision="10" />
+          <Field Name="SyncSystemFieldMappingId" Type="int" Precision="10" />
+          <Field Name="Value" Type="string" IsOptional="true" MaxLength="2147483647" />
+        </Fields>
+      </EntityDefinition>
+      <EntityDefinition Name="MasterHistory" ObjectID="70d25528-f794-45e1-990f-015b319c7dd6">
+        <Fields>
+          <Field Name="Assignee" Type="string" IsOptional="true" MaxLength="2147483647" />
+          <Field Name="DateFinish" Type="datetime" IsOptional="true" />
+          <Field Name="DateFinishActual" Type="datetime" IsOptional="true" />
+          <Field Name="DateRelease" Type="datetime" IsOptional="true" />
+          <Field Name="DateStart" Type="datetime" IsOptional="true" />
+          <Field Name="DateStartActual" Type="datetime" IsOptional="true" />
+          <Field Name="IsSubTask" Type="bool" />
+          <Field Name="IssueActualWork" Type="int" IsOptional="true" Precision="10" />
+          <Field Name="IssueId" Type="string" IsOptional="true" MaxLength="50" />
+          <Field Name="IssueKey" Type="string" IsOptional="true" MaxLength="200" />
+          <Field Name="IssueName" Type="string" IsOptional="true" MaxLength="2147483647" />
+          <Field Name="IssueStatus" Type="string" IsOptional="true" MaxLength="200" />
+          <Field Name="IssueTypeId" Type="string" IsOptional="true" MaxLength="50" />
+          <Field Name="IssueTypeName" Type="string" IsOptional="true" MaxLength="50" />
+          <Field Name="MasterHistoryId" Type="int" IsReadOnly="true" Precision="10" IsPrimaryKey="true" />
+          <Field Name="OriginalEstimate" Type="int" IsOptional="true" Precision="10" />
+          <Field Name="ParentEpicId" Type="string" IsOptional="true" MaxLength="50" />
+          <Field Name="ParentEpicKey" Type="string" IsOptional="true" MaxLength="50" />
+          <Field Name="ParentIssueId" Type="string" IsOptional="true" MaxLength="50" />
+          <Field Name="ParentIssueKey" Type="string" IsOptional="true" MaxLength="50" />
+          <Field Name="ParentSprintId" Type="string" IsOptional="true" MaxLength="50" />
+          <Field Name="ParentSprintName" Type="string" IsOptional="true" MaxLength="2147483647" />
+          <Field Name="ParentVersionId" Type="string" IsOptional="true" MaxLength="50" />
+          <Field Name="ParentVersionName" Type="string" IsOptional="true" MaxLength="2147483647" />
+          <Field Name="ParentVersionReleased" Type="bool" IsOptional="true" />
+          <Field Name="ProjectId" Type="string" IsOptional="true" MaxLength="50" />
+          <Field Name="ProjectKey" Type="string" IsOptional="true" MaxLength="200" />
+          <Field Name="ProjectName" Type="string" IsOptional="true" MaxLength="2147483647" />
+          <Field Name="RecordDateCreated" Type="datetime" />
+          <Field Name="RecordDateUpdated" Type="datetime" />
+          <Field Name="SystemId" Type="int" Precision="10" />
+        </Fields>
+      </EntityDefinition>
+      <EntityDefinition Name="MasterHistoryFieldMappingValue" ObjectID="c3561bb2-a07e-46fe-9d80-d74a7b0a499f">
+        <Fields>
+          <Field Name="MasterHistoryFieldMappingValueId" Type="int" IsReadOnly="true" Precision="10" IsPrimaryKey="true" />
+          <Field Name="MasterHistoryId" Type="int" Precision="10" />
+          <Field Name="SyncSystemFieldMappingId" Type="int" Precision="10" />
+          <Field Name="Value" Type="string" IsOptional="true" MaxLength="2147483647" />
+        </Fields>
+      </EntityDefinition>
+      <EntityDefinition Name="MasterWorklog" ObjectID="14aa2364-b914-462c-9d0d-e6660fd75ae7">
+        <Fields>
+          <Field Name="AuthorEmailAddress" Type="string" IsOptional="true" MaxLength="2147483647" />
+          <Field Name="AuthorKey" Type="string" IsOptional="true" MaxLength="50" />
+          <Field Name="AuthorName" Type="string" IsOptional="true" MaxLength="50" />
+          <Field Name="Comment" Type="string" IsOptional="true" MaxLength="2147483647" />
+          <Field Name="DateCreated" Type="datetime" IsOptional="true" />
+          <Field Name="DateStarted" Type="datetime" IsOptional="true" />
+          <Field Name="DateUpdated" Type="datetime" IsOptional="true" />
+          <Field Name="IssueId" Type="string" IsOptional="true" MaxLength="50" />
+          <Field Name="MasterWorklogId" Type="int" IsReadOnly="true" Precision="10" IsPrimaryKey="true" />
+          <Field Name="RecordDateCreated" Type="datetime" />
+          <Field Name="RecordDateUpdated" Type="datetime" />
+          <Field Name="RecordState" Type="string" MaxLength="50" />
+          <Field Name="SystemId" Type="int" Precision="10" />
+          <Field Name="TimeSpentSeconds" Type="long" IsOptional="true" Precision="19" />
+          <Field Name="WebHookEvent" Type="string" MaxLength="2147483647" />
+          <Field Name="WorkLogId" Type="string" IsOptional="true" MaxLength="2147483647" />
+        </Fields>
+      </EntityDefinition>
+      <EntityDefinition Name="ProjectServerSystemLink" ObjectID="aadd55e8-d14d-4dd8-af5a-9cc8f39e53df">
+        <Fields>
+          <Field Name="DateCreated" Type="datetime" />
+          <Field Name="EpicId" Type="string" IsOptional="true" MaxLength="200" />
+          <Field Name="EpicKey" Type="string" IsOptional="true" MaxLength="200" />
+          <Field Name="EpicName" Type="string" IsOptional="true" MaxLength="200" />
+          <Field Name="ExecuteStatus" Type="string" IsOptional="true" MaxLength="2147483647" />
+          <Field Name="IsHomeProject" Type="bool" />
+          <Field Name="LastExecuted" Type="datetime" IsOptional="true" />
+          <Field Name="ProjectId" Type="string" IsOptional="true" MaxLength="200" />
+          <Field Name="ProjectKey" Type="string" IsOptional="true" MaxLength="200" />
+          <Field Name="ProjectName" Type="string" IsOptional="true" MaxLength="200" />
+          <Field Name="ProjectServerSystemLinkId" Type="int" IsReadOnly="true" Precision="10" IsPrimaryKey="true" />
+          <Field Name="ProjectUid" Type="guid" />
+          <Field Name="SystemId" Type="int" Precision="10" />
+        </Fields>
+      </EntityDefinition>
+      <EntityDefinition Name="Staging" ObjectID="93e2da46-3c11-4c2f-8a19-7626ddc31ffc">
+        <Fields>
+          <Field Name="Assignee" Type="string" IsOptional="true" MaxLength="2147483647" />
+          <Field Name="ChangedFields" Type="string" IsOptional="true" MaxLength="2147483647" />
+          <Field Name="DateFinish" Type="datetime" IsOptional="true" />
+          <Field Name="DateFinishActual" Type="datetime" IsOptional="true" />
+          <Field Name="DateRelease" Type="datetime" IsOptional="true" />
+          <Field Name="DateStart" Type="datetime" IsOptional="true" />
+          <Field Name="DateStartActual" Type="datetime" IsOptional="true" />
+          <Field Name="IsSubTask" Type="bool" />
+          <Field Name="IssueActualWork" Type="int" IsOptional="true" Precision="10" />
+          <Field Name="IssueId" Type="string" IsOptional="true" MaxLength="50" />
+          <Field Name="IssueKey" Type="string" IsOptional="true" MaxLength="200" />
+          <Field Name="IssueName" Type="string" IsOptional="true" MaxLength="2147483647" />
+          <Field Name="IssueStatus" Type="string" IsOptional="true" MaxLength="200" />
+          <Field Name="IssueTypeId" Type="string" IsOptional="true" MaxLength="50" />
+          <Field Name="IssueTypeName" Type="string" IsOptional="true" MaxLength="50" />
+          <Field Name="OriginalEstimate" Type="int" IsOptional="true" Precision="10" />
+          <Field Name="ParentEpicId" Type="string" IsOptional="true" MaxLength="50" />
+          <Field Name="ParentEpicKey" Type="string" IsOptional="true" MaxLength="50" />
+          <Field Name="ParentIssueId" Type="string" IsOptional="true" MaxLength="50" />
+          <Field Name="ParentIssueKey" Type="string" IsOptional="true" MaxLength="50" />
+          <Field Name="ParentSprintId" Type="string" IsOptional="true" MaxLength="50" />
+          <Field Name="ParentSprintName" Type="string" IsOptional="true" MaxLength="2147483647" />
+          <Field Name="ParentVersionId" Type="string" IsOptional="true" MaxLength="50" />
+          <Field Name="ParentVersionName" Type="string" IsOptional="true" MaxLength="2147483647" />
+          <Field Name="ParentVersionReleased" Type="bool" IsOptional="true" />
+          <Field Name="ProjectId" Type="string" IsOptional="true" MaxLength="50" />
+          <Field Name="ProjectKey" Type="string" IsOptional="true" MaxLength="200" />
+          <Field Name="ProjectName" Type="string" IsOptional="true" MaxLength="2147483647" />
+          <Field Name="RecordDateCreated" Type="datetime" />
+          <Field Name="RecordDateUpdated" Type="datetime" />
+          <Field Name="RecordState" Type="string" MaxLength="50" />
+          <Field Name="StagingId" Type="int" IsReadOnly="true" Precision="10" IsPrimaryKey="true" />
+          <Field Name="SystemId" Type="int" Precision="10" />
+          <Field Name="WebHookEvent" Type="string" MaxLength="2147483647" />
+        </Fields>
+      </EntityDefinition>
+      <EntityDefinition Name="StagingFieldMappingValue" ObjectID="f902afe1-c749-4e2e-a79e-20643fcef9e1">
+        <Fields>
+          <Field Name="StagingFieldMappingValueId" Type="int" IsReadOnly="true" Precision="10" IsPrimaryKey="true" />
+          <Field Name="StagingId" Type="int" Precision="10" />
+          <Field Name="SyncSystemFieldMappingId" Type="int" Precision="10" />
+          <Field Name="Value" Type="string" IsOptional="true" MaxLength="2147483647" />
+        </Fields>
+      </EntityDefinition>
+      <EntityDefinition Name="SyncSystem" ObjectID="8728ed88-44ad-435d-8668-182958bdac8b">
+        <Fields>
+          <Field Name="DefaultParentTaskName" Type="string" MaxLength="2147483647" />
+          <Field Name="SystemApiUrl" Type="string" MaxLength="2147483647" />
+          <Field Name="SystemId" Type="int" IsReadOnly="true" Precision="10" IsPrimaryKey="true" />
+          <Field Name="SystemLogin" Type="string" MaxLength="2147483647" />
+          <Field Name="SystemName" Type="string" MaxLength="2147483647" />
+          <Field Name="SystemPassword" Type="string" MaxLength="2147483647" />
+          <Field Name="SystemTypeId" Type="int" Precision="10" />
+          <Field Name="SystemUrl" Type="string" MaxLength="2147483647" />
+        </Fields>
+      </EntityDefinition>
+      <EntityDefinition Name="SyncSystemFieldMapping" ObjectID="1a6c705f-8068-45ad-b6f9-2e34bde12eac">
+        <Fields>
+          <Field Name="EpmFieldName" Type="string" MaxLength="2147483647" />
+          <Field Name="FieldType" Type="string" MaxLength="2147483647" />
+          <Field Name="IsIdWithValue" Type="bool" />
+          <Field Name="IsMultiSelect" Type="bool" />
+          <Field Name="StagingFieldName" Type="string" IsOptional="true" MaxLength="2147483647" />
+          <Field Name="SyncSystemFieldMappingId" Type="int" IsReadOnly="true" Precision="10" IsPrimaryKey="true" />
+          <Field Name="SystemFieldName" Type="string" IsOptional="true" MaxLength="2147483647" />
+          <Field Name="SystemId" Type="int" Precision="10" />
+        </Fields>
+      </EntityDefinition>
+      <EntityDefinition Name="SyncSystemSetting" ObjectID="5565d194-bbe3-45bd-be1f-943f95b460b5">
+        <Fields>
+          <Field Name="Setting" Type="string" MaxLength="2147483647" />
+          <Field Name="SettingId" Type="int" IsReadOnly="true" Precision="10" IsPrimaryKey="true" />
+        </Fields>
+      </EntityDefinition>
+      <EntityDefinition Name="SyncSystemSettingValue" ObjectID="9d34e683-5ec8-4add-8257-72a1e31b0c5a">
+        <Fields>
+          <Field Name="SettingId" Type="int" Precision="10" />
+          <Field Name="SettingValue" Type="string" MaxLength="2147483647" />
+          <Field Name="SyncSystemSettingId" Type="int" IsReadOnly="true" Precision="10" IsPrimaryKey="true" />
+          <Field Name="SystemId" Type="int" Precision="10" />
+        </Fields>
+      </EntityDefinition>
+      <EntityDefinition Name="SyncSystemType" ObjectID="4a865dca-a101-4df8-874e-0fe8cc4a0e21">
+        <Fields>
+          <Field Name="SystemTypeId" Type="int" IsReadOnly="true" Precision="10" IsPrimaryKey="true" />
+          <Field Name="SystemTypeName" Type="string" MaxLength="2147483647" />
+        </Fields>
+      </EntityDefinition>
+      <EntityDefinition Name="VProjectServerSystemLink" ObjectID="ea287041-a3f8-4b9a-affe-d8e69ae56fe1">
+        <Fields>
+          <Field Name="DateCreated" Type="datetime" />
+          <Field Name="EpicId" Type="string" IsOptional="true" MaxLength="200" />
+          <Field Name="EpicKey" Type="string" IsOptional="true" MaxLength="200" />
+          <Field Name="EpicName" Type="string" IsOptional="true" MaxLength="200" />
+          <Field Name="ExecuteStatus" Type="string" IsOptional="true" MaxLength="2147483647" />
+          <Field Name="IsHomeProject" Type="bool" />
+          <Field Name="LastExecuted" Type="datetime" IsOptional="true" />
+          <Field Name="ProjectId" Type="string" IsOptional="true" MaxLength="200" />
+          <Field Name="ProjectKey" Type="string" IsOptional="true" MaxLength="200" />
+          <Field Name="ProjectName" Type="string" IsOptional="true" MaxLength="200" />
+          <Field Name="ProjectServerSystemLinkId" Type="int" Precision="10" />
+          <Field Name="ProjectUid" Type="guid" />
+          <Field Name="RowNumber" Type="int" Precision="10" IsPrimaryKey="true" />
+          <Field Name="SystemId" Type="int" Precision="10" />
+          <Field Name="SystemName" Type="string" IsOptional="true" MaxLength="2147483647" />
+        </Fields>
+      </EntityDefinition>
+      <EntityDefinition Name="VStagingFieldMappingValue" ObjectID="577d0cf7-d532-423c-a58f-f1c9a4b7af02">
+        <Fields>
+          <Field Name="EpmFieldName" Type="string" MaxLength="2147483647" />
+          <Field Name="FieldType" Type="string" MaxLength="2147483647" />
+          <Field Name="RowNumber" Type="int" Precision="10" IsPrimaryKey="true" />
+          <Field Name="StagingFieldMappingValueId" Type="int" IsOptional="true" Precision="10" />
+          <Field Name="StagingFieldName" Type="string" IsOptional="true" MaxLength="2147483647" />
+          <Field Name="StagingId" Type="int" IsOptional="true" Precision="10" />
+          <Field Name="SyncSystemFieldMappingId" Type="int" IsOptional="true" Precision="10" />
+          <Field Name="SystemFieldName" Type="string" IsOptional="true" MaxLength="2147483647" />
+          <Field Name="SystemId" Type="int" Precision="10" />
+          <Field Name="Value" Type="string" IsOptional="true" MaxLength="2147483647" />
+        </Fields>
+      </EntityDefinition>
+      <EntityDefinition Name="WebHookEntry" ObjectID="d4491ecd-6406-4061-838d-fe7b2f98b119">
+        <Fields>
+          <Field Name="DateCreated" Type="datetime" />
+          <Field Name="JsonRequest" Type="string" MaxLength="2147483647" />
+          <Field Name="SystemId" Type="int" Precision="10" />
+          <Field Name="WebHookEntryId" Type="int" IsReadOnly="true" Precision="10" IsPrimaryKey="true" />
+        </Fields>
+      </EntityDefinition>
+    </EntityDefinitions>
+    <Relationships>
+      <NormalRelationship Name="Master.SyncSystem-SyncSystem.Masters" Start=":Master" End=":SyncSystem" StartNavigator="SyncSystem" EndNavigator="Masters" Type="4" DeleteRuleAction="1">
+        <FieldRelationships>
+          <FieldFieldRelationship FkField="SystemId" PkField="SystemId" />
+        </FieldRelationships>
+      </NormalRelationship>
+      <NormalRelationship Name="MasterFieldMappingValue.Master-Master.MasterFieldMappingValues" Start=":MasterFieldMappingValue" End=":Master" StartNavigator="Master" EndNavigator="MasterFieldMappingValues" Type="4" DeleteRuleAction="1">
+        <FieldRelationships>
+          <FieldFieldRelationship FkField="MasterId" PkField="MasterId" />
+        </FieldRelationships>
+      </NormalRelationship>
+      <NormalRelationship Name="MasterFieldMappingValue.SyncSystemFieldMapping-SyncSystemFieldMapping.MasterFieldMappingValues" Start=":MasterFieldMappingValue" End=":SyncSystemFieldMapping" StartNavigator="SyncSystemFieldMapping" EndNavigator="MasterFieldMappingValues" Type="4">
+        <FieldRelationships>
+          <FieldFieldRelationship FkField="SyncSystemFieldMappingId" PkField="SyncSystemFieldMappingId" />
+        </FieldRelationships>
+      </NormalRelationship>
+      <NormalRelationship Name="MasterHistory.SyncSystem-SyncSystem.MasterHistories" Start=":MasterHistory" End=":SyncSystem" StartNavigator="SyncSystem" EndNavigator="MasterHistories" Type="4" DeleteRuleAction="1">
+        <FieldRelationships>
+          <FieldFieldRelationship FkField="SystemId" PkField="SystemId" />
+        </FieldRelationships>
+      </NormalRelationship>
+      <NormalRelationship Name="MasterHistoryFieldMappingValue.MasterHistory-MasterHistory.MasterHistoryFieldMappingValues" Start=":MasterHistoryFieldMappingValue" End=":MasterHistory" StartNavigator="MasterHistory" EndNavigator="MasterHistoryFieldMappingValues" Type="4" DeleteRuleAction="1">
+        <FieldRelationships>
+          <FieldFieldRelationship FkField="MasterHistoryId" PkField="MasterHistoryId" />
+        </FieldRelationships>
+      </NormalRelationship>
+      <NormalRelationship Name="MasterHistoryFieldMappingValue.SyncSystemFieldMapping-SyncSystemFieldMapping.MasterHistoryFieldMappingValues" Start=":MasterHistoryFieldMappingValue" End=":SyncSystemFieldMapping" StartNavigator="SyncSystemFieldMapping" EndNavigator="MasterHistoryFieldMappingValues" Type="4">
+        <FieldRelationships>
+          <FieldFieldRelationship FkField="SyncSystemFieldMappingId" PkField="SyncSystemFieldMappingId" />
+        </FieldRelationships>
+      </NormalRelationship>
+      <NormalRelationship Name="MasterWorklog.SyncSystem-SyncSystem.MasterWorklogs" Start=":MasterWorklog" End=":SyncSystem" StartNavigator="SyncSystem" EndNavigator="MasterWorklogs" Type="4" DeleteRuleAction="1">
+        <FieldRelationships>
+          <FieldFieldRelationship FkField="SystemId" PkField="SystemId" />
+        </FieldRelationships>
+      </NormalRelationship>
+      <NormalRelationship Name="ProjectServerSystemLink.SyncSystem-SyncSystem.ProjectServerSystemLinks" Start=":ProjectServerSystemLink" End=":SyncSystem" StartNavigator="SyncSystem" EndNavigator="ProjectServerSystemLinks" Type="4" DeleteRuleAction="1">
+        <FieldRelationships>
+          <FieldFieldRelationship FkField="SystemId" PkField="SystemId" />
+        </FieldRelationships>
+      </NormalRelationship>
+      <NormalRelationship Name="Staging.SyncSystem-SyncSystem.Stagings" Start=":Staging" End=":SyncSystem" StartNavigator="SyncSystem" EndNavigator="Stagings" Type="4" DeleteRuleAction="1">
+        <FieldRelationships>
+          <FieldFieldRelationship FkField="SystemId" PkField="SystemId" />
+        </FieldRelationships>
+      </NormalRelationship>
+      <NormalRelationship Name="StagingFieldMappingValue.Staging-Staging.StagingFieldMappingValues" Start=":StagingFieldMappingValue" End=":Staging" StartNavigator="Staging" EndNavigator="StagingFieldMappingValues" Type="4" DeleteRuleAction="1">
+        <FieldRelationships>
+          <FieldFieldRelationship FkField="StagingId" PkField="StagingId" />
+        </FieldRelationships>
+      </NormalRelationship>
+      <NormalRelationship Name="StagingFieldMappingValue.SyncSystemFieldMapping-SyncSystemFieldMapping.StagingFieldMappingValues" Start=":StagingFieldMappingValue" End=":SyncSystemFieldMapping" StartNavigator="SyncSystemFieldMapping" EndNavigator="StagingFieldMappingValues" Type="4">
+        <FieldRelationships>
+          <FieldFieldRelationship FkField="SyncSystemFieldMappingId" PkField="SyncSystemFieldMappingId" />
+        </FieldRelationships>
+      </NormalRelationship>
+      <NormalRelationship Name="SyncSystem.SyncSystemType-SyncSystemType.SyncSystems" Start=":SyncSystem" End=":SyncSystemType" StartNavigator="SyncSystemType" EndNavigator="SyncSystems" Type="4" DeleteRuleAction="1">
+        <FieldRelationships>
+          <FieldFieldRelationship FkField="SystemTypeId" PkField="SystemTypeId" />
+        </FieldRelationships>
+      </NormalRelationship>
+      <NormalRelationship Name="SyncSystemFieldMapping.SyncSystem-SyncSystem.SyncSystemFieldMappings" Start=":SyncSystemFieldMapping" End=":SyncSystem" StartNavigator="SyncSystem" EndNavigator="SyncSystemFieldMappings" Type="4" DeleteRuleAction="1">
+        <FieldRelationships>
+          <FieldFieldRelationship FkField="SystemId" PkField="SystemId" />
+        </FieldRelationships>
+      </NormalRelationship>
+      <NormalRelationship Name="SyncSystemSettingValue.SyncSystem-SyncSystem.SyncSystemSettingValues" Start=":SyncSystemSettingValue" End=":SyncSystem" StartNavigator="SyncSystem" EndNavigator="SyncSystemSettingValues" Type="4" DeleteRuleAction="1">
+        <FieldRelationships>
+          <FieldFieldRelationship FkField="SystemId" PkField="SystemId" />
+        </FieldRelationships>
+      </NormalRelationship>
+      <NormalRelationship Name="SyncSystemSettingValue.SyncSystemSetting-SyncSystemSetting.SyncSystemSettingValues" Start=":SyncSystemSettingValue" End=":SyncSystemSetting" StartNavigator="SyncSystemSetting" EndNavigator="SyncSystemSettingValues" Type="4" DeleteRuleAction="1">
+        <FieldRelationships>
+          <FieldFieldRelationship FkField="SettingId" PkField="SettingId" />
+        </FieldRelationships>
+      </NormalRelationship>
+      <NormalRelationship Name="WebHookEntry.SyncSystem-SyncSystem.WebHookEntries" Start=":WebHookEntry" End=":SyncSystem" StartNavigator="SyncSystem" EndNavigator="WebHookEntries" Type="4" DeleteRuleAction="1">
+        <FieldRelationships>
+          <FieldFieldRelationship FkField="SystemId" PkField="SystemId" />
+        </FieldRelationships>
+      </NormalRelationship>
+    </Relationships>
+    <InheritanceHierarchies />
+  </EntityModel>
+  <SPCallDefinitions>
+    <SPCallDefinition Name="CleanMasterAndMasterWorklog" ObjectID="36318c79-9cc3-40f6-83d2-682c90b40704" />
+    <SPCallDefinition Name="CleanStaging" ObjectID="c3c308ff-9f30-40fa-bdb7-01e9c03ccdcc" />
+  </SPCallDefinitions>
+  <TargetDatabases>
+    <TargetDatabase Type="2D18D138-1DD2-467E-86CC-4838250611AE">
+      <ConnectionElements>
+        <ConnectionElement Name="ServerName" Value="YAROSLAVPC\MSSQLSERVER2014" />
+        <ConnectionElement Name="CatalogName" Value="master" />
+        <ConnectionElement Name="UserID" Value="sa" />
+        <ConnectionElement Name="Password" Value="" />
+      </ConnectionElements>
+      <SystemSequences>
+        <Sequence Name="SCOPE_IDENTITY()" />
+        <Sequence Name="@@IDENTITY" />
+      </SystemSequences>
+      <Catalogs>
+        <Catalog Name="ProjectOnlineSystemConnector">
+          <Schemas>
+            <Schema Name="dbo">
+              <Tables>
+                <Table Name="Master">
+                  <PkConstraintName Name="PK_Master" />
+                  <Fields>
+                    <Field Name="MasterId" Ordinal="1" IsIdentity="true" IsPrimaryKey="true" DbType="8" Precision="10" />
+                    <Field Name="SystemId" Ordinal="2" DbType="8" Precision="10" />
+                    <Field Name="RecordDateCreated" Ordinal="3" DbType="4" />
+                    <Field Name="RecordDateUpdated" Ordinal="4" DbType="4" />
+                    <Field Name="ProjectId" Ordinal="5" IsOptional="true" DbType="12" Length="50" />
+                    <Field Name="ProjectKey" Ordinal="6" IsOptional="true" DbType="12" Length="200" />
+                    <Field Name="ProjectName" Ordinal="7" IsOptional="true" DbType="12" Length="2147483647" />
+                    <Field Name="IssueId" Ordinal="8" IsOptional="true" DbType="12" Length="50" />
+                    <Field Name="IssueKey" Ordinal="9" IsOptional="true" DbType="12" Length="200" />
+                    <Field Name="IssueName" Ordinal="10" IsOptional="true" DbType="12" Length="2147483647" />
+                    <Field Name="IssueTypeId" Ordinal="11" IsOptional="true" DbType="12" Length="50" />
+                    <Field Name="IssueTypeName" Ordinal="12" IsOptional="true" DbType="12" Length="50" />
+                    <Field Name="IsSubTask" Ordinal="13" HasDefaultValue="true" DefaultValue="(0)" DbType="2" />
+                    <Field Name="ParentEpicId" Ordinal="14" IsOptional="true" DbType="12" Length="50" />
+                    <Field Name="ParentEpicKey" Ordinal="15" IsOptional="true" DbType="12" Length="50" />
+                    <Field Name="ParentSprintId" Ordinal="16" IsOptional="true" DbType="12" Length="50" />
+                    <Field Name="ParentSprintName" Ordinal="17" IsOptional="true" DbType="12" Length="2147483647" />
+                    <Field Name="ParentVersionId" Ordinal="18" IsOptional="true" DbType="12" Length="50" />
+                    <Field Name="ParentVersionName" Ordinal="19" IsOptional="true" DbType="12" Length="2147483647" />
+                    <Field Name="ParentVersionReleased" Ordinal="20" IsOptional="true" DbType="2" />
+                    <Field Name="ParentIssueId" Ordinal="21" IsOptional="true" DbType="12" Length="50" />
+                    <Field Name="ParentIssueKey" Ordinal="22" IsOptional="true" DbType="12" Length="50" />
+                    <Field Name="DateStart" Ordinal="23" IsOptional="true" DbType="4" />
+                    <Field Name="DateFinish" Ordinal="24" IsOptional="true" DbType="4" />
+                    <Field Name="Assignee" Ordinal="25" IsOptional="true" DbType="12" Length="2147483647" />
+                    <Field Name="IssueStatus" Ordinal="26" IsOptional="true" DbType="12" Length="200" />
+                    <Field Name="DateRelease" Ordinal="27" IsOptional="true" DbType="4" />
+                    <Field Name="DateStartActual" Ordinal="28" IsOptional="true" DbType="4" />
+                    <Field Name="DateFinishActual" Ordinal="29" IsOptional="true" DbType="4" />
+                    <Field Name="IssueActualWork" Ordinal="30" IsOptional="true" DbType="8" Precision="10" />
+                    <Field Name="OriginalEstimate" Ordinal="31" IsOptional="true" DbType="8" Precision="10" />
+                  </Fields>
+                </Table>
+                <Table Name="MasterFieldMappingValue">
+                  <PkConstraintName Name="PK_MasterFieldMappingValue" />
+                  <Fields>
+                    <Field Name="MasterFieldMappingValueId" Ordinal="1" IsIdentity="true" IsPrimaryKey="true" DbType="8" Precision="10" />
+                    <Field Name="MasterId" Ordinal="2" DbType="8" Precision="10" />
+                    <Field Name="SyncSystemFieldMappingId" Ordinal="3" DbType="8" Precision="10" />
+                    <Field Name="Value" Ordinal="4" IsOptional="true" DbType="12" Length="2147483647" />
+                  </Fields>
+                </Table>
+                <Table Name="MasterHistory">
+                  <PkConstraintName Name="PK_MasterHistory" />
+                  <Fields>
+                    <Field Name="MasterHistoryId" Ordinal="1" IsIdentity="true" IsPrimaryKey="true" DbType="8" Precision="10" />
+                    <Field Name="SystemId" Ordinal="2" DbType="8" Precision="10" />
+                    <Field Name="RecordDateCreated" Ordinal="3" DbType="4" />
+                    <Field Name="RecordDateUpdated" Ordinal="4" DbType="4" />
+                    <Field Name="ProjectId" Ordinal="5" IsOptional="true" DbType="12" Length="50" />
+                    <Field Name="ProjectKey" Ordinal="6" IsOptional="true" DbType="12" Length="200" />
+                    <Field Name="ProjectName" Ordinal="7" IsOptional="true" DbType="12" Length="2147483647" />
+                    <Field Name="IssueId" Ordinal="8" IsOptional="true" DbType="12" Length="50" />
+                    <Field Name="IssueKey" Ordinal="9" IsOptional="true" DbType="12" Length="200" />
+                    <Field Name="IssueName" Ordinal="10" IsOptional="true" DbType="12" Length="2147483647" />
+                    <Field Name="IssueTypeId" Ordinal="11" IsOptional="true" DbType="12" Length="50" />
+                    <Field Name="IssueTypeName" Ordinal="12" IsOptional="true" DbType="12" Length="50" />
+                    <Field Name="IsSubTask" Ordinal="13" HasDefaultValue="true" DefaultValue="(0)" DbType="2" />
+                    <Field Name="ParentEpicId" Ordinal="14" IsOptional="true" DbType="12" Length="50" />
+                    <Field Name="ParentEpicKey" Ordinal="15" IsOptional="true" DbType="12" Length="50" />
+                    <Field Name="ParentSprintId" Ordinal="16" IsOptional="true" DbType="12" Length="50" />
+                    <Field Name="ParentSprintName" Ordinal="17" IsOptional="true" DbType="12" Length="2147483647" />
+                    <Field Name="ParentVersionId" Ordinal="18" IsOptional="true" DbType="12" Length="50" />
+                    <Field Name="ParentVersionName" Ordinal="19" IsOptional="true" DbType="12" Length="2147483647" />
+                    <Field Name="ParentVersionReleased" Ordinal="20" IsOptional="true" DbType="2" />
+                    <Field Name="ParentIssueId" Ordinal="21" IsOptional="true" DbType="12" Length="50" />
+                    <Field Name="ParentIssueKey" Ordinal="22" IsOptional="true" DbType="12" Length="50" />
+                    <Field Name="DateStart" Ordinal="23" IsOptional="true" DbType="4" />
+                    <Field Name="DateFinish" Ordinal="24" IsOptional="true" DbType="4" />
+                    <Field Name="Assignee" Ordinal="25" IsOptional="true" DbType="12" Length="2147483647" />
+                    <Field Name="IssueStatus" Ordinal="26" IsOptional="true" DbType="12" Length="200" />
+                    <Field Name="DateRelease" Ordinal="27" IsOptional="true" DbType="4" />
+                    <Field Name="DateStartActual" Ordinal="28" IsOptional="true" DbType="4" />
+                    <Field Name="DateFinishActual" Ordinal="29" IsOptional="true" DbType="4" />
+                    <Field Name="IssueActualWork" Ordinal="30" IsOptional="true" DbType="8" Precision="10" />
+                    <Field Name="OriginalEstimate" Ordinal="31" IsOptional="true" DbType="8" Precision="10" />
+                  </Fields>
+                </Table>
+                <Table Name="MasterHistoryFieldMappingValue">
+                  <PkConstraintName Name="PK_MasterHistoryFieldMappingValue" />
+                  <Fields>
+                    <Field Name="MasterHistoryFieldMappingValueId" Ordinal="1" IsIdentity="true" IsPrimaryKey="true" DbType="8" Precision="10" />
+                    <Field Name="MasterHistoryId" Ordinal="2" DbType="8" Precision="10" />
+                    <Field Name="SyncSystemFieldMappingId" Ordinal="3" DbType="8" Precision="10" />
+                    <Field Name="Value" Ordinal="4" IsOptional="true" DbType="12" Length="2147483647" />
+                  </Fields>
+                </Table>
+                <Table Name="MasterWorklog">
+                  <PkConstraintName Name="PK_MasterWorklog" />
+                  <Fields>
+                    <Field Name="MasterWorklogId" Ordinal="1" IsIdentity="true" IsPrimaryKey="true" DbType="8" Precision="10" />
+                    <Field Name="SystemId" Ordinal="2" HasDefaultValue="true" DefaultValue="(1)" DbType="8" Precision="10" />
+                    <Field Name="RecordDateCreated" Ordinal="3" HasDefaultValue="true" DefaultValue="getdate()" DbType="4" />
+                    <Field Name="RecordDateUpdated" Ordinal="4" HasDefaultValue="true" DefaultValue="getdate()" DbType="4" />
+                    <Field Name="WebHookEvent" Ordinal="5" HasDefaultValue="true" DefaultValue="''" DbType="12" Length="2147483647" />
+                    <Field Name="RecordState" Ordinal="6" DbType="12" Length="50" />
+                    <Field Name="WorkLogId" Ordinal="7" IsOptional="true" DbType="12" Length="2147483647" />
+                    <Field Name="IssueId" Ordinal="8" IsOptional="true" DbType="12" Length="50" />
+                    <Field Name="TimeSpentSeconds" Ordinal="9" IsOptional="true" DbType="0" Precision="19" />
+                    <Field Name="DateStarted" Ordinal="10" IsOptional="true" DbType="4" />
+                    <Field Name="DateCreated" Ordinal="11" IsOptional="true" DbType="4" />
+                    <Field Name="DateUpdated" Ordinal="12" IsOptional="true" DbType="4" />
+                    <Field Name="Comment" Ordinal="13" IsOptional="true" DbType="12" Length="2147483647" />
+                    <Field Name="AuthorEmailAddress" Ordinal="14" IsOptional="true" DbType="12" Length="2147483647" />
+                    <Field Name="AuthorName" Ordinal="15" IsOptional="true" DbType="12" Length="50" />
+                    <Field Name="AuthorKey" Ordinal="16" IsOptional="true" DbType="12" Length="50" />
+                  </Fields>
+                </Table>
+                <Table Name="ProjectServerSystemLink">
+                  <PkConstraintName Name="PK_ProjectServerSystemLink" />
+                  <Fields>
+                    <Field Name="ProjectServerSystemLinkId" Ordinal="1" IsIdentity="true" IsPrimaryKey="true" DbType="8" Precision="10" />
+                    <Field Name="ProjectUid" Ordinal="2" DbType="25" />
+                    <Field Name="SystemId" Ordinal="3" DbType="8" Precision="10" />
+                    <Field Name="ProjectKey" Ordinal="4" IsOptional="true" DbType="12" Length="200" />
+                    <Field Name="ProjectName" Ordinal="5" IsOptional="true" DbType="12" Length="200" />
+                    <Field Name="ProjectId" Ordinal="6" IsOptional="true" DbType="12" Length="200" />
+                    <Field Name="IsHomeProject" Ordinal="7" DbType="2" />
+                    <Field Name="EpicKey" Ordinal="8" IsOptional="true" DbType="12" Length="200" />
+                    <Field Name="EpicName" Ordinal="9" IsOptional="true" DbType="12" Length="200" />
+                    <Field Name="EpicId" Ordinal="10" IsOptional="true" DbType="12" Length="200" />
+                    <Field Name="LastExecuted" Ordinal="11" IsOptional="true" DbType="4" />
+                    <Field Name="ExecuteStatus" Ordinal="12" IsOptional="true" DbType="12" Length="2147483647" />
+                    <Field Name="DateCreated" Ordinal="13" HasDefaultValue="true" DefaultValue="getdate()" DbType="4" />
+                  </Fields>
+                </Table>
+                <Table Name="Staging">
+                  <PkConstraintName Name="PK_Stating" />
+                  <Fields>
+                    <Field Name="StagingId" Ordinal="1" IsIdentity="true" IsPrimaryKey="true" DbType="8" Precision="10" />
+                    <Field Name="SystemId" Ordinal="2" DbType="8" Precision="10" />
+                    <Field Name="RecordDateCreated" Ordinal="3" DbType="4" />
+                    <Field Name="RecordDateUpdated" Ordinal="4" DbType="4" />
+                    <Field Name="WebHookEvent" Ordinal="5" DbType="12" Length="2147483647" />
+                    <Field Name="RecordState" Ordinal="6" DbType="12" Length="50" />
+                    <Field Name="ChangedFields" Ordinal="7" IsOptional="true" DbType="12" Length="2147483647" />
+                    <Field Name="ProjectId" Ordinal="8" IsOptional="true" DbType="12" Length="50" />
+                    <Field Name="ProjectKey" Ordinal="9" IsOptional="true" DbType="12" Length="200" />
+                    <Field Name="ProjectName" Ordinal="10" IsOptional="true" DbType="12" Length="2147483647" />
+                    <Field Name="IssueId" Ordinal="11" IsOptional="true" DbType="12" Length="50" />
+                    <Field Name="IssueKey" Ordinal="12" IsOptional="true" DbType="12" Length="200" />
+                    <Field Name="IssueName" Ordinal="13" IsOptional="true" DbType="12" Length="2147483647" />
+                    <Field Name="IssueTypeId" Ordinal="14" IsOptional="true" DbType="12" Length="50" />
+                    <Field Name="IssueTypeName" Ordinal="15" IsOptional="true" DbType="12" Length="50" />
+                    <Field Name="IsSubTask" Ordinal="16" HasDefaultValue="true" DefaultValue="(0)" DbType="2" />
+                    <Field Name="ParentEpicId" Ordinal="17" IsOptional="true" DbType="12" Length="50" />
+                    <Field Name="ParentEpicKey" Ordinal="18" IsOptional="true" DbType="12" Length="50" />
+                    <Field Name="ParentSprintId" Ordinal="19" IsOptional="true" DbType="12" Length="50" />
+                    <Field Name="ParentSprintName" Ordinal="20" IsOptional="true" DbType="12" Length="2147483647" />
+                    <Field Name="ParentVersionId" Ordinal="21" IsOptional="true" DbType="12" Length="50" />
+                    <Field Name="ParentVersionName" Ordinal="22" IsOptional="true" DbType="12" Length="2147483647" />
+                    <Field Name="ParentVersionReleased" Ordinal="23" IsOptional="true" DbType="2" />
+                    <Field Name="ParentIssueId" Ordinal="24" IsOptional="true" DbType="12" Length="50" />
+                    <Field Name="ParentIssueKey" Ordinal="25" IsOptional="true" DbType="12" Length="50" />
+                    <Field Name="DateStart" Ordinal="26" IsOptional="true" DbType="4" />
+                    <Field Name="DateFinish" Ordinal="27" IsOptional="true" DbType="4" />
+                    <Field Name="Assignee" Ordinal="28" IsOptional="true" DbType="12" Length="2147483647" />
+                    <Field Name="IssueStatus" Ordinal="29" IsOptional="true" DbType="12" Length="200" />
+                    <Field Name="DateRelease" Ordinal="30" IsOptional="true" DbType="4" />
+                    <Field Name="DateStartActual" Ordinal="31" IsOptional="true" DbType="4" />
+                    <Field Name="DateFinishActual" Ordinal="32" IsOptional="true" DbType="4" />
+                    <Field Name="IssueActualWork" Ordinal="33" IsOptional="true" DbType="8" Precision="10" />
+                    <Field Name="OriginalEstimate" Ordinal="34" IsOptional="true" DbType="8" Precision="10" />
+                  </Fields>
+                </Table>
+                <Table Name="StagingFieldMappingValue">
+                  <PkConstraintName Name="PK_StagingFieldMappingValue" />
+                  <Fields>
+                    <Field Name="StagingFieldMappingValueId" Ordinal="1" IsIdentity="true" IsPrimaryKey="true" DbType="8" Precision="10" />
+                    <Field Name="StagingId" Ordinal="2" DbType="8" Precision="10" />
+                    <Field Name="SyncSystemFieldMappingId" Ordinal="3" DbType="8" Precision="10" />
+                    <Field Name="Value" Ordinal="4" IsOptional="true" DbType="12" Length="2147483647" />
+                  </Fields>
+                </Table>
+                <Table Name="SyncSystem">
+                  <PkConstraintName Name="PK_SyncSystem" />
+                  <Fields>
+                    <Field Name="SystemId" Ordinal="1" IsIdentity="true" IsPrimaryKey="true" DbType="8" Precision="10" />
+                    <Field Name="SystemTypeId" Ordinal="2" DbType="8" Precision="10" />
+                    <Field Name="SystemName" Ordinal="3" DbType="12" Length="2147483647" />
+                    <Field Name="SystemUrl" Ordinal="4" DbType="12" Length="2147483647" />
+                    <Field Name="SystemApiUrl" Ordinal="5" DbType="12" Length="2147483647" />
+                    <Field Name="SystemLogin" Ordinal="6" DbType="12" Length="2147483647" />
+                    <Field Name="SystemPassword" Ordinal="7" DbType="12" Length="2147483647" />
+                    <Field Name="DefaultParentTaskName" Ordinal="8" DbType="12" Length="2147483647" />
+                  </Fields>
+                </Table>
+                <Table Name="SyncSystemFieldMapping">
+                  <PkConstraintName Name="PK_SyncSystemFieldMapping" />
+                  <Fields>
+                    <Field Name="SyncSystemFieldMappingId" Ordinal="1" IsIdentity="true" IsPrimaryKey="true" DbType="8" Precision="10" />
+                    <Field Name="SystemId" Ordinal="2" DbType="8" Precision="10" />
+                    <Field Name="SystemFieldName" Ordinal="3" IsOptional="true" DbType="12" Length="2147483647" />
+                    <Field Name="EpmFieldName" Ordinal="4" DbType="12" Length="2147483647" />
+                    <Field Name="FieldType" Ordinal="5" DbType="12" Length="2147483647" />
+                    <Field Name="StagingFieldName" Ordinal="6" IsOptional="true" DbType="12" Length="2147483647" />
+                    <Field Name="IsMultiSelect" Ordinal="7" HasDefaultValue="true" DefaultValue="(0)" DbType="2" />
+                    <Field Name="IsIdWithValue" Ordinal="8" HasDefaultValue="true" DefaultValue="(0)" DbType="2" />
+                  </Fields>
+                </Table>
+                <Table Name="SyncSystemSetting">
+                  <PkConstraintName Name="PK_SyncSystemSetting" />
+                  <Fields>
+                    <Field Name="SettingId" Ordinal="1" IsIdentity="true" IsPrimaryKey="true" DbType="8" Precision="10" />
+                    <Field Name="Setting" Ordinal="2" DbType="12" Length="2147483647" />
+                  </Fields>
+                </Table>
+                <Table Name="SyncSystemSettingValue">
+                  <PkConstraintName Name="PK_SyncSystemSettingValue" />
+                  <Fields>
+                    <Field Name="SyncSystemSettingId" Ordinal="1" IsIdentity="true" IsPrimaryKey="true" DbType="8" Precision="10" />
+                    <Field Name="SystemId" Ordinal="2" DbType="8" Precision="10" />
+                    <Field Name="SettingId" Ordinal="3" DbType="8" Precision="10" />
+                    <Field Name="SettingValue" Ordinal="4" DbType="12" Length="2147483647" />
+                  </Fields>
+                </Table>
+                <Table Name="SyncSystemType">
+                  <PkConstraintName Name="PK_SyncSystemType" />
+                  <Fields>
+                    <Field Name="SystemTypeId" Ordinal="1" IsIdentity="true" IsPrimaryKey="true" DbType="8" Precision="10" />
+                    <Field Name="SystemTypeName" Ordinal="2" DbType="12" Length="2147483647" />
+                  </Fields>
+                </Table>
+                <Table Name="WebHookEntry">
+                  <PkConstraintName Name="PK_WebHookEntry" />
+                  <Fields>
+                    <Field Name="WebHookEntryId" Ordinal="1" IsIdentity="true" IsPrimaryKey="true" DbType="8" Precision="10" />
+                    <Field Name="SystemId" Ordinal="2" DbType="8" Precision="10" />
+                    <Field Name="JsonRequest" Ordinal="3" DbType="12" Length="2147483647" />
+                    <Field Name="DateCreated" Ordinal="4" DbType="4" />
+                  </Fields>
+                </Table>
+              </Tables>
+              <Views>
+                <View Name="vProjectServerSystemLink">
+                  <Fields>
+                    <Field Name="RowNumber" Ordinal="1" DbType="8" Precision="10" />
+                    <Field Name="ProjectServerSystemLinkId" Ordinal="2" DbType="8" Precision="10" />
+                    <Field Name="ProjectUid" Ordinal="3" DbType="25" />
+                    <Field Name="SystemId" Ordinal="4" DbType="8" Precision="10" />
+                    <Field Name="ProjectKey" Ordinal="5" IsOptional="true" DbType="12" Length="200" />
+                    <Field Name="ProjectName" Ordinal="6" IsOptional="true" DbType="12" Length="200" />
+                    <Field Name="ProjectId" Ordinal="7" IsOptional="true" DbType="12" Length="200" />
+                    <Field Name="IsHomeProject" Ordinal="8" DbType="2" />
+                    <Field Name="EpicKey" Ordinal="9" IsOptional="true" DbType="12" Length="200" />
+                    <Field Name="EpicName" Ordinal="10" IsOptional="true" DbType="12" Length="200" />
+                    <Field Name="EpicId" Ordinal="11" IsOptional="true" DbType="12" Length="200" />
+                    <Field Name="LastExecuted" Ordinal="12" IsOptional="true" DbType="4" />
+                    <Field Name="ExecuteStatus" Ordinal="13" IsOptional="true" DbType="12" Length="2147483647" />
+                    <Field Name="DateCreated" Ordinal="14" DbType="4" />
+                    <Field Name="SystemName" Ordinal="15" IsOptional="true" DbType="12" Length="2147483647" />
+                  </Fields>
+                </View>
+                <View Name="vStagingFieldMappingValue">
+                  <Fields>
+                    <Field Name="RowNumber" Ordinal="1" DbType="8" Precision="10" />
+                    <Field Name="StagingFieldMappingValueId" Ordinal="2" IsOptional="true" DbType="8" Precision="10" />
+                    <Field Name="StagingId" Ordinal="3" IsOptional="true" DbType="8" Precision="10" />
+                    <Field Name="SyncSystemFieldMappingId" Ordinal="4" IsOptional="true" DbType="8" Precision="10" />
+                    <Field Name="Value" Ordinal="5" IsOptional="true" DbType="12" Length="2147483647" />
+                    <Field Name="EpmFieldName" Ordinal="6" DbType="12" Length="2147483647" />
+                    <Field Name="FieldType" Ordinal="7" DbType="12" Length="2147483647" />
+                    <Field Name="SystemFieldName" Ordinal="8" IsOptional="true" DbType="12" Length="2147483647" />
+                    <Field Name="StagingFieldName" Ordinal="9" IsOptional="true" DbType="12" Length="2147483647" />
+                    <Field Name="SystemId" Ordinal="10" DbType="8" Precision="10" />
+                  </Fields>
+                </View>
+              </Views>
+              <StoredProcedures>
+                <StoredProcedure Name="CleanMasterAndMasterWorklog" />
+                <StoredProcedure Name="CleanStaging" />
+              </StoredProcedures>
+            </Schema>
+          </Schemas>
+          <ForeignKeyConstraints>
+            <ForeignKeyConstraint Name="dbo:Master:FK_Master_SyncSystem" DeleteRuleAction="1">
+              <FieldPairs>
+                <FieldPair PkField="dbo:SyncSystem:SystemId" FkField="dbo:Master:SystemId" />
+              </FieldPairs>
+            </ForeignKeyConstraint>
+            <ForeignKeyConstraint Name="dbo:MasterFieldMappingValue:FK_FieldMappingValueMaster_Master" DeleteRuleAction="1">
+              <FieldPairs>
+                <FieldPair PkField="dbo:Master:MasterId" FkField="dbo:MasterFieldMappingValue:MasterId" />
+              </FieldPairs>
+            </ForeignKeyConstraint>
+            <ForeignKeyConstraint Name="dbo:MasterFieldMappingValue:FK_FieldMappingValueMaster_SyncSystemFieldMapping">
+              <FieldPairs>
+                <FieldPair PkField="dbo:SyncSystemFieldMapping:SyncSystemFieldMappingId" FkField="dbo:MasterFieldMappingValue:SyncSystemFieldMappingId" />
+              </FieldPairs>
+            </ForeignKeyConstraint>
+            <ForeignKeyConstraint Name="dbo:MasterHistory:FK_MasterHistory_SyncSystem" DeleteRuleAction="1">
+              <FieldPairs>
+                <FieldPair PkField="dbo:SyncSystem:SystemId" FkField="dbo:MasterHistory:SystemId" />
+              </FieldPairs>
+            </ForeignKeyConstraint>
+            <ForeignKeyConstraint Name="dbo:MasterHistoryFieldMappingValue:FK_FieldMappingValueMasterHistory_MasterHistory" DeleteRuleAction="1">
+              <FieldPairs>
+                <FieldPair PkField="dbo:MasterHistory:MasterHistoryId" FkField="dbo:MasterHistoryFieldMappingValue:MasterHistoryId" />
+              </FieldPairs>
+            </ForeignKeyConstraint>
+            <ForeignKeyConstraint Name="dbo:MasterHistoryFieldMappingValue:FK_FieldMappingValueMasterHistory_SyncSystemFieldMapping">
+              <FieldPairs>
+                <FieldPair PkField="dbo:SyncSystemFieldMapping:SyncSystemFieldMappingId" FkField="dbo:MasterHistoryFieldMappingValue:SyncSystemFieldMappingId" />
+              </FieldPairs>
+            </ForeignKeyConstraint>
+            <ForeignKeyConstraint Name="dbo:MasterWorklog:FK_MasterWorklog_SyncSystem" DeleteRuleAction="1">
+              <FieldPairs>
+                <FieldPair PkField="dbo:SyncSystem:SystemId" FkField="dbo:MasterWorklog:SystemId" />
+              </FieldPairs>
+            </ForeignKeyConstraint>
+            <ForeignKeyConstraint Name="dbo:ProjectServerSystemLink:FK_ProjectServerSystemLink_SyncSystem" DeleteRuleAction="1">
+              <FieldPairs>
+                <FieldPair PkField="dbo:SyncSystem:SystemId" FkField="dbo:ProjectServerSystemLink:SystemId" />
+              </FieldPairs>
+            </ForeignKeyConstraint>
+            <ForeignKeyConstraint Name="dbo:Staging:FK_Stating_SyncSystem" DeleteRuleAction="1">
+              <FieldPairs>
+                <FieldPair PkField="dbo:SyncSystem:SystemId" FkField="dbo:Staging:SystemId" />
+              </FieldPairs>
+            </ForeignKeyConstraint>
+            <ForeignKeyConstraint Name="dbo:StagingFieldMappingValue:FK_FieldMappingValueStaging_Staging" DeleteRuleAction="1">
+              <FieldPairs>
+                <FieldPair PkField="dbo:Staging:StagingId" FkField="dbo:StagingFieldMappingValue:StagingId" />
+              </FieldPairs>
+            </ForeignKeyConstraint>
+            <ForeignKeyConstraint Name="dbo:StagingFieldMappingValue:FK_FieldMappingValueStaging_SyncSystemFieldMapping">
+              <FieldPairs>
+                <FieldPair PkField="dbo:SyncSystemFieldMapping:SyncSystemFieldMappingId" FkField="dbo:StagingFieldMappingValue:SyncSystemFieldMappingId" />
+              </FieldPairs>
+            </ForeignKeyConstraint>
+            <ForeignKeyConstraint Name="dbo:SyncSystem:FK_SyncSystem_SyncSystemType" DeleteRuleAction="1">
+              <FieldPairs>
+                <FieldPair PkField="dbo:SyncSystemType:SystemTypeId" FkField="dbo:SyncSystem:SystemTypeId" />
+              </FieldPairs>
+            </ForeignKeyConstraint>
+            <ForeignKeyConstraint Name="dbo:SyncSystemFieldMapping:FK_SyncSystemFieldMapping_SyncSystem" DeleteRuleAction="1">
+              <FieldPairs>
+                <FieldPair PkField="dbo:SyncSystem:SystemId" FkField="dbo:SyncSystemFieldMapping:SystemId" />
+              </FieldPairs>
+            </ForeignKeyConstraint>
+            <ForeignKeyConstraint Name="dbo:SyncSystemSettingValue:FK_SyncSystemSettingValue_SyncSystem" DeleteRuleAction="1">
+              <FieldPairs>
+                <FieldPair PkField="dbo:SyncSystem:SystemId" FkField="dbo:SyncSystemSettingValue:SystemId" />
+              </FieldPairs>
+            </ForeignKeyConstraint>
+            <ForeignKeyConstraint Name="dbo:SyncSystemSettingValue:FK_SyncSystemSettingValue_SyncSystemSetting" DeleteRuleAction="1">
+              <FieldPairs>
+                <FieldPair PkField="dbo:SyncSystemSetting:SettingId" FkField="dbo:SyncSystemSettingValue:SettingId" />
+              </FieldPairs>
+            </ForeignKeyConstraint>
+            <ForeignKeyConstraint Name="dbo:WebHookEntry:FK_WebHookEntry_SyncSystem" DeleteRuleAction="1">
+              <FieldPairs>
+                <FieldPair PkField="dbo:SyncSystem:SystemId" FkField="dbo:WebHookEntry:SystemId" />
+              </FieldPairs>
+            </ForeignKeyConstraint>
+          </ForeignKeyConstraints>
+        </Catalog>
+      </Catalogs>
+    </TargetDatabase>
+  </TargetDatabases>
+  <MappingStores>
+    <MappingStore Type="2D18D138-1DD2-467E-86CC-4838250611AE">
+      <EntityMappings>
+        <EntityMapping EntityName=":Master" TargetName="ProjectOnlineSystemConnector:dbo:Master">
+          <FieldMappings>
+            <FieldMapping FieldName="Assignee" TargetFieldName="Assignee" />
+            <FieldMapping FieldName="DateFinish" TargetFieldName="DateFinish" />
+            <FieldMapping FieldName="DateFinishActual" TargetFieldName="DateFinishActual" />
+            <FieldMapping FieldName="DateRelease" TargetFieldName="DateRelease" />
+            <FieldMapping FieldName="DateStart" TargetFieldName="DateStart" />
+            <FieldMapping FieldName="DateStartActual" TargetFieldName="DateStartActual" />
+            <FieldMapping FieldName="IsSubTask" TargetFieldName="IsSubTask" />
+            <FieldMapping FieldName="IssueActualWork" TargetFieldName="IssueActualWork" />
+            <FieldMapping FieldName="IssueId" TargetFieldName="IssueId" />
+            <FieldMapping FieldName="IssueKey" TargetFieldName="IssueKey" />
+            <FieldMapping FieldName="IssueName" TargetFieldName="IssueName" />
+            <FieldMapping FieldName="IssueStatus" TargetFieldName="IssueStatus" />
+            <FieldMapping FieldName="IssueTypeId" TargetFieldName="IssueTypeId" />
+            <FieldMapping FieldName="IssueTypeName" TargetFieldName="IssueTypeName" />
+            <FieldMapping FieldName="MasterId" TargetFieldName="MasterId" SequenceToUse="SCOPE_IDENTITY()" />
+            <FieldMapping FieldName="OriginalEstimate" TargetFieldName="OriginalEstimate" />
+            <FieldMapping FieldName="ParentEpicId" TargetFieldName="ParentEpicId" />
+            <FieldMapping FieldName="ParentEpicKey" TargetFieldName="ParentEpicKey" />
+            <FieldMapping FieldName="ParentIssueId" TargetFieldName="ParentIssueId" />
+            <FieldMapping FieldName="ParentIssueKey" TargetFieldName="ParentIssueKey" />
+            <FieldMapping FieldName="ParentSprintId" TargetFieldName="ParentSprintId" />
+            <FieldMapping FieldName="ParentSprintName" TargetFieldName="ParentSprintName" />
+            <FieldMapping FieldName="ParentVersionId" TargetFieldName="ParentVersionId" />
+            <FieldMapping FieldName="ParentVersionName" TargetFieldName="ParentVersionName" />
+            <FieldMapping FieldName="ParentVersionReleased" TargetFieldName="ParentVersionReleased" />
+            <FieldMapping FieldName="ProjectId" TargetFieldName="ProjectId" />
+            <FieldMapping FieldName="ProjectKey" TargetFieldName="ProjectKey" />
+            <FieldMapping FieldName="ProjectName" TargetFieldName="ProjectName" />
+            <FieldMapping FieldName="RecordDateCreated" TargetFieldName="RecordDateCreated" />
+            <FieldMapping FieldName="RecordDateUpdated" TargetFieldName="RecordDateUpdated" />
+            <FieldMapping FieldName="SystemId" TargetFieldName="SystemId" />
+          </FieldMappings>
+        </EntityMapping>
+        <EntityMapping EntityName=":MasterFieldMappingValue" TargetName="ProjectOnlineSystemConnector:dbo:MasterFieldMappingValue">
+          <FieldMappings>
+            <FieldMapping FieldName="MasterFieldMappingValueId" TargetFieldName="MasterFieldMappingValueId" SequenceToUse="SCOPE_IDENTITY()" />
+            <FieldMapping FieldName="MasterId" TargetFieldName="MasterId" />
+            <FieldMapping FieldName="SyncSystemFieldMappingId" TargetFieldName="SyncSystemFieldMappingId" />
+            <FieldMapping FieldName="Value" TargetFieldName="Value" />
+          </FieldMappings>
+        </EntityMapping>
+        <EntityMapping EntityName=":MasterHistory" TargetName="ProjectOnlineSystemConnector:dbo:MasterHistory">
+          <FieldMappings>
+            <FieldMapping FieldName="Assignee" TargetFieldName="Assignee" />
+            <FieldMapping FieldName="DateFinish" TargetFieldName="DateFinish" />
+            <FieldMapping FieldName="DateFinishActual" TargetFieldName="DateFinishActual" />
+            <FieldMapping FieldName="DateRelease" TargetFieldName="DateRelease" />
+            <FieldMapping FieldName="DateStart" TargetFieldName="DateStart" />
+            <FieldMapping FieldName="DateStartActual" TargetFieldName="DateStartActual" />
+            <FieldMapping FieldName="IsSubTask" TargetFieldName="IsSubTask" />
+            <FieldMapping FieldName="IssueActualWork" TargetFieldName="IssueActualWork" />
+            <FieldMapping FieldName="IssueId" TargetFieldName="IssueId" />
+            <FieldMapping FieldName="IssueKey" TargetFieldName="IssueKey" />
+            <FieldMapping FieldName="IssueName" TargetFieldName="IssueName" />
+            <FieldMapping FieldName="IssueStatus" TargetFieldName="IssueStatus" />
+            <FieldMapping FieldName="IssueTypeId" TargetFieldName="IssueTypeId" />
+            <FieldMapping FieldName="IssueTypeName" TargetFieldName="IssueTypeName" />
+            <FieldMapping FieldName="MasterHistoryId" TargetFieldName="MasterHistoryId" SequenceToUse="SCOPE_IDENTITY()" />
+            <FieldMapping FieldName="OriginalEstimate" TargetFieldName="OriginalEstimate" />
+            <FieldMapping FieldName="ParentEpicId" TargetFieldName="ParentEpicId" />
+            <FieldMapping FieldName="ParentEpicKey" TargetFieldName="ParentEpicKey" />
+            <FieldMapping FieldName="ParentIssueId" TargetFieldName="ParentIssueId" />
+            <FieldMapping FieldName="ParentIssueKey" TargetFieldName="ParentIssueKey" />
+            <FieldMapping FieldName="ParentSprintId" TargetFieldName="ParentSprintId" />
+            <FieldMapping FieldName="ParentSprintName" TargetFieldName="ParentSprintName" />
+            <FieldMapping FieldName="ParentVersionId" TargetFieldName="ParentVersionId" />
+            <FieldMapping FieldName="ParentVersionName" TargetFieldName="ParentVersionName" />
+            <FieldMapping FieldName="ParentVersionReleased" TargetFieldName="ParentVersionReleased" />
+            <FieldMapping FieldName="ProjectId" TargetFieldName="ProjectId" />
+            <FieldMapping FieldName="ProjectKey" TargetFieldName="ProjectKey" />
+            <FieldMapping FieldName="ProjectName" TargetFieldName="ProjectName" />
+            <FieldMapping FieldName="RecordDateCreated" TargetFieldName="RecordDateCreated" />
+            <FieldMapping FieldName="RecordDateUpdated" TargetFieldName="RecordDateUpdated" />
+            <FieldMapping FieldName="SystemId" TargetFieldName="SystemId" />
+          </FieldMappings>
+        </EntityMapping>
+        <EntityMapping EntityName=":MasterHistoryFieldMappingValue" TargetName="ProjectOnlineSystemConnector:dbo:MasterHistoryFieldMappingValue">
+          <FieldMappings>
+            <FieldMapping FieldName="MasterHistoryFieldMappingValueId" TargetFieldName="MasterHistoryFieldMappingValueId" SequenceToUse="SCOPE_IDENTITY()" />
+            <FieldMapping FieldName="MasterHistoryId" TargetFieldName="MasterHistoryId" />
+            <FieldMapping FieldName="SyncSystemFieldMappingId" TargetFieldName="SyncSystemFieldMappingId" />
+            <FieldMapping FieldName="Value" TargetFieldName="Value" />
+          </FieldMappings>
+        </EntityMapping>
+        <EntityMapping EntityName=":MasterWorklog" TargetName="ProjectOnlineSystemConnector:dbo:MasterWorklog">
+          <FieldMappings>
+            <FieldMapping FieldName="AuthorEmailAddress" TargetFieldName="AuthorEmailAddress" />
+            <FieldMapping FieldName="AuthorKey" TargetFieldName="AuthorKey" />
+            <FieldMapping FieldName="AuthorName" TargetFieldName="AuthorName" />
+            <FieldMapping FieldName="Comment" TargetFieldName="Comment" />
+            <FieldMapping FieldName="DateCreated" TargetFieldName="DateCreated" />
+            <FieldMapping FieldName="DateStarted" TargetFieldName="DateStarted" />
+            <FieldMapping FieldName="DateUpdated" TargetFieldName="DateUpdated" />
+            <FieldMapping FieldName="IssueId" TargetFieldName="IssueId" />
+            <FieldMapping FieldName="MasterWorklogId" TargetFieldName="MasterWorklogId" SequenceToUse="SCOPE_IDENTITY()" />
+            <FieldMapping FieldName="RecordDateCreated" TargetFieldName="RecordDateCreated" />
+            <FieldMapping FieldName="RecordDateUpdated" TargetFieldName="RecordDateUpdated" />
+            <FieldMapping FieldName="RecordState" TargetFieldName="RecordState" />
+            <FieldMapping FieldName="SystemId" TargetFieldName="SystemId" />
+            <FieldMapping FieldName="TimeSpentSeconds" TargetFieldName="TimeSpentSeconds" />
+            <FieldMapping FieldName="WebHookEvent" TargetFieldName="WebHookEvent" />
+            <FieldMapping FieldName="WorkLogId" TargetFieldName="WorkLogId" />
+          </FieldMappings>
+        </EntityMapping>
+        <EntityMapping EntityName=":ProjectServerSystemLink" TargetName="ProjectOnlineSystemConnector:dbo:ProjectServerSystemLink">
+          <FieldMappings>
+            <FieldMapping FieldName="DateCreated" TargetFieldName="DateCreated" />
+            <FieldMapping FieldName="EpicId" TargetFieldName="EpicId" />
+            <FieldMapping FieldName="EpicKey" TargetFieldName="EpicKey" />
+            <FieldMapping FieldName="EpicName" TargetFieldName="EpicName" />
+            <FieldMapping FieldName="ExecuteStatus" TargetFieldName="ExecuteStatus" />
+            <FieldMapping FieldName="IsHomeProject" TargetFieldName="IsHomeProject" />
+            <FieldMapping FieldName="LastExecuted" TargetFieldName="LastExecuted" />
+            <FieldMapping FieldName="ProjectId" TargetFieldName="ProjectId" />
+            <FieldMapping FieldName="ProjectKey" TargetFieldName="ProjectKey" />
+            <FieldMapping FieldName="ProjectName" TargetFieldName="ProjectName" />
+            <FieldMapping FieldName="ProjectServerSystemLinkId" TargetFieldName="ProjectServerSystemLinkId" SequenceToUse="SCOPE_IDENTITY()" />
+            <FieldMapping FieldName="ProjectUid" TargetFieldName="ProjectUid" />
+            <FieldMapping FieldName="SystemId" TargetFieldName="SystemId" />
+          </FieldMappings>
+        </EntityMapping>
+        <EntityMapping EntityName=":Staging" TargetName="ProjectOnlineSystemConnector:dbo:Staging">
+          <FieldMappings>
+            <FieldMapping FieldName="Assignee" TargetFieldName="Assignee" />
+            <FieldMapping FieldName="ChangedFields" TargetFieldName="ChangedFields" />
+            <FieldMapping FieldName="DateFinish" TargetFieldName="DateFinish" />
+            <FieldMapping FieldName="DateFinishActual" TargetFieldName="DateFinishActual" />
+            <FieldMapping FieldName="DateRelease" TargetFieldName="DateRelease" />
+            <FieldMapping FieldName="DateStart" TargetFieldName="DateStart" />
+            <FieldMapping FieldName="DateStartActual" TargetFieldName="DateStartActual" />
+            <FieldMapping FieldName="IsSubTask" TargetFieldName="IsSubTask" />
+            <FieldMapping FieldName="IssueActualWork" TargetFieldName="IssueActualWork" />
+            <FieldMapping FieldName="IssueId" TargetFieldName="IssueId" />
+            <FieldMapping FieldName="IssueKey" TargetFieldName="IssueKey" />
+            <FieldMapping FieldName="IssueName" TargetFieldName="IssueName" />
+            <FieldMapping FieldName="IssueStatus" TargetFieldName="IssueStatus" />
+            <FieldMapping FieldName="IssueTypeId" TargetFieldName="IssueTypeId" />
+            <FieldMapping FieldName="IssueTypeName" TargetFieldName="IssueTypeName" />
+            <FieldMapping FieldName="OriginalEstimate" TargetFieldName="OriginalEstimate" />
+            <FieldMapping FieldName="ParentEpicId" TargetFieldName="ParentEpicId" />
+            <FieldMapping FieldName="ParentEpicKey" TargetFieldName="ParentEpicKey" />
+            <FieldMapping FieldName="ParentIssueId" TargetFieldName="ParentIssueId" />
+            <FieldMapping FieldName="ParentIssueKey" TargetFieldName="ParentIssueKey" />
+            <FieldMapping FieldName="ParentSprintId" TargetFieldName="ParentSprintId" />
+            <FieldMapping FieldName="ParentSprintName" TargetFieldName="ParentSprintName" />
+            <FieldMapping FieldName="ParentVersionId" TargetFieldName="ParentVersionId" />
+            <FieldMapping FieldName="ParentVersionName" TargetFieldName="ParentVersionName" />
+            <FieldMapping FieldName="ParentVersionReleased" TargetFieldName="ParentVersionReleased" />
+            <FieldMapping FieldName="ProjectId" TargetFieldName="ProjectId" />
+            <FieldMapping FieldName="ProjectKey" TargetFieldName="ProjectKey" />
+            <FieldMapping FieldName="ProjectName" TargetFieldName="ProjectName" />
+            <FieldMapping FieldName="RecordDateCreated" TargetFieldName="RecordDateCreated" />
+            <FieldMapping FieldName="RecordDateUpdated" TargetFieldName="RecordDateUpdated" />
+            <FieldMapping FieldName="RecordState" TargetFieldName="RecordState" />
+            <FieldMapping FieldName="StagingId" TargetFieldName="StagingId" SequenceToUse="SCOPE_IDENTITY()" />
+            <FieldMapping FieldName="SystemId" TargetFieldName="SystemId" />
+            <FieldMapping FieldName="WebHookEvent" TargetFieldName="WebHookEvent" />
+          </FieldMappings>
+        </EntityMapping>
+        <EntityMapping EntityName=":StagingFieldMappingValue" TargetName="ProjectOnlineSystemConnector:dbo:StagingFieldMappingValue">
+          <FieldMappings>
+            <FieldMapping FieldName="StagingFieldMappingValueId" TargetFieldName="StagingFieldMappingValueId" SequenceToUse="SCOPE_IDENTITY()" />
+            <FieldMapping FieldName="StagingId" TargetFieldName="StagingId" />
+            <FieldMapping FieldName="SyncSystemFieldMappingId" TargetFieldName="SyncSystemFieldMappingId" />
+            <FieldMapping FieldName="Value" TargetFieldName="Value" />
+          </FieldMappings>
+        </EntityMapping>
+        <EntityMapping EntityName=":SyncSystem" TargetName="ProjectOnlineSystemConnector:dbo:SyncSystem">
+          <FieldMappings>
+            <FieldMapping FieldName="DefaultParentTaskName" TargetFieldName="DefaultParentTaskName" />
+            <FieldMapping FieldName="SystemApiUrl" TargetFieldName="SystemApiUrl" />
+            <FieldMapping FieldName="SystemId" TargetFieldName="SystemId" SequenceToUse="SCOPE_IDENTITY()" />
+            <FieldMapping FieldName="SystemLogin" TargetFieldName="SystemLogin" />
+            <FieldMapping FieldName="SystemName" TargetFieldName="SystemName" />
+            <FieldMapping FieldName="SystemPassword" TargetFieldName="SystemPassword" />
+            <FieldMapping FieldName="SystemTypeId" TargetFieldName="SystemTypeId" />
+            <FieldMapping FieldName="SystemUrl" TargetFieldName="SystemUrl" />
+          </FieldMappings>
+        </EntityMapping>
+        <EntityMapping EntityName=":SyncSystemFieldMapping" TargetName="ProjectOnlineSystemConnector:dbo:SyncSystemFieldMapping">
+          <FieldMappings>
+            <FieldMapping FieldName="EpmFieldName" TargetFieldName="EpmFieldName" />
+            <FieldMapping FieldName="FieldType" TargetFieldName="FieldType" />
+            <FieldMapping FieldName="IsIdWithValue" TargetFieldName="IsIdWithValue" />
+            <FieldMapping FieldName="IsMultiSelect" TargetFieldName="IsMultiSelect" />
+            <FieldMapping FieldName="StagingFieldName" TargetFieldName="StagingFieldName" />
+            <FieldMapping FieldName="SyncSystemFieldMappingId" TargetFieldName="SyncSystemFieldMappingId" SequenceToUse="SCOPE_IDENTITY()" />
+            <FieldMapping FieldName="SystemFieldName" TargetFieldName="SystemFieldName" />
+            <FieldMapping FieldName="SystemId" TargetFieldName="SystemId" />
+          </FieldMappings>
+        </EntityMapping>
+        <EntityMapping EntityName=":SyncSystemSetting" TargetName="ProjectOnlineSystemConnector:dbo:SyncSystemSetting">
+          <FieldMappings>
+            <FieldMapping FieldName="Setting" TargetFieldName="Setting" />
+            <FieldMapping FieldName="SettingId" TargetFieldName="SettingId" SequenceToUse="SCOPE_IDENTITY()" />
+          </FieldMappings>
+        </EntityMapping>
+        <EntityMapping EntityName=":SyncSystemSettingValue" TargetName="ProjectOnlineSystemConnector:dbo:SyncSystemSettingValue">
+          <FieldMappings>
+            <FieldMapping FieldName="SettingId" TargetFieldName="SettingId" />
+            <FieldMapping FieldName="SettingValue" TargetFieldName="SettingValue" />
+            <FieldMapping FieldName="SyncSystemSettingId" TargetFieldName="SyncSystemSettingId" SequenceToUse="SCOPE_IDENTITY()" />
+            <FieldMapping FieldName="SystemId" TargetFieldName="SystemId" />
+          </FieldMappings>
+        </EntityMapping>
+        <EntityMapping EntityName=":SyncSystemType" TargetName="ProjectOnlineSystemConnector:dbo:SyncSystemType">
+          <FieldMappings>
+            <FieldMapping FieldName="SystemTypeId" TargetFieldName="SystemTypeId" SequenceToUse="SCOPE_IDENTITY()" />
+            <FieldMapping FieldName="SystemTypeName" TargetFieldName="SystemTypeName" />
+          </FieldMappings>
+        </EntityMapping>
+        <EntityMapping EntityName=":VProjectServerSystemLink" TargetName="ProjectOnlineSystemConnector:dbo:vProjectServerSystemLink" ActionCombination="4">
+          <FieldMappings>
+            <FieldMapping FieldName="DateCreated" TargetFieldName="DateCreated" />
+            <FieldMapping FieldName="EpicId" TargetFieldName="EpicId" />
+            <FieldMapping FieldName="EpicKey" TargetFieldName="EpicKey" />
+            <FieldMapping FieldName="EpicName" TargetFieldName="EpicName" />
+            <FieldMapping FieldName="ExecuteStatus" TargetFieldName="ExecuteStatus" />
+            <FieldMapping FieldName="IsHomeProject" TargetFieldName="IsHomeProject" />
+            <FieldMapping FieldName="LastExecuted" TargetFieldName="LastExecuted" />
+            <FieldMapping FieldName="ProjectId" TargetFieldName="ProjectId" />
+            <FieldMapping FieldName="ProjectKey" TargetFieldName="ProjectKey" />
+            <FieldMapping FieldName="ProjectName" TargetFieldName="ProjectName" />
+            <FieldMapping FieldName="ProjectServerSystemLinkId" TargetFieldName="ProjectServerSystemLinkId" />
+            <FieldMapping FieldName="ProjectUid" TargetFieldName="ProjectUid" />
+            <FieldMapping FieldName="RowNumber" TargetFieldName="RowNumber" />
+            <FieldMapping FieldName="SystemId" TargetFieldName="SystemId" />
+            <FieldMapping FieldName="SystemName" TargetFieldName="SystemName" />
+          </FieldMappings>
+        </EntityMapping>
+        <EntityMapping EntityName=":VStagingFieldMappingValue" TargetName="ProjectOnlineSystemConnector:dbo:vStagingFieldMappingValue" ActionCombination="4">
+          <FieldMappings>
+            <FieldMapping FieldName="EpmFieldName" TargetFieldName="EpmFieldName" />
+            <FieldMapping FieldName="FieldType" TargetFieldName="FieldType" />
+            <FieldMapping FieldName="RowNumber" TargetFieldName="RowNumber" />
+            <FieldMapping FieldName="StagingFieldMappingValueId" TargetFieldName="StagingFieldMappingValueId" />
+            <FieldMapping FieldName="StagingFieldName" TargetFieldName="StagingFieldName" />
+            <FieldMapping FieldName="StagingId" TargetFieldName="StagingId" />
+            <FieldMapping FieldName="SyncSystemFieldMappingId" TargetFieldName="SyncSystemFieldMappingId" />
+            <FieldMapping FieldName="SystemFieldName" TargetFieldName="SystemFieldName" />
+            <FieldMapping FieldName="SystemId" TargetFieldName="SystemId" />
+            <FieldMapping FieldName="Value" TargetFieldName="Value" />
+          </FieldMappings>
+        </EntityMapping>
+        <EntityMapping EntityName=":WebHookEntry" TargetName="ProjectOnlineSystemConnector:dbo:WebHookEntry">
+          <FieldMappings>
+            <FieldMapping FieldName="DateCreated" TargetFieldName="DateCreated" />
+            <FieldMapping FieldName="JsonRequest" TargetFieldName="JsonRequest" />
+            <FieldMapping FieldName="SystemId" TargetFieldName="SystemId" />
+            <FieldMapping FieldName="WebHookEntryId" TargetFieldName="WebHookEntryId" SequenceToUse="SCOPE_IDENTITY()" />
+          </FieldMappings>
+        </EntityMapping>
+      </EntityMappings>
+      <TypedViewMappings />
+      <SPCallMappings>
+        <SPCallMapping SPCallName=":CleanMasterAndMasterWorklog" TargetName="ProjectOnlineSystemConnector:dbo:CleanMasterAndMasterWorklog">
+          <FieldMappings />
+        </SPCallMapping>
+        <SPCallMapping SPCallName=":CleanStaging" TargetName="ProjectOnlineSystemConnector:dbo:CleanStaging">
+          <FieldMappings />
+        </SPCallMapping>
+      </SPCallMappings>
+      <TvfCallMappings />
+      <TypeConversionDefinitions />
+    </MappingStore>
+  </MappingStores>
+  <ModelViews />
+</Project>

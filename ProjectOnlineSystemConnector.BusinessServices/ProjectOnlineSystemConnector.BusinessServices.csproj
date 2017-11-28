@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{288DD9B6-8912-44FC-B28B-8BAA76AADF9D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ProjectOnlineSystemConnector.BusinessServices</RootNamespace>
+    <AssemblyName>ProjectOnlineSystemConnector.BusinessServices</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper, Version=6.2.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.6.2.1\lib\net45\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.4.4.12\lib\net45\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Z.EntityFramework.Plus.EF6, Version=1.7.8.0, Culture=neutral, PublicKeyToken=59b66d028979105b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Z.EntityFramework.Plus.EF6.1.7.8\lib\net45\Z.EntityFramework.Plus.EF6.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseBusinessService.cs" />
+    <Compile Include="CommonBusinessService.cs" />
+    <Compile Include="MasterBusinessService.cs" />
+    <Compile Include="MasterWorklogBusinessService.cs" />
+    <Compile Include="ProjectServerSystemLinkBusinessService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StagingBusinessService.cs" />
+    <Compile Include="SyncSystemSettingValueBusinessService.cs" />
+    <Compile Include="SyncSystemSettingBusinessService.cs" />
+    <Compile Include="SyncSystemTypeBusinessService.cs" />
+    <Compile Include="SyncSystemBusinessService.cs" />
+    <Compile Include="SyncSystemFieldMappingBusinessService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ProjectOnlineSystemConnector.Common\ProjectOnlineSystemConnector.Common.csproj">
+      <Project>{B7221E0F-8732-47A2-8B1D-B5F61724838D}</Project>
+      <Name>ProjectOnlineSystemConnector.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ProjectOnlineSystemConnector.Data.Views\Model\ProjectOnlineSystemConnector.Data.Views.Model.csproj">
+      <Project>{5F5DB26F-8920-488F-8145-6EB8878656FB}</Project>
+      <Name>ProjectOnlineSystemConnector.Data.Views.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ProjectOnlineSystemConnector.DataAccess.CSOM\ProjectOnlineSystemConnector.DataAccess.CSOM.csproj">
+      <Project>{CF0E1681-CF6D-448E-9903-7F51C3312B80}</Project>
+      <Name>ProjectOnlineSystemConnector.DataAccess.CSOM</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ProjectOnlineSystemConnector.DataAccess.DataBase\ProjectOnlineSystemConnector.DataAccess.DataBase.csproj">
+      <Project>{88CCDD32-973C-446F-B683-0ECA221137E1}</Project>
+      <Name>ProjectOnlineSystemConnector.DataAccess.DataBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ProjectOnlineSystemConnector.DataModel\ProjectOnlineSystemConnector.DataModel.csproj">
+      <Project>{C23D8595-7870-4F82-B2ED-D11F8D9E4ED4}</Project>
+      <Name>ProjectOnlineSystemConnector.DataModel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

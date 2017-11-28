@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{05B760AE-CA09-40DF-8847-8A7EBBE510C6}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ProjectOnlineSystemConnector.HtmlCssJsReady</RootNamespace>
+    <AssemblyName>ProjectOnlineSystemConnector.HtmlCssJsReady</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Content\icons\dxicons.ttf" />
+    <None Include="Content\icons\dxicons.woff" />
+    <None Include="Content\icons\dxiconsios.ttf" />
+    <None Include="Content\icons\dxiconsios.woff" />
+    <None Include="packages.config" />
+    <None Include="Scripts\jquery-3.2.1.min.map" />
+    <None Include="Scripts\jquery-3.2.1.slim.min.map" />
+    <None Include="SiteAssets\CommonContent\icons\dxicons.eot" />
+    <None Include="SiteAssets\CommonContent\icons\dxicons.ttf" />
+    <None Include="SiteAssets\CommonContent\icons\dxicons.woff" />
+    <None Include="SiteAssets\CommonContent\icons\dxiconsios.eot" />
+    <None Include="SiteAssets\CommonContent\icons\dxiconsios.ttf" />
+    <None Include="SiteAssets\CommonContent\icons\dxiconsios.woff" />
+    <None Include="SiteAssets\CommonJavascript\jquery-3.1.1.min.map" />
+    <None Include="SiteAssets\CommonJavascript\jquery-3.1.1.slim.min.map" />
+    <None Include="tsconfig.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\dx.android5.light.css" />
+    <Content Include="Content\dx.carmine.compact.css" />
+    <Content Include="Content\dx.carmine.css" />
+    <Content Include="Content\dx.common.css" />
+    <Content Include="Content\dx.contrast.compact.css" />
+    <Content Include="Content\dx.contrast.css" />
+    <Content Include="Content\dx.dark.compact.css" />
+    <Content Include="Content\dx.dark.css" />
+    <Content Include="Content\dx.darkmoon.compact.css" />
+    <Content Include="Content\dx.darkmoon.css" />
+    <Content Include="Content\dx.darkviolet.compact.css" />
+    <Content Include="Content\dx.darkviolet.css" />
+    <Content Include="Content\dx.greenmist.compact.css" />
+    <Content Include="Content\dx.greenmist.css" />
+    <Content Include="Content\dx.ios7.default.css" />
+    <Content Include="Content\dx.light.compact.css" />
+    <Content Include="Content\dx.light.css" />
+    <Content Include="Content\dx.softblue.compact.css" />
+    <Content Include="Content\dx.softblue.css" />
+    <Content Include="Content\dx.spa.css" />
+    <Content Include="Content\dx.win10.black.css" />
+    <Content Include="Content\dx.win10.white.css" />
+    <Content Include="Content\dx.win8.black.css" />
+    <Content Include="Content\dx.win8.white.css" />
+    <Content Include="Content\layouts\Desktop\DesktopLayout.css" />
+    <Content Include="Content\layouts\Desktop\DesktopLayout.html" />
+    <Content Include="Content\layouts\Desktop\DesktopLayout.js" />
+    <Content Include="Content\layouts\Empty\EmptyLayout.css" />
+    <Content Include="Content\layouts\Empty\EmptyLayout.html" />
+    <Content Include="Content\layouts\Empty\EmptyLayout.js" />
+    <Content Include="Content\layouts\Popup\PopupLayout.css" />
+    <Content Include="Content\layouts\Popup\PopupLayout.html" />
+    <Content Include="Content\layouts\Popup\PopupLayout.js" />
+    <Content Include="DataSyncHtml\Admin\CRUDTables.html" />
+    <Content Include="DataSyncHtml\JiraSyncContentEditor.html" />
+    <Content Include="DataSyncHtml\TfsSyncContentEditor.html" />
+    <Content Include="Scripts\cldr.js" />
+    <Content Include="Scripts\cldr\event.js" />
+    <Content Include="Scripts\cldr\supplemental.js" />
+    <Content Include="Scripts\cldr\unresolved.js" />
+    <Content Include="Scripts\devextreme-localization\dx.messages.de.js" />
+    <Content Include="Scripts\devextreme-localization\dx.messages.en.js" />
+    <Content Include="Scripts\devextreme-localization\dx.messages.ja.js" />
+    <Content Include="Scripts\devextreme-localization\dx.messages.ru.js" />
+    <Content Include="Scripts\devextreme-localization\dx.web.de.js" />
+    <Content Include="Scripts\devextreme-localization\dx.web.ja.js" />
+    <Content Include="Scripts\devextreme-localization\dx.web.ru.js" />
+    <Content Include="Scripts\dx.aspnet.mvc.js" />
+    <Content Include="Scripts\dx.viz-web.debug.js" />
+    <Content Include="Scripts\dx.viz-web.js" />
+    <Content Include="Scripts\dx.viz.debug.js" />
+    <Content Include="Scripts\dx.viz.js" />
+    <Content Include="Scripts\dx.web.debug.js" />
+    <Content Include="Scripts\dx.web.js" />
+    <Content Include="Scripts\globalize.js" />
+    <Content Include="Scripts\globalize\currency.js" />
+    <Content Include="Scripts\globalize\date.js" />
+    <Content Include="Scripts\globalize\message.js" />
+    <Content Include="Scripts\globalize\number.js" />
+    <Content Include="Scripts\globalize\plural.js" />
+    <Content Include="Scripts\globalize\relative-time.js" />
+    <Content Include="Scripts\globalize\unit.js" />
+    <Content Include="Scripts\jquery-3.2.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.2.1.js" />
+    <Content Include="Scripts\jquery-3.2.1.min.js" />
+    <Content Include="Scripts\jquery-3.2.1.slim.js" />
+    <Content Include="Scripts\jquery-3.2.1.slim.min.js" />
+    <Content Include="Scripts\jquery.signalR-2.2.2.js" />
+    <Content Include="Scripts\jquery.signalR-2.2.2.min.js" />
+    <Content Include="Scripts\jszip.js" />
+    <Content Include="Scripts\jszip.min.js" />
+    <Content Include="Scripts\vectormap-data\africa.js" />
+    <Content Include="Scripts\vectormap-data\canada.js" />
+    <Content Include="Scripts\vectormap-data\eurasia.js" />
+    <Content Include="Scripts\vectormap-data\europe.js" />
+    <Content Include="Scripts\vectormap-data\usa.js" />
+    <Content Include="Scripts\vectormap-data\world.js" />
+    <Content Include="Scripts\vectormap-utils\dx.vectormaputils.debug.js" />
+    <Content Include="Scripts\vectormap-utils\dx.vectormaputils.js" />
+    <Content Include="Scripts\vectormap-utils\dx.vectormaputils.node.js" />
+    <Content Include="SiteAssets\CommonContent\App.css" />
+    <Content Include="SiteAssets\CommonContent\dx.android5.light.css" />
+    <Content Include="SiteAssets\CommonContent\dx.common.css" />
+    <Content Include="SiteAssets\CommonContent\dx.contrast.compact.css" />
+    <Content Include="SiteAssets\CommonContent\dx.contrast.css" />
+    <Content Include="SiteAssets\CommonContent\dx.dark.compact.css" />
+    <Content Include="SiteAssets\CommonContent\dx.dark.css" />
+    <Content Include="SiteAssets\CommonContent\dx.ios7.default.css" />
+    <Content Include="SiteAssets\CommonContent\dx.light.compact.css" />
+    <Content Include="SiteAssets\CommonContent\dx.light.css" />
+    <Content Include="SiteAssets\CommonContent\dx.spa.css" />
+    <Content Include="SiteAssets\CommonContent\dx.win10.black.css" />
+    <Content Include="SiteAssets\CommonContent\dx.win10.white.css" />
+    <Content Include="SiteAssets\CommonContent\dx.win8.black.css" />
+    <Content Include="SiteAssets\CommonContent\dx.win8.white.css" />
+    <Content Include="SiteAssets\CommonContent\layouts\Desktop\DesktopLayout.css" />
+    <Content Include="SiteAssets\CommonContent\layouts\Desktop\DesktopLayout.html" />
+    <Content Include="SiteAssets\CommonContent\layouts\Desktop\DesktopLayout.js" />
+    <Content Include="SiteAssets\CommonContent\layouts\Empty\EmptyLayout.css" />
+    <Content Include="SiteAssets\CommonContent\layouts\Empty\EmptyLayout.html" />
+    <Content Include="SiteAssets\CommonContent\layouts\Empty\EmptyLayout.js" />
+    <Content Include="SiteAssets\CommonContent\layouts\Popup\PopupLayout.css" />
+    <Content Include="SiteAssets\CommonContent\layouts\Popup\PopupLayout.html" />
+    <Content Include="SiteAssets\CommonContent\layouts\Popup\PopupLayout.js" />
+    <Content Include="SiteAssets\CommonContent\Site.css" />
+    <Content Include="SiteAssets\CommonContent\tabs.css" />
+    <Content Include="SiteAssets\CommonJavascript\cldr.js" />
+    <Content Include="SiteAssets\CommonJavascript\cldr\event.js" />
+    <Content Include="SiteAssets\CommonJavascript\cldr\supplemental.js" />
+    <Content Include="SiteAssets\CommonJavascript\cldr\unresolved.js" />
+    <Content Include="SiteAssets\CommonJavascript\devextreme-localization\dx.messages.de.js" />
+    <Content Include="SiteAssets\CommonJavascript\devextreme-localization\dx.messages.en.js" />
+    <Content Include="SiteAssets\CommonJavascript\devextreme-localization\dx.messages.ja.js" />
+    <Content Include="SiteAssets\CommonJavascript\devextreme-localization\dx.messages.ru.js" />
+    <Content Include="SiteAssets\CommonJavascript\devextreme-localization\dx.web.de.js" />
+    <Content Include="SiteAssets\CommonJavascript\devextreme-localization\dx.web.ja.js" />
+    <Content Include="SiteAssets\CommonJavascript\devextreme-localization\dx.web.ru.js" />
+    <Content Include="SiteAssets\CommonJavascript\dx.aspnet.mvc.js" />
+    <Content Include="SiteAssets\CommonJavascript\dx.viz-web.debug.js" />
+    <Content Include="SiteAssets\CommonJavascript\dx.viz-web.js" />
+    <Content Include="SiteAssets\CommonJavascript\dx.viz.debug.js" />
+    <Content Include="SiteAssets\CommonJavascript\dx.viz.js" />
+    <Content Include="SiteAssets\CommonJavascript\dx.web.debug.js" />
+    <Content Include="SiteAssets\CommonJavascript\dx.web.js" />
+    <Content Include="SiteAssets\CommonJavascript\globalize.js" />
+    <Content Include="SiteAssets\CommonJavascript\globalize\currency.js" />
+    <Content Include="SiteAssets\CommonJavascript\globalize\date.js" />
+    <Content Include="SiteAssets\CommonJavascript\globalize\message.js" />
+    <Content Include="SiteAssets\CommonJavascript\globalize\number.js" />
+    <Content Include="SiteAssets\CommonJavascript\globalize\plural.js" />
+    <Content Include="SiteAssets\CommonJavascript\globalize\relative-time.js" />
+    <Content Include="SiteAssets\CommonJavascript\globalize\unit.js" />
+    <Content Include="SiteAssets\CommonJavascript\jquery-3.1.1.intellisense.js" />
+    <Content Include="SiteAssets\CommonJavascript\jquery-3.1.1.js" />
+    <Content Include="SiteAssets\CommonJavascript\jquery-3.1.1.min.js" />
+    <Content Include="SiteAssets\CommonJavascript\jquery-3.1.1.slim.js" />
+    <Content Include="SiteAssets\CommonJavascript\jquery-3.1.1.slim.min.js" />
+    <Content Include="SiteAssets\CommonJavascript\jquery.signalR-2.2.2.js" />
+    <Content Include="SiteAssets\CommonJavascript\jquery.signalR-2.2.2.min.js" />
+    <Content Include="SiteAssets\CommonJavascript\jszip.js" />
+    <Content Include="SiteAssets\CommonJavascript\jszip.min.js" />
+    <Content Include="SiteAssets\CommonJavascript\tabs.js" />
+    <Content Include="SiteAssets\CommonJavascript\vectormap-data\africa.js" />
+    <Content Include="SiteAssets\CommonJavascript\vectormap-data\canada.js" />
+    <Content Include="SiteAssets\CommonJavascript\vectormap-data\eurasia.js" />
+    <Content Include="SiteAssets\CommonJavascript\vectormap-data\europe.js" />
+    <Content Include="SiteAssets\CommonJavascript\vectormap-data\usa.js" />
+    <Content Include="SiteAssets\CommonJavascript\vectormap-data\world.js" />
+    <Content Include="SiteAssets\CommonJavascript\vectormap-utils\dx.vectormaputils.debug.js" />
+    <Content Include="SiteAssets\CommonJavascript\vectormap-utils\dx.vectormaputils.js" />
+    <Content Include="SiteAssets\CommonJavascript\vectormap-utils\dx.vectormaputils.node.js" />
+    <Content Include="SiteAssets\DataSyncJs\App.js" />
+    <Content Include="SiteAssets\DataSyncJs\CRUDTables.js" />
+    <Content Include="SiteAssets\DataSyncJs\DevExtremeExtension.js" />
+    <Content Include="SiteAssets\DataSyncJs\JiraSync.js" />
+    <Content Include="SiteAssets\DataSyncJs\LinkedItemsTable.js" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

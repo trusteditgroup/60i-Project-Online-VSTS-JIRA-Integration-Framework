@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C23D8595-7870-4F82-B2ED-D11F8D9E4ED4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ProjectOnlineSystemConnector.DataModel</RootNamespace>
+    <AssemblyName>ProjectOnlineSystemConnector.DataModel</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\JiraProxyRequest.cs" />
+    <Compile Include="Common\LinkEpmToSystemViewModel.cs" />
+    <Compile Include="Common\LogMessage.cs" />
+    <Compile Include="Common\ProxyResponse.cs" />
+    <Compile Include="DTO\AssignmentInfoAuthorKeyComparer.cs" />
+    <Compile Include="DTO\IDtoId.cs" />
+    <Compile Include="DTO\StagingDTO.cs" />
+    <Compile Include="DTO\ProjectServerSystemLinkDTO.cs" />
+    <Compile Include="DTO\SyncSystemDTO.cs" />
+    <Compile Include="DTO\AssignmentInfo.cs" />
+    <Compile Include="DTO\AssignmentInfoComparer.cs" />
+    <Compile Include="DTO\SyncSystemFieldMappingDTO.cs" />
+    <Compile Include="DTO\SyncSystemSettingDTO.cs" />
+    <Compile Include="DTO\SyncSystemSettingValueDTO.cs" />
+    <Compile Include="DTO\SyncSystemTypeDTO.cs" />
+    <Compile Include="DTO\TaskInfo.cs" />
+    <Compile Include="JiraWebHook\JiraChangeLog.cs" />
+    <Compile Include="JiraWebHook\JiraChangeLogItem.cs" />
+    <Compile Include="JiraWebHook\JiraComponent.cs" />
+    <Compile Include="JiraWebHook\JiraEpicLink.cs" />
+    <Compile Include="JiraWebHook\JiraField.cs" />
+    <Compile Include="JiraWebHook\JiraIssue.cs" />
+    <Compile Include="JiraWebHook\JiraIssueField.cs" />
+    <Compile Include="JiraWebHook\JiraIssueLink.cs" />
+    <Compile Include="JiraWebHook\JiraIssueLinkType.cs" />
+    <Compile Include="JiraWebHook\JiraIssueType.cs" />
+    <Compile Include="JiraWebHook\JiraProject.cs" />
+    <Compile Include="JiraWebHook\JiraRequest.cs" />
+    <Compile Include="JiraWebHook\JiraSprint.cs" />
+    <Compile Include="JiraWebHook\JiraStatus.cs" />
+    <Compile Include="JiraWebHook\JiraUser.cs" />
+    <Compile Include="JiraWebHook\JiraVersion.cs" />
+    <Compile Include="JiraWebHook\JiraWorklog.cs" />
+    <Compile Include="OData\ODataAssignment.cs" />
+    <Compile Include="OData\ODataAssignmentTimephasedDataRecord.cs" />
+    <Compile Include="OData\ODataLookupTable.cs" />
+    <Compile Include="OData\ODataLookupTableEntry.cs" />
+    <Compile Include="OData\ODataProject.cs" />
+    <Compile Include="OData\ODataResource.cs" />
+    <Compile Include="OData\ODataTask.cs" />
+    <Compile Include="OData\ODataTimesheetPeriod.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TfsWebHook\FieldChangeTrack.cs" />
+    <Compile Include="TfsWebHook\Message.cs" />
+    <Compile Include="TfsWebHook\Relation.cs" />
+    <Compile Include="TfsWebHook\ResourceCreate.cs" />
+    <Compile Include="TfsWebHook\ResourceUpdate.cs" />
+    <Compile Include="TfsWebHook\Revision.cs" />
+    <Compile Include="TfsWebHook\UpdateLink.cs" />
+    <Compile Include="TfsWebHook\UpdateLinkProperty.cs" />
+    <Compile Include="TfsWebHook\User.cs" />
+    <Compile Include="TfsWebHook\WebHookCreateRequest.cs" />
+    <Compile Include="TfsWebHook\WebHookUpdateRequest.cs" />
+    <Compile Include="ViewModel\PostViewModel.cs" />
+    <Compile Include="ViewModel\SystemToDbViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ProjectOnlineSystemConnector.Data.Views\Model\ProjectOnlineSystemConnector.Data.Views.Model.csproj">
+      <Project>{5F5DB26F-8920-488F-8145-6EB8878656FB}</Project>
+      <Name>ProjectOnlineSystemConnector.Data.Views.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

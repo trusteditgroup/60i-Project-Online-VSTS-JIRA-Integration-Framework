@@ -1,0 +1,41 @@
+﻿/* Place custom styles below */
+
+.ProgressBarDialog {
+    background: transparent !important;
+    border: transparent !important;
+}
+
+.execute-button {
+    display: inline-block;
+    border: 1px solid rgb(199, 198, 198);
+    background: rgb(232, 231, 231);
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-left: 15px;
+    margin-right: 5px;
+}
+.execute-button::after {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 10px solid green;
+    margin: 0 0 3px 4px;
+}
+.execute-button:hover{
+    background-color:#ddddca;
+}
+.button-spinner{
+    height: 24px;
+    width:24px;
+    display:none;
+    margin: 2px 0 6px 0px;
+    vertical-align: middle;
+}
+#ButtonSave {
+    margin-left: 140px;
+}
